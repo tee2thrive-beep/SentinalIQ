@@ -1,4 +1,10 @@
 import os
+import sys
+
+_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _root not in sys.path:
+    sys.path.insert(0, _root)
+
 import json
 import csv
 from backend.clustering.engine import cluster_correlations_to_incidents
