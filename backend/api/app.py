@@ -79,11 +79,26 @@ def create_app() -> FastAPI:
             content={"error": True, "status_code": 500, "detail": "Internal server error occurred."}
         )
 
+    @app.get("/")
+    def root_welcome():
+        return {
+            "service": "SentinelIQ — Cyber Incident Prioritization Engine",
+            "status": "operational",
+            "version": settings.VERSION,
+            "endpoints": {
+                "health": "/api/health",
+                "ready": "/api/ready",
+                "incidents": "/api/incidents",
+                "docs": "/docs"
+            }
+        }
+
     # Import and include routes
     from backend.api.routes import router
     app.include_router(router, prefix="/api")
 
     return app
+
 
 app = create_app()
 
