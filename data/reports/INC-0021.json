@@ -1,0 +1,292 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-09-01T06:03:36.007056+00:00",
+  "incident": {
+    "incident_id": "INC-0021",
+    "incident_type": "Multi-stage Attack",
+    "risk_score": 90.2,
+    "risk_level": "CRITICAL",
+    "priority_rank": 1,
+    "priority_band": "CRITICAL",
+    "first_seen": "2026-09-01T10:00:00+00:00",
+    "last_seen": "2026-09-01T10:15:00+00:00",
+    "alert_count": 9,
+    "affected_user_count": 1,
+    "tie_group_id": null
+  },
+  "executive_summary": "INC-0021 is a CRITICAL Multi-stage Attack ranked #1 in the SentinelIQ investigation queue with a defensible risk score of 90.20 / 100. The incident contains 9 correlated alerts affecting 1 unique user(s) and target asset(s) (payment-gateway.corp.internal). The primary risk drivers elevating this incident's priority rank are Business Impact, Asset Importance, Severity.",
+  "risk_analysis": {
+    "formula": "R = 0.20*S + 0.20*A + 0.10*U + 0.15*D + 0.15*C + 0.20*B",
+    "risk_score": 90.2,
+    "risk_level": "CRITICAL",
+    "factors": [
+      {
+        "name": "severity",
+        "value": 96.0,
+        "weight": 0.2,
+        "contribution": 19.2,
+        "status": "CRITICAL",
+        "source": "maximum_severity",
+        "evidence": "Maximum alert severity is 96.0 (average alert severity: 68.33)."
+      },
+      {
+        "name": "asset_importance",
+        "value": 100.0,
+        "weight": 0.2,
+        "contribution": 20.0,
+        "status": "CRITICAL",
+        "source": "incident_asset_importance",
+        "evidence": "Target asset normalized importance rating is 100.0."
+      },
+      {
+        "name": "affected_users",
+        "value": 10.03,
+        "weight": 0.1,
+        "contribution": 1.003,
+        "status": "LOW",
+        "source": "normalized_affected_users",
+        "evidence": "1 unique user(s) affected, logarithmically normalized to 10.03."
+      },
+      {
+        "name": "data_sensitivity",
+        "value": 100.0,
+        "weight": 0.15,
+        "contribution": 15.0,
+        "status": "CRITICAL",
+        "source": "incident_data_sensitivity",
+        "evidence": "Target asset data sensitivity rating is 100.0."
+      },
+      {
+        "name": "attack_confidence",
+        "value": 100.0,
+        "weight": 0.15,
+        "contribution": 15.0,
+        "status": "CRITICAL",
+        "source": "incident_confidence",
+        "evidence": "Corroborated incident attack confidence is 100.0 (max alert confidence: 98)."
+      },
+      {
+        "name": "business_impact",
+        "value": 100.0,
+        "weight": 0.2,
+        "contribution": 20.0,
+        "status": "CRITICAL",
+        "source": "incident_business_impact",
+        "evidence": "Potential business impact rating is 100.0."
+      }
+    ],
+    "dominant_factors": [
+      "business_impact",
+      "asset_importance",
+      "severity"
+    ],
+    "contribution_sum": 90.2
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-09-01T10:00:00+00:00",
+      "alert_id": "alt_0013",
+      "alert_type": "Failed Login",
+      "category": "Security Alert",
+      "severity": 40,
+      "confidence": 80.0,
+      "source_ip": "203.0.113.15",
+      "destination_ip": "10.0.1.99",
+      "user_id": "usr_sysadmin",
+      "username": "charlie.admin",
+      "asset_id": "ast_pay_01",
+      "asset_name": "ast_pay_01"
+    },
+    {
+      "timestamp": "2026-09-01T10:00:30+00:00",
+      "alert_id": "alt_0014",
+      "alert_type": "Failed Login",
+      "category": "Security Alert",
+      "severity": 45,
+      "confidence": 80.0,
+      "source_ip": "203.0.113.15",
+      "destination_ip": "10.0.1.99",
+      "user_id": "usr_sysadmin",
+      "username": "charlie.admin",
+      "asset_id": "ast_pay_01",
+      "asset_name": "ast_pay_01"
+    },
+    {
+      "timestamp": "2026-09-01T10:01:00+00:00",
+      "alert_id": "alt_0015",
+      "alert_type": "Failed Login",
+      "category": "Security Alert",
+      "severity": 50,
+      "confidence": 80.0,
+      "source_ip": "203.0.113.15",
+      "destination_ip": "10.0.1.99",
+      "user_id": "usr_sysadmin",
+      "username": "charlie.admin",
+      "asset_id": "ast_pay_01",
+      "asset_name": "ast_pay_01"
+    },
+    {
+      "timestamp": "2026-09-01T10:01:30+00:00",
+      "alert_id": "alt_0016",
+      "alert_type": "Failed Login",
+      "category": "Security Alert",
+      "severity": 55,
+      "confidence": 80.0,
+      "source_ip": "203.0.113.15",
+      "destination_ip": "10.0.1.99",
+      "user_id": "usr_sysadmin",
+      "username": "charlie.admin",
+      "asset_id": "ast_pay_01",
+      "asset_name": "ast_pay_01"
+    },
+    {
+      "timestamp": "2026-09-01T10:02:00+00:00",
+      "alert_id": "alt_0017",
+      "alert_type": "Failed Login",
+      "category": "Security Alert",
+      "severity": 60,
+      "confidence": 80.0,
+      "source_ip": "203.0.113.15",
+      "destination_ip": "10.0.1.99",
+      "user_id": "usr_sysadmin",
+      "username": "charlie.admin",
+      "asset_id": "ast_pay_01",
+      "asset_name": "ast_pay_01"
+    },
+    {
+      "timestamp": "2026-09-01T10:03:20+00:00",
+      "alert_id": "alt_0018",
+      "alert_type": "Brute Force",
+      "category": "Security Alert",
+      "severity": 85,
+      "confidence": 80.0,
+      "source_ip": "203.0.113.15",
+      "destination_ip": "10.0.1.99",
+      "user_id": "usr_sysadmin",
+      "username": "charlie.admin",
+      "asset_id": "ast_pay_01",
+      "asset_name": "ast_pay_01"
+    },
+    {
+      "timestamp": "2026-09-01T10:05:50+00:00",
+      "alert_id": "alt_0019",
+      "alert_type": "Successful Login After Failures",
+      "category": "Security Alert",
+      "severity": 90,
+      "confidence": 80.0,
+      "source_ip": "203.0.113.15",
+      "destination_ip": "10.0.1.99",
+      "user_id": "usr_sysadmin",
+      "username": "charlie.admin",
+      "asset_id": "ast_pay_01",
+      "asset_name": "ast_pay_01"
+    },
+    {
+      "timestamp": "2026-09-01T10:10:00+00:00",
+      "alert_id": "alt_0020",
+      "alert_type": "Privilege Escalation",
+      "category": "Security Alert",
+      "severity": 94,
+      "confidence": 80.0,
+      "source_ip": "203.0.113.15",
+      "destination_ip": "10.0.1.99",
+      "user_id": "usr_sysadmin",
+      "username": "charlie.admin",
+      "asset_id": "ast_pay_01",
+      "asset_name": "ast_pay_01"
+    },
+    {
+      "timestamp": "2026-09-01T10:15:00+00:00",
+      "alert_id": "alt_0021",
+      "alert_type": "Unauthorized Access",
+      "category": "Security Alert",
+      "severity": 96,
+      "confidence": 80.0,
+      "source_ip": "10.0.1.99",
+      "destination_ip": "10.0.1.99",
+      "user_id": "usr_sysadmin",
+      "username": "charlie.admin",
+      "asset_id": "ast_pay_01",
+      "asset_name": "ast_pay_01"
+    }
+  ],
+  "correlation_evidence": [],
+  "classification": {
+    "incident_type": "Multi-stage Attack",
+    "classification_evidence": [
+      "Incident contains 9 alert(s) matching Multi-stage Attack threat patterns.",
+      "Highest alert severity: 96.0"
+    ]
+  },
+  "affected_users": [
+    {
+      "user_id": "usr_sysadmin",
+      "username": "charlie.admin",
+      "role": "Systems Administrator",
+      "department": "IT",
+      "privilege_level": "administrator"
+    }
+  ],
+  "affected_assets": [
+    {
+      "asset_id": "ast_pay_01",
+      "name": "payment-gateway.corp.internal",
+      "asset_type": "payment_server",
+      "criticality": 100,
+      "business_impact": 80.0,
+      "data_sensitivity": 100
+    }
+  ],
+  "priority_explanation": {
+    "priority_rank": 1,
+    "risk_score": 90.2,
+    "risk_level": "CRITICAL",
+    "tie_group_id": null,
+    "primary_reason": "Higher risk score",
+    "compared_with_next": {
+      "incident_id": "INC-0001",
+      "risk_score": 89.5,
+      "score_difference": 0.7,
+      "deciding_factor": "risk_score"
+    }
+  },
+  "recommendations": [
+    {
+      "type": "automated recommendation",
+      "action": "Isolate Affected Entity",
+      "priority": "IMMEDIATE",
+      "details": "Restrict network access for compromised assets or users involved in the incident.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Preserve Security Logs",
+      "priority": "HIGH",
+      "details": "Collect firewall, SIEM, and host endpoint event logs for root cause analysis.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Audit Account Credentials",
+      "priority": "HIGH",
+      "details": "Reset passwords and review privileges for all accounts associated with the incident alerts.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Monitor Target Subnet",
+      "priority": "MEDIUM",
+      "details": "Enable heightened logging and IDS monitoring across adjacent network subnets.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    }
+  ],
+  "limitations": [
+    "AUTOMATED REPORT DISCLAIMER: Recommendations listed in this report are automated policy-based guidance generated for SOC analysts. They represent suggested investigation/containment actions and do not imply that automated mitigation has been executed.",
+    "Prioritization is based on batch snapshot data. Live streaming telemetry will update queue dynamically.",
+    "Asset importance and data sensitivity values reflect configured CMDB asset tags."
+  ]
+}

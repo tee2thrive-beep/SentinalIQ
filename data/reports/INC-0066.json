@@ -1,0 +1,238 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-09-01T06:03:36.011172+00:00",
+  "incident": {
+    "incident_id": "INC-0066",
+    "incident_type": "Data Exfiltration",
+    "risk_score": 78.85,
+    "risk_level": "CRITICAL",
+    "priority_rank": 6,
+    "priority_band": "CRITICAL",
+    "first_seen": "2026-09-01T15:00:00+00:00",
+    "last_seen": "2026-09-01T15:23:20+00:00",
+    "alert_count": 4,
+    "affected_user_count": 1,
+    "tie_group_id": null
+  },
+  "executive_summary": "INC-0066 is a CRITICAL Data Exfiltration ranked #6 in the SentinelIQ investigation queue with a defensible risk score of 78.85 / 100. The incident contains 4 correlated alerts affecting 1 unique user(s) and target asset(s) (dev-db-01.corp.internal, file-share-prod.corp.internal). The primary risk drivers elevating this incident's priority rank are Severity, Business Impact, Asset Importance.",
+  "risk_analysis": {
+    "formula": "R = 0.20*S + 0.20*A + 0.10*U + 0.15*D + 0.15*C + 0.20*B",
+    "risk_score": 78.85,
+    "risk_level": "CRITICAL",
+    "factors": [
+      {
+        "name": "severity",
+        "value": 95.0,
+        "weight": 0.2,
+        "contribution": 19.0,
+        "status": "CRITICAL",
+        "source": "maximum_severity",
+        "evidence": "Maximum alert severity is 95.0 (average alert severity: 80.0)."
+      },
+      {
+        "name": "asset_importance",
+        "value": 77.0,
+        "weight": 0.2,
+        "contribution": 15.4,
+        "status": "CRITICAL",
+        "source": "incident_asset_importance",
+        "evidence": "Target asset normalized importance rating is 77.0."
+      },
+      {
+        "name": "affected_users",
+        "value": 10.03,
+        "weight": 0.1,
+        "contribution": 1.003,
+        "status": "LOW",
+        "source": "normalized_affected_users",
+        "evidence": "1 unique user(s) affected, logarithmically normalized to 10.03."
+      },
+      {
+        "name": "data_sensitivity",
+        "value": 85.0,
+        "weight": 0.15,
+        "contribution": 12.75,
+        "status": "CRITICAL",
+        "source": "incident_data_sensitivity",
+        "evidence": "Target asset data sensitivity rating is 85.0."
+      },
+      {
+        "name": "attack_confidence",
+        "value": 100.0,
+        "weight": 0.15,
+        "contribution": 15.0,
+        "status": "CRITICAL",
+        "source": "incident_confidence",
+        "evidence": "Corroborated incident attack confidence is 100.0 (max alert confidence: 95)."
+      },
+      {
+        "name": "business_impact",
+        "value": 78.5,
+        "weight": 0.2,
+        "contribution": 15.7,
+        "status": "CRITICAL",
+        "source": "incident_business_impact",
+        "evidence": "Potential business impact rating is 78.5."
+      }
+    ],
+    "dominant_factors": [
+      "severity",
+      "business_impact",
+      "asset_importance"
+    ],
+    "contribution_sum": 78.85
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-09-01T15:00:00+00:00",
+      "alert_id": "alt_0041",
+      "alert_type": "Unauthorized Access",
+      "category": "Security Alert",
+      "severity": 65,
+      "confidence": 80.0,
+      "source_ip": "192.168.1.110",
+      "destination_ip": "10.0.2.30",
+      "user_id": "usr_insider",
+      "username": "frank.insider",
+      "asset_id": "ast_dev_db",
+      "asset_name": "ast_dev_db"
+    },
+    {
+      "timestamp": "2026-09-01T15:07:30+00:00",
+      "alert_id": "alt_0042",
+      "alert_type": "Unusual File Access",
+      "category": "Security Alert",
+      "severity": 78,
+      "confidence": 80.0,
+      "source_ip": "192.168.1.110",
+      "destination_ip": "10.0.3.15",
+      "user_id": "usr_insider",
+      "username": "frank.insider",
+      "asset_id": "ast_file_01",
+      "asset_name": "ast_file_01"
+    },
+    {
+      "timestamp": "2026-09-01T15:15:00+00:00",
+      "alert_id": "alt_0043",
+      "alert_type": "Command and Control",
+      "category": "Security Alert",
+      "severity": 82,
+      "confidence": 80.0,
+      "source_ip": "192.168.1.110",
+      "destination_ip": "52.84.12.19",
+      "user_id": "usr_insider",
+      "username": "frank.insider",
+      "asset_id": "ast_wkst_06",
+      "asset_name": "ast_wkst_06"
+    },
+    {
+      "timestamp": "2026-09-01T15:23:20+00:00",
+      "alert_id": "alt_0044",
+      "alert_type": "Data Exfiltration",
+      "category": "Security Alert",
+      "severity": 95,
+      "confidence": 80.0,
+      "source_ip": "192.168.1.110",
+      "destination_ip": "52.84.12.19",
+      "user_id": "usr_insider",
+      "username": "frank.insider",
+      "asset_id": "ast_wkst_06",
+      "asset_name": "ast_wkst_06"
+    }
+  ],
+  "correlation_evidence": [],
+  "classification": {
+    "incident_type": "Data Exfiltration",
+    "classification_evidence": [
+      "Incident contains 4 alert(s) matching Data Exfiltration threat patterns.",
+      "Highest alert severity: 95.0"
+    ]
+  },
+  "affected_users": [
+    {
+      "user_id": "usr_insider",
+      "username": "frank.insider",
+      "role": "Software Engineer",
+      "department": "Engineering",
+      "privilege_level": "standard"
+    }
+  ],
+  "affected_assets": [
+    {
+      "asset_id": "ast_dev_db",
+      "name": "dev-db-01.corp.internal",
+      "asset_type": "database_server",
+      "criticality": 50,
+      "business_impact": 80.0,
+      "data_sensitivity": 55
+    },
+    {
+      "asset_id": "ast_file_01",
+      "name": "file-share-prod.corp.internal",
+      "asset_type": "file_server",
+      "criticality": 75,
+      "business_impact": 80.0,
+      "data_sensitivity": 85
+    },
+    {
+      "asset_id": "ast_wkst_06",
+      "name": "wkst-security-06.corp.internal",
+      "asset_type": "workstation",
+      "criticality": 21,
+      "business_impact": 80.0,
+      "data_sensitivity": 17
+    }
+  ],
+  "priority_explanation": {
+    "priority_rank": 6,
+    "risk_score": 78.85,
+    "risk_level": "CRITICAL",
+    "tie_group_id": null,
+    "primary_reason": "Higher risk score",
+    "compared_with_next": {
+      "incident_id": "INC-0012",
+      "risk_score": 78.84,
+      "score_difference": 0.01,
+      "deciding_factor": "risk_score"
+    }
+  },
+  "recommendations": [
+    {
+      "type": "automated recommendation",
+      "action": "Restrict Outbound IP Connections",
+      "priority": "IMMEDIATE",
+      "details": "Block destination external IP addresses and command-and-control domain endpoints at perimeter firewall.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Preserve Network & Proxy Logs",
+      "priority": "HIGH",
+      "details": "Export full NetFlow, Web Proxy, and egress gateway transaction logs for data volume estimation.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Identify Exposed Confidential Data",
+      "priority": "HIGH",
+      "details": "Audit file access logs on targeted database/file storage servers to identify compromised datasets.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Investigate Egress Infrastructure",
+      "priority": "MEDIUM",
+      "details": "Perform threat intelligence lookup on external IP addresses and protocol signatures.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    }
+  ],
+  "limitations": [
+    "AUTOMATED REPORT DISCLAIMER: Recommendations listed in this report are automated policy-based guidance generated for SOC analysts. They represent suggested investigation/containment actions and do not imply that automated mitigation has been executed.",
+    "Prioritization is based on batch snapshot data. Live streaming telemetry will update queue dynamically.",
+    "Asset importance and data sensitivity values reflect configured CMDB asset tags."
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "perturbation_delta": 0.05,
+  "factor_sensitivity_ranking": [
+    {
+      "factor": "attack_confidence",
+      "display_name": "Attack Confidence",
+      "baseline_weight": 0.15,
+      "sensitivity_score": 3.6396,
+      "plus_perturbation": {
+        "weight": 0.2,
+        "average_absolute_rank_change": 1.8018,
+        "maximum_rank_change": 12,
+        "incidents_moved": 78,
+        "risk_level_changes": 3
+      },
+      "minus_perturbation": {
+        "weight": 0.1,
+        "average_absolute_rank_change": 1.8378,
+        "maximum_rank_change": 9,
+        "incidents_moved": 73,
+        "risk_level_changes": 14
+      },
+      "explanation": "Attack Confidence has a sensitivity score of 3.6396. Increasing its weight by 5% shifts average incident rank by 1.80 positions (78 moved, max shift: 12), while decreasing it shifts average rank by 1.84 positions (73 moved, max shift: 9).",
+      "sensitivity_rank": 1
+    },
+    {
+      "factor": "severity",
+      "display_name": "Severity",
+      "baseline_weight": 0.2,
+      "sensitivity_score": 3.3694,
+      "plus_perturbation": {
+        "weight": 0.25,
+        "average_absolute_rank_change": 1.7658,
+        "maximum_rank_change": 10,
+        "incidents_moved": 77,
+        "risk_level_changes": 1
+      },
+      "minus_perturbation": {
+        "weight": 0.15,
+        "average_absolute_rank_change": 1.6036,
+        "maximum_rank_change": 9,
+        "incidents_moved": 72,
+        "risk_level_changes": 4
+      },
+      "explanation": "Severity has a sensitivity score of 3.3694. Increasing its weight by 5% shifts average incident rank by 1.77 positions (77 moved, max shift: 10), while decreasing it shifts average rank by 1.60 positions (72 moved, max shift: 9).",
+      "sensitivity_rank": 2
+    },
+    {
+      "factor": "data_sensitivity",
+      "display_name": "Data Sensitivity",
+      "baseline_weight": 0.15,
+      "sensitivity_score": 1.8559,
+      "plus_perturbation": {
+        "weight": 0.2,
+        "average_absolute_rank_change": 0.6667,
+        "maximum_rank_change": 6,
+        "incidents_moved": 41,
+        "risk_level_changes": 6
+      },
+      "minus_perturbation": {
+        "weight": 0.1,
+        "average_absolute_rank_change": 1.1892,
+        "maximum_rank_change": 8,
+        "incidents_moved": 67,
+        "risk_level_changes": 1
+      },
+      "explanation": "Data Sensitivity has a sensitivity score of 1.8559. Increasing its weight by 5% shifts average incident rank by 0.67 positions (41 moved, max shift: 6), while decreasing it shifts average rank by 1.19 positions (67 moved, max shift: 8).",
+      "sensitivity_rank": 3
+    },
+    {
+      "factor": "asset_importance",
+      "display_name": "Asset Importance",
+      "baseline_weight": 0.2,
+      "sensitivity_score": 1.7117,
+      "plus_perturbation": {
+        "weight": 0.25,
+        "average_absolute_rank_change": 0.9189,
+        "maximum_rank_change": 6,
+        "incidents_moved": 56,
+        "risk_level_changes": 3
+      },
+      "minus_perturbation": {
+        "weight": 0.15,
+        "average_absolute_rank_change": 0.7928,
+        "maximum_rank_change": 4,
+        "incidents_moved": 60,
+        "risk_level_changes": 2
+      },
+      "explanation": "Asset Importance has a sensitivity score of 1.7117. Increasing its weight by 5% shifts average incident rank by 0.92 positions (56 moved, max shift: 6), while decreasing it shifts average rank by 0.79 positions (60 moved, max shift: 4).",
+      "sensitivity_rank": 4
+    },
+    {
+      "factor": "business_impact",
+      "display_name": "Business Impact",
+      "baseline_weight": 0.2,
+      "sensitivity_score": 1.3513,
+      "plus_perturbation": {
+        "weight": 0.25,
+        "average_absolute_rank_change": 0.7027,
+        "maximum_rank_change": 6,
+        "incidents_moved": 44,
+        "risk_level_changes": 3
+      },
+      "minus_perturbation": {
+        "weight": 0.15,
+        "average_absolute_rank_change": 0.6486,
+        "maximum_rank_change": 3,
+        "incidents_moved": 51,
+        "risk_level_changes": 1
+      },
+      "explanation": "Business Impact has a sensitivity score of 1.3513. Increasing its weight by 5% shifts average incident rank by 0.70 positions (44 moved, max shift: 6), while decreasing it shifts average rank by 0.65 positions (51 moved, max shift: 3).",
+      "sensitivity_rank": 5
+    },
+    {
+      "factor": "affected_users",
+      "display_name": "Affected Users",
+      "baseline_weight": 0.1,
+      "sensitivity_score": 0.1622,
+      "plus_perturbation": {
+        "weight": 0.15,
+        "average_absolute_rank_change": 0.0721,
+        "maximum_rank_change": 2,
+        "incidents_moved": 7,
+        "risk_level_changes": 8
+      },
+      "minus_perturbation": {
+        "weight": 0.05,
+        "average_absolute_rank_change": 0.0901,
+        "maximum_rank_change": 2,
+        "incidents_moved": 8,
+        "risk_level_changes": 7
+      },
+      "explanation": "Affected Users has a sensitivity score of 0.1622. Increasing its weight by 5% shifts average incident rank by 0.07 positions (7 moved, max shift: 2), while decreasing it shifts average rank by 0.09 positions (8 moved, max shift: 2).",
+      "sensitivity_rank": 6
+    }
+  ],
+  "factor_details": {
+    "severity": {
+      "factor": "severity",
+      "display_name": "Severity",
+      "baseline_weight": 0.2,
+      "sensitivity_score": 3.3694,
+      "plus_perturbation": {
+        "weight": 0.25,
+        "average_absolute_rank_change": 1.7658,
+        "maximum_rank_change": 10,
+        "incidents_moved": 77,
+        "risk_level_changes": 1
+      },
+      "minus_perturbation": {
+        "weight": 0.15,
+        "average_absolute_rank_change": 1.6036,
+        "maximum_rank_change": 9,
+        "incidents_moved": 72,
+        "risk_level_changes": 4
+      },
+      "explanation": "Severity has a sensitivity score of 3.3694. Increasing its weight by 5% shifts average incident rank by 1.77 positions (77 moved, max shift: 10), while decreasing it shifts average rank by 1.60 positions (72 moved, max shift: 9)."
+    },
+    "business_impact": {
+      "factor": "business_impact",
+      "display_name": "Business Impact",
+      "baseline_weight": 0.2,
+      "sensitivity_score": 1.3513,
+      "plus_perturbation": {
+        "weight": 0.25,
+        "average_absolute_rank_change": 0.7027,
+        "maximum_rank_change": 6,
+        "incidents_moved": 44,
+        "risk_level_changes": 3
+      },
+      "minus_perturbation": {
+        "weight": 0.15,
+        "average_absolute_rank_change": 0.6486,
+        "maximum_rank_change": 3,
+        "incidents_moved": 51,
+        "risk_level_changes": 1
+      },
+      "explanation": "Business Impact has a sensitivity score of 1.3513. Increasing its weight by 5% shifts average incident rank by 0.70 positions (44 moved, max shift: 6), while decreasing it shifts average rank by 0.65 positions (51 moved, max shift: 3)."
+    },
+    "asset_importance": {
+      "factor": "asset_importance",
+      "display_name": "Asset Importance",
+      "baseline_weight": 0.2,
+      "sensitivity_score": 1.7117,
+      "plus_perturbation": {
+        "weight": 0.25,
+        "average_absolute_rank_change": 0.9189,
+        "maximum_rank_change": 6,
+        "incidents_moved": 56,
+        "risk_level_changes": 3
+      },
+      "minus_perturbation": {
+        "weight": 0.15,
+        "average_absolute_rank_change": 0.7928,
+        "maximum_rank_change": 4,
+        "incidents_moved": 60,
+        "risk_level_changes": 2
+      },
+      "explanation": "Asset Importance has a sensitivity score of 1.7117. Increasing its weight by 5% shifts average incident rank by 0.92 positions (56 moved, max shift: 6), while decreasing it shifts average rank by 0.79 positions (60 moved, max shift: 4)."
+    },
+    "data_sensitivity": {
+      "factor": "data_sensitivity",
+      "display_name": "Data Sensitivity",
+      "baseline_weight": 0.15,
+      "sensitivity_score": 1.8559,
+      "plus_perturbation": {
+        "weight": 0.2,
+        "average_absolute_rank_change": 0.6667,
+        "maximum_rank_change": 6,
+        "incidents_moved": 41,
+        "risk_level_changes": 6
+      },
+      "minus_perturbation": {
+        "weight": 0.1,
+        "average_absolute_rank_change": 1.1892,
+        "maximum_rank_change": 8,
+        "incidents_moved": 67,
+        "risk_level_changes": 1
+      },
+      "explanation": "Data Sensitivity has a sensitivity score of 1.8559. Increasing its weight by 5% shifts average incident rank by 0.67 positions (41 moved, max shift: 6), while decreasing it shifts average rank by 1.19 positions (67 moved, max shift: 8)."
+    },
+    "attack_confidence": {
+      "factor": "attack_confidence",
+      "display_name": "Attack Confidence",
+      "baseline_weight": 0.15,
+      "sensitivity_score": 3.6396,
+      "plus_perturbation": {
+        "weight": 0.2,
+        "average_absolute_rank_change": 1.8018,
+        "maximum_rank_change": 12,
+        "incidents_moved": 78,
+        "risk_level_changes": 3
+      },
+      "minus_perturbation": {
+        "weight": 0.1,
+        "average_absolute_rank_change": 1.8378,
+        "maximum_rank_change": 9,
+        "incidents_moved": 73,
+        "risk_level_changes": 14
+      },
+      "explanation": "Attack Confidence has a sensitivity score of 3.6396. Increasing its weight by 5% shifts average incident rank by 1.80 positions (78 moved, max shift: 12), while decreasing it shifts average rank by 1.84 positions (73 moved, max shift: 9)."
+    },
+    "affected_users": {
+      "factor": "affected_users",
+      "display_name": "Affected Users",
+      "baseline_weight": 0.1,
+      "sensitivity_score": 0.1622,
+      "plus_perturbation": {
+        "weight": 0.15,
+        "average_absolute_rank_change": 0.0721,
+        "maximum_rank_change": 2,
+        "incidents_moved": 7,
+        "risk_level_changes": 8
+      },
+      "minus_perturbation": {
+        "weight": 0.05,
+        "average_absolute_rank_change": 0.0901,
+        "maximum_rank_change": 2,
+        "incidents_moved": 8,
+        "risk_level_changes": 7
+      },
+      "explanation": "Affected Users has a sensitivity score of 0.1622. Increasing its weight by 5% shifts average incident rank by 0.07 positions (7 moved, max shift: 2), while decreasing it shifts average rank by 0.09 positions (8 moved, max shift: 2)."
+    }
+  }
+}

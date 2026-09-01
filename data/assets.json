@@ -1,0 +1,352 @@
+[
+  {
+    "asset_id": "ast_dc_01",
+    "hostname": "dc-primary.corp.internal",
+    "asset_type": "domain_controller",
+    "department": "IT",
+    "criticality": 100,
+    "data_sensitivity": 95,
+    "business_value": 100,
+    "owner_department": "IT"
+  },
+  {
+    "asset_id": "ast_dc_02",
+    "hostname": "dc-backup.corp.internal",
+    "asset_type": "domain_controller",
+    "department": "IT",
+    "criticality": 95,
+    "data_sensitivity": 90,
+    "business_value": 95,
+    "owner_department": "IT"
+  },
+  {
+    "asset_id": "ast_db_fin",
+    "hostname": "fin-db-prod.corp.internal",
+    "asset_type": "database_server",
+    "department": "Finance",
+    "criticality": 95,
+    "data_sensitivity": 100,
+    "business_value": 100,
+    "owner_department": "Finance"
+  },
+  {
+    "asset_id": "ast_db_cust",
+    "hostname": "cust-db-cluster.corp.internal",
+    "asset_type": "database_server",
+    "department": "Sales",
+    "criticality": 90,
+    "data_sensitivity": 95,
+    "business_value": 95,
+    "owner_department": "Sales"
+  },
+  {
+    "asset_id": "ast_pay_01",
+    "hostname": "payment-gateway.corp.internal",
+    "asset_type": "payment_server",
+    "department": "Finance",
+    "criticality": 100,
+    "data_sensitivity": 100,
+    "business_value": 100,
+    "owner_department": "Finance"
+  },
+  {
+    "asset_id": "ast_web_01",
+    "hostname": "www.company.com",
+    "asset_type": "web_server",
+    "department": "Engineering",
+    "criticality": 85,
+    "data_sensitivity": 60,
+    "business_value": 85,
+    "owner_department": "Engineering"
+  },
+  {
+    "asset_id": "ast_web_02",
+    "hostname": "portal.company.com",
+    "asset_type": "web_server",
+    "department": "Engineering",
+    "criticality": 80,
+    "data_sensitivity": 65,
+    "business_value": 80,
+    "owner_department": "Engineering"
+  },
+  {
+    "asset_id": "ast_app_01",
+    "hostname": "app-prod-01.corp.internal",
+    "asset_type": "application_server",
+    "department": "Engineering",
+    "criticality": 85,
+    "data_sensitivity": 75,
+    "business_value": 85,
+    "owner_department": "Engineering"
+  },
+  {
+    "asset_id": "ast_app_02",
+    "hostname": "app-prod-02.corp.internal",
+    "asset_type": "application_server",
+    "department": "Engineering",
+    "criticality": 80,
+    "data_sensitivity": 70,
+    "business_value": 80,
+    "owner_department": "Engineering"
+  },
+  {
+    "asset_id": "ast_file_01",
+    "hostname": "file-share-prod.corp.internal",
+    "asset_type": "file_server",
+    "department": "Operations",
+    "criticality": 75,
+    "data_sensitivity": 85,
+    "business_value": 80,
+    "owner_department": "Operations"
+  },
+  {
+    "asset_id": "ast_email_01",
+    "hostname": "mail.corp.internal",
+    "asset_type": "email_server",
+    "department": "IT",
+    "criticality": 85,
+    "data_sensitivity": 80,
+    "business_value": 85,
+    "owner_department": "IT"
+  },
+  {
+    "asset_id": "ast_fw_01",
+    "hostname": "fw-edge-01.corp.internal",
+    "asset_type": "firewall",
+    "department": "Security",
+    "criticality": 90,
+    "data_sensitivity": 50,
+    "business_value": 90,
+    "owner_department": "Security"
+  },
+  {
+    "asset_id": "ast_cloud_01",
+    "hostname": "aws-prod-k8s.cloud.internal",
+    "asset_type": "cloud_server",
+    "department": "Engineering",
+    "criticality": 85,
+    "data_sensitivity": 80,
+    "business_value": 85,
+    "owner_department": "Engineering"
+  },
+  {
+    "asset_id": "ast_dev_db",
+    "hostname": "dev-db-01.corp.internal",
+    "asset_type": "database_server",
+    "department": "Engineering",
+    "criticality": 50,
+    "data_sensitivity": 55,
+    "business_value": 50,
+    "owner_department": "Engineering"
+  },
+  {
+    "asset_id": "ast_dev_app",
+    "hostname": "dev-app-01.corp.internal",
+    "asset_type": "application_server",
+    "department": "Engineering",
+    "criticality": 45,
+    "data_sensitivity": 40,
+    "business_value": 45,
+    "owner_department": "Engineering"
+  },
+  {
+    "asset_id": "ast_stage_web",
+    "hostname": "staging-web.corp.internal",
+    "asset_type": "web_server",
+    "department": "Engineering",
+    "criticality": 55,
+    "data_sensitivity": 45,
+    "business_value": 50,
+    "owner_department": "Engineering"
+  },
+  {
+    "asset_id": "ast_internal_tool",
+    "hostname": "wiki.corp.internal",
+    "asset_type": "application_server",
+    "department": "IT",
+    "criticality": 60,
+    "data_sensitivity": 60,
+    "business_value": 60,
+    "owner_department": "IT"
+  },
+  {
+    "asset_id": "ast_file_dev",
+    "hostname": "file-share-dev.corp.internal",
+    "asset_type": "file_server",
+    "department": "Engineering",
+    "criticality": 45,
+    "data_sensitivity": 50,
+    "business_value": 45,
+    "owner_department": "Engineering"
+  },
+  {
+    "asset_id": "ast_cloud_dev",
+    "hostname": "aws-dev-sandbox.cloud.internal",
+    "asset_type": "cloud_server",
+    "department": "Engineering",
+    "criticality": 40,
+    "data_sensitivity": 35,
+    "business_value": 40,
+    "owner_department": "Engineering"
+  },
+  {
+    "asset_id": "ast_test_01",
+    "hostname": "test-box-01.corp.internal",
+    "asset_type": "test_server",
+    "department": "IT",
+    "criticality": 20,
+    "data_sensitivity": 15,
+    "business_value": 20,
+    "owner_department": "IT"
+  },
+  {
+    "asset_id": "ast_test_02",
+    "hostname": "test-box-02.corp.internal",
+    "asset_type": "test_server",
+    "department": "IT",
+    "criticality": 15,
+    "data_sensitivity": 10,
+    "business_value": 15,
+    "owner_department": "IT"
+  },
+  {
+    "asset_id": "ast_wkst_01",
+    "hostname": "wkst-hr-01.corp.internal",
+    "asset_type": "laptop",
+    "department": "HR",
+    "criticality": 35,
+    "data_sensitivity": 13,
+    "business_value": 15,
+    "owner_department": "HR"
+  },
+  {
+    "asset_id": "ast_wkst_02",
+    "hostname": "wkst-it-02.corp.internal",
+    "asset_type": "workstation",
+    "department": "IT",
+    "criticality": 23,
+    "data_sensitivity": 17,
+    "business_value": 22,
+    "owner_department": "IT"
+  },
+  {
+    "asset_id": "ast_wkst_03",
+    "hostname": "wkst-engineering-03.corp.internal",
+    "asset_type": "laptop",
+    "department": "Engineering",
+    "criticality": 19,
+    "data_sensitivity": 13,
+    "business_value": 32,
+    "owner_department": "Engineering"
+  },
+  {
+    "asset_id": "ast_wkst_04",
+    "hostname": "wkst-sales-04.corp.internal",
+    "asset_type": "workstation",
+    "department": "Sales",
+    "criticality": 17,
+    "data_sensitivity": 28,
+    "business_value": 28,
+    "owner_department": "Sales"
+  },
+  {
+    "asset_id": "ast_wkst_05",
+    "hostname": "wkst-operations-05.corp.internal",
+    "asset_type": "laptop",
+    "department": "Operations",
+    "criticality": 16,
+    "data_sensitivity": 10,
+    "business_value": 17,
+    "owner_department": "Operations"
+  },
+  {
+    "asset_id": "ast_wkst_06",
+    "hostname": "wkst-security-06.corp.internal",
+    "asset_type": "workstation",
+    "department": "Security",
+    "criticality": 21,
+    "data_sensitivity": 17,
+    "business_value": 31,
+    "owner_department": "Security"
+  },
+  {
+    "asset_id": "ast_wkst_07",
+    "hostname": "wkst-executive-07.corp.internal",
+    "asset_type": "laptop",
+    "department": "Executive",
+    "criticality": 34,
+    "data_sensitivity": 10,
+    "business_value": 32,
+    "owner_department": "Executive"
+  },
+  {
+    "asset_id": "ast_wkst_08",
+    "hostname": "wkst-finance-08.corp.internal",
+    "asset_type": "workstation",
+    "department": "Finance",
+    "criticality": 21,
+    "data_sensitivity": 30,
+    "business_value": 32,
+    "owner_department": "Finance"
+  },
+  {
+    "asset_id": "ast_wkst_09",
+    "hostname": "wkst-hr-09.corp.internal",
+    "asset_type": "laptop",
+    "department": "HR",
+    "criticality": 28,
+    "data_sensitivity": 17,
+    "business_value": 29,
+    "owner_department": "HR"
+  },
+  {
+    "asset_id": "ast_wkst_10",
+    "hostname": "wkst-it-10.corp.internal",
+    "asset_type": "workstation",
+    "department": "IT",
+    "criticality": 33,
+    "data_sensitivity": 18,
+    "business_value": 15,
+    "owner_department": "IT"
+  },
+  {
+    "asset_id": "ast_wkst_11",
+    "hostname": "wkst-engineering-11.corp.internal",
+    "asset_type": "laptop",
+    "department": "Engineering",
+    "criticality": 20,
+    "data_sensitivity": 23,
+    "business_value": 25,
+    "owner_department": "Engineering"
+  },
+  {
+    "asset_id": "ast_wkst_12",
+    "hostname": "wkst-sales-12.corp.internal",
+    "asset_type": "workstation",
+    "department": "Sales",
+    "criticality": 23,
+    "data_sensitivity": 14,
+    "business_value": 21,
+    "owner_department": "Sales"
+  },
+  {
+    "asset_id": "ast_wkst_13",
+    "hostname": "wkst-operations-13.corp.internal",
+    "asset_type": "laptop",
+    "department": "Operations",
+    "criticality": 25,
+    "data_sensitivity": 13,
+    "business_value": 17,
+    "owner_department": "Operations"
+  },
+  {
+    "asset_id": "ast_wkst_14",
+    "hostname": "wkst-security-14.corp.internal",
+    "asset_type": "workstation",
+    "department": "Security",
+    "criticality": 27,
+    "data_sensitivity": 13,
+    "business_value": 26,
+    "owner_department": "Security"
+  }
+]

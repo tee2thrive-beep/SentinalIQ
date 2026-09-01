@@ -1,0 +1,265 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-09-01T06:03:36.011947+00:00",
+  "incident": {
+    "incident_id": "INC-0012",
+    "incident_type": "Multi-stage Attack",
+    "risk_score": 78.84,
+    "risk_level": "CRITICAL",
+    "priority_rank": 7,
+    "priority_band": "CRITICAL",
+    "first_seen": "2026-09-01T09:00:00+00:00",
+    "last_seen": "2026-09-01T09:48:54+00:00",
+    "alert_count": 6,
+    "affected_user_count": 2,
+    "tie_group_id": null
+  },
+  "executive_summary": "INC-0012 is a CRITICAL Multi-stage Attack ranked #7 in the SentinelIQ investigation queue with a defensible risk score of 78.84 / 100. The incident contains 6 correlated alerts affecting 2 unique user(s) and target asset(s) (file-share-prod.corp.internal, wkst-it-02.corp.internal). The primary risk drivers elevating this incident's priority rank are Severity, Business Impact, Asset Importance.",
+  "risk_analysis": {
+    "formula": "R = 0.20*S + 0.20*A + 0.10*U + 0.15*D + 0.15*C + 0.20*B",
+    "risk_score": 78.84,
+    "risk_level": "CRITICAL",
+    "factors": [
+      {
+        "name": "severity",
+        "value": 92.0,
+        "weight": 0.2,
+        "contribution": 18.4,
+        "status": "CRITICAL",
+        "source": "maximum_severity",
+        "evidence": "Maximum alert severity is 92.0 (average alert severity: 69.0)."
+      },
+      {
+        "name": "asset_importance",
+        "value": 77.0,
+        "weight": 0.2,
+        "contribution": 15.4,
+        "status": "CRITICAL",
+        "source": "incident_asset_importance",
+        "evidence": "Target asset normalized importance rating is 77.0."
+      },
+      {
+        "name": "affected_users",
+        "value": 15.9,
+        "weight": 0.1,
+        "contribution": 1.59,
+        "status": "LOW",
+        "source": "normalized_affected_users",
+        "evidence": "2 unique user(s) affected, logarithmically normalized to 15.9."
+      },
+      {
+        "name": "data_sensitivity",
+        "value": 85.0,
+        "weight": 0.15,
+        "contribution": 12.75,
+        "status": "CRITICAL",
+        "source": "incident_data_sensitivity",
+        "evidence": "Target asset data sensitivity rating is 85.0."
+      },
+      {
+        "name": "attack_confidence",
+        "value": 100.0,
+        "weight": 0.15,
+        "contribution": 15.0,
+        "status": "CRITICAL",
+        "source": "incident_confidence",
+        "evidence": "Corroborated incident attack confidence is 100.0 (max alert confidence: 95)."
+      },
+      {
+        "name": "business_impact",
+        "value": 78.5,
+        "weight": 0.2,
+        "contribution": 15.7,
+        "status": "CRITICAL",
+        "source": "incident_business_impact",
+        "evidence": "Potential business impact rating is 78.5."
+      }
+    ],
+    "dominant_factors": [
+      "severity",
+      "business_impact",
+      "asset_importance"
+    ],
+    "contribution_sum": 78.84
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-09-01T09:00:00+00:00",
+      "alert_id": "alt_0008",
+      "alert_type": "Suspicious Email",
+      "category": "Security Alert",
+      "severity": 50,
+      "confidence": 80.0,
+      "source_ip": "198.51.100.44",
+      "destination_ip": "192.168.1.106",
+      "user_id": "usr_hr_spec",
+      "username": "bob.johnson",
+      "asset_id": "ast_wkst_02",
+      "asset_name": "ast_wkst_02"
+    },
+    {
+      "timestamp": "2026-09-01T09:04:00+00:00",
+      "alert_id": "alt_0009",
+      "alert_type": "Suspicious PowerShell",
+      "category": "Security Alert",
+      "severity": 78,
+      "confidence": 80.0,
+      "source_ip": "192.168.1.106",
+      "destination_ip": "192.168.1.106",
+      "user_id": "usr_hr_spec",
+      "username": "bob.johnson",
+      "asset_id": "ast_wkst_02",
+      "asset_name": "ast_wkst_02"
+    },
+    {
+      "timestamp": "2026-09-01T09:08:00+00:00",
+      "alert_id": "alt_0010",
+      "alert_type": "Malware Detection",
+      "category": "Security Alert",
+      "severity": 85,
+      "confidence": 80.0,
+      "source_ip": "192.168.1.106",
+      "destination_ip": "192.168.1.106",
+      "user_id": "usr_hr_spec",
+      "username": "bob.johnson",
+      "asset_id": "ast_wkst_02",
+      "asset_name": "ast_wkst_02"
+    },
+    {
+      "timestamp": "2026-09-01T09:13:20+00:00",
+      "alert_id": "alt_0011",
+      "alert_type": "Command and Control",
+      "category": "Security Alert",
+      "severity": 92,
+      "confidence": 80.0,
+      "source_ip": "192.168.1.106",
+      "destination_ip": "198.51.100.44",
+      "user_id": "usr_hr_spec",
+      "username": "bob.johnson",
+      "asset_id": "ast_wkst_02",
+      "asset_name": "ast_wkst_02"
+    },
+    {
+      "timestamp": "2026-09-01T09:20:00+00:00",
+      "alert_id": "alt_0012",
+      "alert_type": "Lateral Movement",
+      "category": "Security Alert",
+      "severity": 82,
+      "confidence": 80.0,
+      "source_ip": "192.168.1.106",
+      "destination_ip": "10.0.3.15",
+      "user_id": "usr_hr_spec",
+      "username": "bob.johnson",
+      "asset_id": "ast_file_01",
+      "asset_name": "ast_file_01"
+    },
+    {
+      "timestamp": "2026-09-01T09:48:54+00:00",
+      "alert_id": "alt_0108",
+      "alert_type": "Command and Control",
+      "category": "Security Alert",
+      "severity": 27,
+      "confidence": 80.0,
+      "source_ip": "192.168.1.186",
+      "destination_ip": "10.0.1.106",
+      "user_id": "usr_042",
+      "username": "quinn.taylor42",
+      "asset_id": "ast_file_01",
+      "asset_name": "ast_file_01"
+    }
+  ],
+  "correlation_evidence": [],
+  "classification": {
+    "incident_type": "Multi-stage Attack",
+    "classification_evidence": [
+      "Incident contains 6 alert(s) matching Multi-stage Attack threat patterns.",
+      "Highest alert severity: 92.0"
+    ]
+  },
+  "affected_users": [
+    {
+      "user_id": "usr_042",
+      "username": "quinn.taylor42",
+      "role": "Systems Administrator",
+      "department": "IT",
+      "privilege_level": "administrator"
+    },
+    {
+      "user_id": "usr_hr_spec",
+      "username": "bob.johnson",
+      "role": "HR Specialist",
+      "department": "HR",
+      "privilege_level": "standard"
+    }
+  ],
+  "affected_assets": [
+    {
+      "asset_id": "ast_file_01",
+      "name": "file-share-prod.corp.internal",
+      "asset_type": "file_server",
+      "criticality": 75,
+      "business_impact": 80.0,
+      "data_sensitivity": 85
+    },
+    {
+      "asset_id": "ast_wkst_02",
+      "name": "wkst-it-02.corp.internal",
+      "asset_type": "workstation",
+      "criticality": 23,
+      "business_impact": 80.0,
+      "data_sensitivity": 17
+    }
+  ],
+  "priority_explanation": {
+    "priority_rank": 7,
+    "risk_score": 78.84,
+    "risk_level": "CRITICAL",
+    "tie_group_id": null,
+    "primary_reason": "Higher risk score",
+    "compared_with_next": {
+      "incident_id": "INC-0045",
+      "risk_score": 78.34,
+      "score_difference": 0.5,
+      "deciding_factor": "risk_score"
+    }
+  },
+  "recommendations": [
+    {
+      "type": "automated recommendation",
+      "action": "Isolate Affected Entity",
+      "priority": "IMMEDIATE",
+      "details": "Restrict network access for compromised assets or users involved in the incident.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Preserve Security Logs",
+      "priority": "HIGH",
+      "details": "Collect firewall, SIEM, and host endpoint event logs for root cause analysis.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Audit Account Credentials",
+      "priority": "HIGH",
+      "details": "Reset passwords and review privileges for all accounts associated with the incident alerts.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Monitor Target Subnet",
+      "priority": "MEDIUM",
+      "details": "Enable heightened logging and IDS monitoring across adjacent network subnets.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    }
+  ],
+  "limitations": [
+    "AUTOMATED REPORT DISCLAIMER: Recommendations listed in this report are automated policy-based guidance generated for SOC analysts. They represent suggested investigation/containment actions and do not imply that automated mitigation has been executed.",
+    "Prioritization is based on batch snapshot data. Live streaming telemetry will update queue dynamically.",
+    "Asset importance and data sensitivity values reflect configured CMDB asset tags."
+  ]
+}

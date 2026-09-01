@@ -1,0 +1,180 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-09-01T06:03:36.031241+00:00",
+  "incident": {
+    "incident_id": "INC-0032",
+    "incident_type": "Suspicious DNS Event",
+    "risk_score": 60.75,
+    "risk_level": "HIGH",
+    "priority_rank": 34,
+    "priority_band": "HIGH",
+    "first_seen": "2026-09-01T11:59:01+00:00",
+    "last_seen": "2026-09-01T11:59:01+00:00",
+    "alert_count": 1,
+    "affected_user_count": 1,
+    "tie_group_id": null
+  },
+  "executive_summary": "INC-0032 is a HIGH Suspicious DNS Event ranked #34 in the SentinelIQ investigation queue with a defensible risk score of 60.75 / 100. The incident contains 1 correlated alerts affecting 1 unique user(s) and target asset(s) (app-prod-01.corp.internal). The primary risk drivers elevating this incident's priority rank are Asset Importance, Business Impact, Data Sensitivity.",
+  "risk_analysis": {
+    "formula": "R = 0.20*S + 0.20*A + 0.10*U + 0.15*D + 0.15*C + 0.20*B",
+    "risk_score": 60.75,
+    "risk_level": "HIGH",
+    "factors": [
+      {
+        "name": "severity",
+        "value": 34.0,
+        "weight": 0.2,
+        "contribution": 6.8,
+        "status": "MEDIUM",
+        "source": "maximum_severity",
+        "evidence": "Maximum alert severity is 34.0 (average alert severity: 34.0)."
+      },
+      {
+        "name": "asset_importance",
+        "value": 85.0,
+        "weight": 0.2,
+        "contribution": 17.0,
+        "status": "CRITICAL",
+        "source": "incident_asset_importance",
+        "evidence": "Target asset normalized importance rating is 85.0."
+      },
+      {
+        "name": "affected_users",
+        "value": 10.03,
+        "weight": 0.1,
+        "contribution": 1.003,
+        "status": "LOW",
+        "source": "normalized_affected_users",
+        "evidence": "1 unique user(s) affected, logarithmically normalized to 10.03."
+      },
+      {
+        "name": "data_sensitivity",
+        "value": 75.0,
+        "weight": 0.15,
+        "contribution": 11.25,
+        "status": "CRITICAL",
+        "source": "incident_data_sensitivity",
+        "evidence": "Target asset data sensitivity rating is 75.0."
+      },
+      {
+        "name": "attack_confidence",
+        "value": 54.0,
+        "weight": 0.15,
+        "contribution": 8.1,
+        "status": "HIGH",
+        "source": "incident_confidence",
+        "evidence": "Corroborated incident attack confidence is 54.0 (max alert confidence: 54)."
+      },
+      {
+        "name": "business_impact",
+        "value": 83.0,
+        "weight": 0.2,
+        "contribution": 16.6,
+        "status": "CRITICAL",
+        "source": "incident_business_impact",
+        "evidence": "Potential business impact rating is 83.0."
+      }
+    ],
+    "dominant_factors": [
+      "asset_importance",
+      "business_impact",
+      "data_sensitivity"
+    ],
+    "contribution_sum": 60.75
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-09-01T11:59:01+00:00",
+      "alert_id": "alt_0058",
+      "alert_type": "Suspicious DNS",
+      "category": "Security Alert",
+      "severity": 34,
+      "confidence": 80.0,
+      "source_ip": "192.168.5.120",
+      "destination_ip": "10.0.1.144",
+      "user_id": "usr_016",
+      "username": "emma.rodriguez16",
+      "asset_id": "ast_app_01",
+      "asset_name": "ast_app_01"
+    }
+  ],
+  "correlation_evidence": [],
+  "classification": {
+    "incident_type": "Suspicious DNS Event",
+    "classification_evidence": [
+      "Incident contains 1 alert(s) matching Suspicious DNS Event threat patterns.",
+      "Highest alert severity: 34.0"
+    ]
+  },
+  "affected_users": [
+    {
+      "user_id": "usr_016",
+      "username": "emma.rodriguez16",
+      "role": "Helpdesk Technician",
+      "department": "IT",
+      "privilege_level": "elevated"
+    }
+  ],
+  "affected_assets": [
+    {
+      "asset_id": "ast_app_01",
+      "name": "app-prod-01.corp.internal",
+      "asset_type": "application_server",
+      "criticality": 85,
+      "business_impact": 80.0,
+      "data_sensitivity": 75
+    }
+  ],
+  "priority_explanation": {
+    "priority_rank": 34,
+    "risk_score": 60.75,
+    "risk_level": "HIGH",
+    "tie_group_id": null,
+    "primary_reason": "Higher risk score",
+    "compared_with_next": {
+      "incident_id": "INC-0009",
+      "risk_score": 60.65,
+      "score_difference": 0.1,
+      "deciding_factor": "risk_score"
+    }
+  },
+  "recommendations": [
+    {
+      "type": "automated recommendation",
+      "action": "Isolate Affected Entity",
+      "priority": "IMMEDIATE",
+      "details": "Restrict network access for compromised assets or users involved in the incident.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Preserve Security Logs",
+      "priority": "HIGH",
+      "details": "Collect firewall, SIEM, and host endpoint event logs for root cause analysis.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Audit Account Credentials",
+      "priority": "HIGH",
+      "details": "Reset passwords and review privileges for all accounts associated with the incident alerts.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Monitor Target Subnet",
+      "priority": "MEDIUM",
+      "details": "Enable heightened logging and IDS monitoring across adjacent network subnets.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    }
+  ],
+  "limitations": [
+    "AUTOMATED REPORT DISCLAIMER: Recommendations listed in this report are automated policy-based guidance generated for SOC analysts. They represent suggested investigation/containment actions and do not imply that automated mitigation has been executed.",
+    "Prioritization is based on batch snapshot data. Live streaming telemetry will update queue dynamically.",
+    "Asset importance and data sensitivity values reflect configured CMDB asset tags."
+  ]
+}

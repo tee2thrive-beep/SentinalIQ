@@ -1,0 +1,1001 @@
+[
+  {
+    "incident_id": "INC-0021",
+    "incident_type": "Multi-stage Attack",
+    "risk_score": 90.2,
+    "risk_level": "CRITICAL",
+    "priority_rank": 1,
+    "report_path_json": "data/reports/INC-0021.json",
+    "report_path_md": "data/reports/markdown/INC-0021.md"
+  },
+  {
+    "incident_id": "INC-0001",
+    "incident_type": "Data Exfiltration",
+    "risk_score": 89.5,
+    "risk_level": "CRITICAL",
+    "priority_rank": 2,
+    "report_path_json": "data/reports/INC-0001.json",
+    "report_path_md": "data/reports/markdown/INC-0001.md"
+  },
+  {
+    "incident_id": "INC-0028",
+    "incident_type": "Data Exfiltration",
+    "risk_score": 86.55,
+    "risk_level": "CRITICAL",
+    "priority_rank": 3,
+    "report_path_json": "data/reports/INC-0028.json",
+    "report_path_md": "data/reports/markdown/INC-0028.md"
+  },
+  {
+    "incident_id": "INC-0058",
+    "incident_type": "Multi-stage Attack",
+    "risk_score": 85.95,
+    "risk_level": "CRITICAL",
+    "priority_rank": 4,
+    "report_path_json": "data/reports/INC-0058.json",
+    "report_path_md": "data/reports/markdown/INC-0058.md"
+  },
+  {
+    "incident_id": "INC-0033",
+    "incident_type": "Ransomware Outbreak",
+    "risk_score": 79.45,
+    "risk_level": "CRITICAL",
+    "priority_rank": 5,
+    "report_path_json": "data/reports/INC-0033.json",
+    "report_path_md": "data/reports/markdown/INC-0033.md"
+  },
+  {
+    "incident_id": "INC-0066",
+    "incident_type": "Data Exfiltration",
+    "risk_score": 78.85,
+    "risk_level": "CRITICAL",
+    "priority_rank": 6,
+    "report_path_json": "data/reports/INC-0066.json",
+    "report_path_md": "data/reports/markdown/INC-0066.md"
+  },
+  {
+    "incident_id": "INC-0012",
+    "incident_type": "Multi-stage Attack",
+    "risk_score": 78.84,
+    "risk_level": "CRITICAL",
+    "priority_rank": 7,
+    "report_path_json": "data/reports/INC-0012.json",
+    "report_path_md": "data/reports/markdown/INC-0012.md"
+  },
+  {
+    "incident_id": "INC-0045",
+    "incident_type": "DDoS Attack",
+    "risk_score": 78.34,
+    "risk_level": "CRITICAL",
+    "priority_rank": 8,
+    "report_path_json": "data/reports/INC-0045.json",
+    "report_path_md": "data/reports/markdown/INC-0045.md"
+  },
+  {
+    "incident_id": "INC-0042",
+    "incident_type": "Malware Infection",
+    "risk_score": 76.0,
+    "risk_level": "CRITICAL",
+    "priority_rank": 9,
+    "report_path_json": "data/reports/INC-0042.json",
+    "report_path_md": "data/reports/markdown/INC-0042.md"
+  },
+  {
+    "incident_id": "INC-0008",
+    "incident_type": "Unauthorized Access Event",
+    "risk_score": 74.35,
+    "risk_level": "HIGH",
+    "priority_rank": 10,
+    "report_path_json": "data/reports/INC-0008.json",
+    "report_path_md": "data/reports/markdown/INC-0008.md"
+  },
+  {
+    "incident_id": "INC-0026",
+    "incident_type": "Malware Infection",
+    "risk_score": 74.3,
+    "risk_level": "HIGH",
+    "priority_rank": 11,
+    "report_path_json": "data/reports/INC-0026.json",
+    "report_path_md": "data/reports/markdown/INC-0026.md"
+  },
+  {
+    "incident_id": "INC-0073",
+    "incident_type": "Successful Login Event",
+    "risk_score": 72.6,
+    "risk_level": "HIGH",
+    "priority_rank": 12,
+    "report_path_json": "data/reports/INC-0073.json",
+    "report_path_md": "data/reports/markdown/INC-0073.md"
+  },
+  {
+    "incident_id": "INC-0031",
+    "incident_type": "Failed Login Event",
+    "risk_score": 72.3,
+    "risk_level": "HIGH",
+    "priority_rank": 13,
+    "report_path_json": "data/reports/INC-0031.json",
+    "report_path_md": "data/reports/markdown/INC-0031.md"
+  },
+  {
+    "incident_id": "INC-0017",
+    "incident_type": "Suspicious DNS Event",
+    "risk_score": 72.05,
+    "risk_level": "HIGH",
+    "priority_rank": 14,
+    "report_path_json": "data/reports/INC-0017.json",
+    "report_path_md": "data/reports/markdown/INC-0017.md"
+  },
+  {
+    "incident_id": "INC-0098",
+    "incident_type": "Malware Infection",
+    "risk_score": 71.35,
+    "risk_level": "HIGH",
+    "priority_rank": 15,
+    "report_path_json": "data/reports/INC-0098.json",
+    "report_path_md": "data/reports/markdown/INC-0098.md"
+  },
+  {
+    "incident_id": "INC-0054",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 71.25,
+    "risk_level": "HIGH",
+    "priority_rank": 16,
+    "report_path_json": "data/reports/INC-0054.json",
+    "report_path_md": "data/reports/markdown/INC-0054.md"
+  },
+  {
+    "incident_id": "INC-0096",
+    "incident_type": "Malware Infection",
+    "risk_score": 70.15,
+    "risk_level": "HIGH",
+    "priority_rank": 17,
+    "report_path_json": "data/reports/INC-0096.json",
+    "report_path_md": "data/reports/markdown/INC-0096.md"
+  },
+  {
+    "incident_id": "INC-0059",
+    "incident_type": "Command and Control Event",
+    "risk_score": 68.7,
+    "risk_level": "HIGH",
+    "priority_rank": 18,
+    "report_path_json": "data/reports/INC-0059.json",
+    "report_path_md": "data/reports/markdown/INC-0059.md"
+  },
+  {
+    "incident_id": "INC-0107",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 68.1,
+    "risk_level": "HIGH",
+    "priority_rank": 19,
+    "report_path_json": "data/reports/INC-0107.json",
+    "report_path_md": "data/reports/markdown/INC-0107.md"
+  },
+  {
+    "incident_id": "INC-0002",
+    "incident_type": "Suspicious DNS Event",
+    "risk_score": 67.65,
+    "risk_level": "HIGH",
+    "priority_rank": 20,
+    "report_path_json": "data/reports/INC-0002.json",
+    "report_path_md": "data/reports/markdown/INC-0002.md"
+  },
+  {
+    "incident_id": "INC-0047",
+    "incident_type": "Malware Infection",
+    "risk_score": 66.9,
+    "risk_level": "HIGH",
+    "priority_rank": 21,
+    "report_path_json": "data/reports/INC-0047.json",
+    "report_path_md": "data/reports/markdown/INC-0047.md"
+  },
+  {
+    "incident_id": "INC-0050",
+    "incident_type": "Malware Infection",
+    "risk_score": 65.25,
+    "risk_level": "HIGH",
+    "priority_rank": 22,
+    "report_path_json": "data/reports/INC-0050.json",
+    "report_path_md": "data/reports/markdown/INC-0050.md"
+  },
+  {
+    "incident_id": "INC-0099",
+    "incident_type": "Port Scan Event",
+    "risk_score": 64.8,
+    "risk_level": "HIGH",
+    "priority_rank": 23,
+    "report_path_json": "data/reports/INC-0099.json",
+    "report_path_md": "data/reports/markdown/INC-0099.md"
+  },
+  {
+    "incident_id": "INC-0110",
+    "incident_type": "Port Scan Event",
+    "risk_score": 64.7,
+    "risk_level": "HIGH",
+    "priority_rank": 24,
+    "report_path_json": "data/reports/INC-0110.json",
+    "report_path_md": "data/reports/markdown/INC-0110.md"
+  },
+  {
+    "incident_id": "INC-0011",
+    "incident_type": "Suspicious DNS Event",
+    "risk_score": 64.35,
+    "risk_level": "HIGH",
+    "priority_rank": 25,
+    "report_path_json": "data/reports/INC-0011.json",
+    "report_path_md": "data/reports/markdown/INC-0011.md"
+  },
+  {
+    "incident_id": "INC-0037",
+    "incident_type": "Unauthorized Access Event",
+    "risk_score": 63.89,
+    "risk_level": "HIGH",
+    "priority_rank": 26,
+    "report_path_json": "data/reports/INC-0037.json",
+    "report_path_md": "data/reports/markdown/INC-0037.md"
+  },
+  {
+    "incident_id": "INC-0087",
+    "incident_type": "Malware Infection",
+    "risk_score": 63.15,
+    "risk_level": "HIGH",
+    "priority_rank": 27,
+    "report_path_json": "data/reports/INC-0087.json",
+    "report_path_md": "data/reports/markdown/INC-0087.md"
+  },
+  {
+    "incident_id": "INC-0069",
+    "incident_type": "Port Scan Event",
+    "risk_score": 62.0,
+    "risk_level": "HIGH",
+    "priority_rank": 28,
+    "report_path_json": "data/reports/INC-0069.json",
+    "report_path_md": "data/reports/markdown/INC-0069.md"
+  },
+  {
+    "incident_id": "INC-0093",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 61.95,
+    "risk_level": "HIGH",
+    "priority_rank": 29,
+    "report_path_json": "data/reports/INC-0093.json",
+    "report_path_md": "data/reports/markdown/INC-0093.md"
+  },
+  {
+    "incident_id": "INC-0095",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 61.45,
+    "risk_level": "HIGH",
+    "priority_rank": 30,
+    "report_path_json": "data/reports/INC-0095.json",
+    "report_path_md": "data/reports/markdown/INC-0095.md"
+  },
+  {
+    "incident_id": "INC-0015",
+    "incident_type": "Unauthorized Access Event",
+    "risk_score": 61.4,
+    "risk_level": "HIGH",
+    "priority_rank": 31,
+    "report_path_json": "data/reports/INC-0015.json",
+    "report_path_md": "data/reports/markdown/INC-0015.md"
+  },
+  {
+    "incident_id": "INC-0081",
+    "incident_type": "Unauthorized Access Event",
+    "risk_score": 61.4,
+    "risk_level": "HIGH",
+    "priority_rank": 32,
+    "report_path_json": "data/reports/INC-0081.json",
+    "report_path_md": "data/reports/markdown/INC-0081.md"
+  },
+  {
+    "incident_id": "INC-0074",
+    "incident_type": "Unauthorized Access Event",
+    "risk_score": 61.05,
+    "risk_level": "HIGH",
+    "priority_rank": 33,
+    "report_path_json": "data/reports/INC-0074.json",
+    "report_path_md": "data/reports/markdown/INC-0074.md"
+  },
+  {
+    "incident_id": "INC-0032",
+    "incident_type": "Suspicious DNS Event",
+    "risk_score": 60.75,
+    "risk_level": "HIGH",
+    "priority_rank": 34,
+    "report_path_json": "data/reports/INC-0032.json",
+    "report_path_md": "data/reports/markdown/INC-0032.md"
+  },
+  {
+    "incident_id": "INC-0009",
+    "incident_type": "Unauthorized Access Event",
+    "risk_score": 60.65,
+    "risk_level": "HIGH",
+    "priority_rank": 35,
+    "report_path_json": "data/reports/INC-0009.json",
+    "report_path_md": "data/reports/markdown/INC-0009.md"
+  },
+  {
+    "incident_id": "INC-0109",
+    "incident_type": "Suspicious DNS Event",
+    "risk_score": 60.65,
+    "risk_level": "HIGH",
+    "priority_rank": 36,
+    "report_path_json": "data/reports/INC-0109.json",
+    "report_path_md": "data/reports/markdown/INC-0109.md"
+  },
+  {
+    "incident_id": "INC-0035",
+    "incident_type": "Failed Login Event",
+    "risk_score": 60.6,
+    "risk_level": "HIGH",
+    "priority_rank": 37,
+    "report_path_json": "data/reports/INC-0035.json",
+    "report_path_md": "data/reports/markdown/INC-0035.md"
+  },
+  {
+    "incident_id": "INC-0056",
+    "incident_type": "Failed Login Event",
+    "risk_score": 60.5,
+    "risk_level": "HIGH",
+    "priority_rank": 38,
+    "report_path_json": "data/reports/INC-0056.json",
+    "report_path_md": "data/reports/markdown/INC-0056.md"
+  },
+  {
+    "incident_id": "INC-0077",
+    "incident_type": "Command and Control Event",
+    "risk_score": 60.2,
+    "risk_level": "HIGH",
+    "priority_rank": 39,
+    "report_path_json": "data/reports/INC-0077.json",
+    "report_path_md": "data/reports/markdown/INC-0077.md"
+  },
+  {
+    "incident_id": "INC-0022",
+    "incident_type": "Command and Control Event",
+    "risk_score": 59.95,
+    "risk_level": "HIGH",
+    "priority_rank": 40,
+    "report_path_json": "data/reports/INC-0022.json",
+    "report_path_md": "data/reports/markdown/INC-0022.md"
+  },
+  {
+    "incident_id": "INC-0063",
+    "incident_type": "Command and Control Event",
+    "risk_score": 59.95,
+    "risk_level": "HIGH",
+    "priority_rank": 41,
+    "report_path_json": "data/reports/INC-0063.json",
+    "report_path_md": "data/reports/markdown/INC-0063.md"
+  },
+  {
+    "incident_id": "INC-0036",
+    "incident_type": "Successful Login Event",
+    "risk_score": 59.75,
+    "risk_level": "HIGH",
+    "priority_rank": 42,
+    "report_path_json": "data/reports/INC-0036.json",
+    "report_path_md": "data/reports/markdown/INC-0036.md"
+  },
+  {
+    "incident_id": "INC-0007",
+    "incident_type": "Failed Login Event",
+    "risk_score": 59.6,
+    "risk_level": "HIGH",
+    "priority_rank": 43,
+    "report_path_json": "data/reports/INC-0007.json",
+    "report_path_md": "data/reports/markdown/INC-0007.md"
+  },
+  {
+    "incident_id": "INC-0088",
+    "incident_type": "Malware Infection",
+    "risk_score": 59.2,
+    "risk_level": "HIGH",
+    "priority_rank": 44,
+    "report_path_json": "data/reports/INC-0088.json",
+    "report_path_md": "data/reports/markdown/INC-0088.md"
+  },
+  {
+    "incident_id": "INC-0106",
+    "incident_type": "Failed Login Event",
+    "risk_score": 56.85,
+    "risk_level": "HIGH",
+    "priority_rank": 45,
+    "report_path_json": "data/reports/INC-0106.json",
+    "report_path_md": "data/reports/markdown/INC-0106.md"
+  },
+  {
+    "incident_id": "INC-0013",
+    "incident_type": "Unauthorized Access Event",
+    "risk_score": 56.4,
+    "risk_level": "HIGH",
+    "priority_rank": 46,
+    "report_path_json": "data/reports/INC-0013.json",
+    "report_path_md": "data/reports/markdown/INC-0013.md"
+  },
+  {
+    "incident_id": "INC-0108",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 55.35,
+    "risk_level": "HIGH",
+    "priority_rank": 47,
+    "report_path_json": "data/reports/INC-0108.json",
+    "report_path_md": "data/reports/markdown/INC-0108.md"
+  },
+  {
+    "incident_id": "INC-0085",
+    "incident_type": "Malware Infection",
+    "risk_score": 52.9,
+    "risk_level": "HIGH",
+    "priority_rank": 48,
+    "report_path_json": "data/reports/INC-0085.json",
+    "report_path_md": "data/reports/markdown/INC-0085.md"
+  },
+  {
+    "incident_id": "INC-0039",
+    "incident_type": "Suspicious DNS Event",
+    "risk_score": 48.75,
+    "risk_level": "MEDIUM",
+    "priority_rank": 49,
+    "report_path_json": "data/reports/INC-0039.json",
+    "report_path_md": "data/reports/markdown/INC-0039.md"
+  },
+  {
+    "incident_id": "INC-0103",
+    "incident_type": "Failed Login Event",
+    "risk_score": 47.15,
+    "risk_level": "MEDIUM",
+    "priority_rank": 50,
+    "report_path_json": "data/reports/INC-0103.json",
+    "report_path_md": "data/reports/markdown/INC-0103.md"
+  },
+  {
+    "incident_id": "INC-0101",
+    "incident_type": "Malware Infection",
+    "risk_score": 46.9,
+    "risk_level": "MEDIUM",
+    "priority_rank": 51,
+    "report_path_json": "data/reports/INC-0101.json",
+    "report_path_md": "data/reports/markdown/INC-0101.md"
+  },
+  {
+    "incident_id": "INC-0070",
+    "incident_type": "Unauthorized Access Event",
+    "risk_score": 45.9,
+    "risk_level": "MEDIUM",
+    "priority_rank": 52,
+    "report_path_json": "data/reports/INC-0070.json",
+    "report_path_md": "data/reports/markdown/INC-0070.md"
+  },
+  {
+    "incident_id": "INC-0090",
+    "incident_type": "Unauthorized Access Event",
+    "risk_score": 45.9,
+    "risk_level": "MEDIUM",
+    "priority_rank": 53,
+    "report_path_json": "data/reports/INC-0090.json",
+    "report_path_md": "data/reports/markdown/INC-0090.md"
+  },
+  {
+    "incident_id": "INC-0094",
+    "incident_type": "Unauthorized Access Event",
+    "risk_score": 44.2,
+    "risk_level": "MEDIUM",
+    "priority_rank": 54,
+    "report_path_json": "data/reports/INC-0094.json",
+    "report_path_md": "data/reports/markdown/INC-0094.md"
+  },
+  {
+    "incident_id": "INC-0065",
+    "incident_type": "Malware Infection",
+    "risk_score": 44.05,
+    "risk_level": "MEDIUM",
+    "priority_rank": 55,
+    "report_path_json": "data/reports/INC-0065.json",
+    "report_path_md": "data/reports/markdown/INC-0065.md"
+  },
+  {
+    "incident_id": "INC-0072",
+    "incident_type": "Suspicious DNS Event",
+    "risk_score": 43.65,
+    "risk_level": "MEDIUM",
+    "priority_rank": 56,
+    "report_path_json": "data/reports/INC-0072.json",
+    "report_path_md": "data/reports/markdown/INC-0072.md"
+  },
+  {
+    "incident_id": "INC-0091",
+    "incident_type": "Successful Login Event",
+    "risk_score": 42.6,
+    "risk_level": "MEDIUM",
+    "priority_rank": 57,
+    "report_path_json": "data/reports/INC-0091.json",
+    "report_path_md": "data/reports/markdown/INC-0091.md"
+  },
+  {
+    "incident_id": "INC-0053",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 42.4,
+    "risk_level": "MEDIUM",
+    "priority_rank": 58,
+    "report_path_json": "data/reports/INC-0053.json",
+    "report_path_md": "data/reports/markdown/INC-0053.md"
+  },
+  {
+    "incident_id": "INC-0105",
+    "incident_type": "Malware Infection",
+    "risk_score": 42.35,
+    "risk_level": "MEDIUM",
+    "priority_rank": 59,
+    "report_path_json": "data/reports/INC-0105.json",
+    "report_path_md": "data/reports/markdown/INC-0105.md"
+  },
+  {
+    "incident_id": "INC-0075",
+    "incident_type": "Port Scan Event",
+    "risk_score": 41.2,
+    "risk_level": "MEDIUM",
+    "priority_rank": 60,
+    "report_path_json": "data/reports/INC-0075.json",
+    "report_path_md": "data/reports/markdown/INC-0075.md"
+  },
+  {
+    "incident_id": "INC-0097",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 38.6,
+    "risk_level": "MEDIUM",
+    "priority_rank": 61,
+    "report_path_json": "data/reports/INC-0097.json",
+    "report_path_md": "data/reports/markdown/INC-0097.md"
+  },
+  {
+    "incident_id": "INC-0111",
+    "incident_type": "Malware Infection",
+    "risk_score": 37.68,
+    "risk_level": "MEDIUM",
+    "priority_rank": 62,
+    "report_path_json": "data/reports/INC-0111.json",
+    "report_path_md": "data/reports/markdown/INC-0111.md"
+  },
+  {
+    "incident_id": "INC-0062",
+    "incident_type": "Suspicious DNS Event",
+    "risk_score": 37.35,
+    "risk_level": "MEDIUM",
+    "priority_rank": 63,
+    "report_path_json": "data/reports/INC-0062.json",
+    "report_path_md": "data/reports/markdown/INC-0062.md"
+  },
+  {
+    "incident_id": "INC-0100",
+    "incident_type": "Malware Infection",
+    "risk_score": 34.81,
+    "risk_level": "MEDIUM",
+    "priority_rank": 64,
+    "report_path_json": "data/reports/INC-0100.json",
+    "report_path_md": "data/reports/markdown/INC-0100.md"
+  },
+  {
+    "incident_id": "INC-0080",
+    "incident_type": "Port Scan Event",
+    "risk_score": 33.95,
+    "risk_level": "MEDIUM",
+    "priority_rank": 65,
+    "report_path_json": "data/reports/INC-0080.json",
+    "report_path_md": "data/reports/markdown/INC-0080.md"
+  },
+  {
+    "incident_id": "INC-0018",
+    "incident_type": "Failed Login Event",
+    "risk_score": 32.65,
+    "risk_level": "MEDIUM",
+    "priority_rank": 66,
+    "report_path_json": "data/reports/INC-0018.json",
+    "report_path_md": "data/reports/markdown/INC-0018.md"
+  },
+  {
+    "incident_id": "INC-0020",
+    "incident_type": "Successful Login Event",
+    "risk_score": 32.31,
+    "risk_level": "MEDIUM",
+    "priority_rank": 67,
+    "report_path_json": "data/reports/INC-0020.json",
+    "report_path_md": "data/reports/markdown/INC-0020.md"
+  },
+  {
+    "incident_id": "INC-0030",
+    "incident_type": "Malware Infection",
+    "risk_score": 31.8,
+    "risk_level": "MEDIUM",
+    "priority_rank": 68,
+    "report_path_json": "data/reports/INC-0030.json",
+    "report_path_md": "data/reports/markdown/INC-0030.md"
+  },
+  {
+    "incident_id": "INC-0079",
+    "incident_type": "Malware Infection",
+    "risk_score": 31.36,
+    "risk_level": "MEDIUM",
+    "priority_rank": 69,
+    "report_path_json": "data/reports/INC-0079.json",
+    "report_path_md": "data/reports/markdown/INC-0079.md"
+  },
+  {
+    "incident_id": "INC-0040",
+    "incident_type": "Malware Infection",
+    "risk_score": 31.32,
+    "risk_level": "MEDIUM",
+    "priority_rank": 70,
+    "report_path_json": "data/reports/INC-0040.json",
+    "report_path_md": "data/reports/markdown/INC-0040.md"
+  },
+  {
+    "incident_id": "INC-0005",
+    "incident_type": "Successful Login Event",
+    "risk_score": 31.28,
+    "risk_level": "MEDIUM",
+    "priority_rank": 71,
+    "report_path_json": "data/reports/INC-0005.json",
+    "report_path_md": "data/reports/markdown/INC-0005.md"
+  },
+  {
+    "incident_id": "INC-0016",
+    "incident_type": "Malware Infection",
+    "risk_score": 31.15,
+    "risk_level": "MEDIUM",
+    "priority_rank": 72,
+    "report_path_json": "data/reports/INC-0016.json",
+    "report_path_md": "data/reports/markdown/INC-0016.md"
+  },
+  {
+    "incident_id": "INC-0038",
+    "incident_type": "Suspicious DNS Event",
+    "risk_score": 31.12,
+    "risk_level": "MEDIUM",
+    "priority_rank": 73,
+    "report_path_json": "data/reports/INC-0038.json",
+    "report_path_md": "data/reports/markdown/INC-0038.md"
+  },
+  {
+    "incident_id": "INC-0041",
+    "incident_type": "Successful Login Event",
+    "risk_score": 30.31,
+    "risk_level": "MEDIUM",
+    "priority_rank": 74,
+    "report_path_json": "data/reports/INC-0041.json",
+    "report_path_md": "data/reports/markdown/INC-0041.md"
+  },
+  {
+    "incident_id": "INC-0067",
+    "incident_type": "Command and Control Event",
+    "risk_score": 30.15,
+    "risk_level": "MEDIUM",
+    "priority_rank": 75,
+    "report_path_json": "data/reports/INC-0067.json",
+    "report_path_md": "data/reports/markdown/INC-0067.md"
+  },
+  {
+    "incident_id": "INC-0064",
+    "incident_type": "Command and Control Event",
+    "risk_score": 30.02,
+    "risk_level": "MEDIUM",
+    "priority_rank": 76,
+    "report_path_json": "data/reports/INC-0064.json",
+    "report_path_md": "data/reports/markdown/INC-0064.md"
+  },
+  {
+    "incident_id": "INC-0025",
+    "incident_type": "Malware Infection",
+    "risk_score": 29.95,
+    "risk_level": "MEDIUM",
+    "priority_rank": 77,
+    "report_path_json": "data/reports/INC-0025.json",
+    "report_path_md": "data/reports/markdown/INC-0025.md"
+  },
+  {
+    "incident_id": "INC-0078",
+    "incident_type": "Failed Login Event",
+    "risk_score": 29.9,
+    "risk_level": "MEDIUM",
+    "priority_rank": 78,
+    "report_path_json": "data/reports/INC-0078.json",
+    "report_path_md": "data/reports/markdown/INC-0078.md"
+  },
+  {
+    "incident_id": "INC-0068",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 29.86,
+    "risk_level": "MEDIUM",
+    "priority_rank": 79,
+    "report_path_json": "data/reports/INC-0068.json",
+    "report_path_md": "data/reports/markdown/INC-0068.md"
+  },
+  {
+    "incident_id": "INC-0061",
+    "incident_type": "Malware Infection",
+    "risk_score": 29.72,
+    "risk_level": "MEDIUM",
+    "priority_rank": 80,
+    "report_path_json": "data/reports/INC-0061.json",
+    "report_path_md": "data/reports/markdown/INC-0061.md"
+  },
+  {
+    "incident_id": "INC-0086",
+    "incident_type": "Successful Login Event",
+    "risk_score": 29.68,
+    "risk_level": "MEDIUM",
+    "priority_rank": 81,
+    "report_path_json": "data/reports/INC-0086.json",
+    "report_path_md": "data/reports/markdown/INC-0086.md"
+  },
+  {
+    "incident_id": "INC-0027",
+    "incident_type": "Malware Infection",
+    "risk_score": 29.65,
+    "risk_level": "MEDIUM",
+    "priority_rank": 82,
+    "report_path_json": "data/reports/INC-0027.json",
+    "report_path_md": "data/reports/markdown/INC-0027.md"
+  },
+  {
+    "incident_id": "INC-0044",
+    "incident_type": "Successful Login Event",
+    "risk_score": 29.5,
+    "risk_level": "MEDIUM",
+    "priority_rank": 83,
+    "report_path_json": "data/reports/INC-0044.json",
+    "report_path_md": "data/reports/markdown/INC-0044.md"
+  },
+  {
+    "incident_id": "INC-0083",
+    "incident_type": "Suspicious DNS Event",
+    "risk_score": 29.05,
+    "risk_level": "MEDIUM",
+    "priority_rank": 84,
+    "report_path_json": "data/reports/INC-0083.json",
+    "report_path_md": "data/reports/markdown/INC-0083.md"
+  },
+  {
+    "incident_id": "INC-0046",
+    "incident_type": "Malware Infection",
+    "risk_score": 28.85,
+    "risk_level": "MEDIUM",
+    "priority_rank": 85,
+    "report_path_json": "data/reports/INC-0046.json",
+    "report_path_md": "data/reports/markdown/INC-0046.md"
+  },
+  {
+    "incident_id": "INC-0024",
+    "incident_type": "Command and Control Event",
+    "risk_score": 28.34,
+    "risk_level": "MEDIUM",
+    "priority_rank": 86,
+    "report_path_json": "data/reports/INC-0024.json",
+    "report_path_md": "data/reports/markdown/INC-0024.md"
+  },
+  {
+    "incident_id": "INC-0104",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 28.32,
+    "risk_level": "MEDIUM",
+    "priority_rank": 87,
+    "report_path_json": "data/reports/INC-0104.json",
+    "report_path_md": "data/reports/markdown/INC-0104.md"
+  },
+  {
+    "incident_id": "INC-0092",
+    "incident_type": "Unauthorized Access Event",
+    "risk_score": 28.22,
+    "risk_level": "MEDIUM",
+    "priority_rank": 88,
+    "report_path_json": "data/reports/INC-0092.json",
+    "report_path_md": "data/reports/markdown/INC-0092.md"
+  },
+  {
+    "incident_id": "INC-0048",
+    "incident_type": "Failed Login Event",
+    "risk_score": 27.88,
+    "risk_level": "MEDIUM",
+    "priority_rank": 89,
+    "report_path_json": "data/reports/INC-0048.json",
+    "report_path_md": "data/reports/markdown/INC-0048.md"
+  },
+  {
+    "incident_id": "INC-0076",
+    "incident_type": "Command and Control Event",
+    "risk_score": 27.81,
+    "risk_level": "MEDIUM",
+    "priority_rank": 90,
+    "report_path_json": "data/reports/INC-0076.json",
+    "report_path_md": "data/reports/markdown/INC-0076.md"
+  },
+  {
+    "incident_id": "INC-0071",
+    "incident_type": "Malware Infection",
+    "risk_score": 27.77,
+    "risk_level": "MEDIUM",
+    "priority_rank": 91,
+    "report_path_json": "data/reports/INC-0071.json",
+    "report_path_md": "data/reports/markdown/INC-0071.md"
+  },
+  {
+    "incident_id": "INC-0051",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 27.12,
+    "risk_level": "MEDIUM",
+    "priority_rank": 92,
+    "report_path_json": "data/reports/INC-0051.json",
+    "report_path_md": "data/reports/markdown/INC-0051.md"
+  },
+  {
+    "incident_id": "INC-0084",
+    "incident_type": "Port Scan Event",
+    "risk_score": 26.77,
+    "risk_level": "MEDIUM",
+    "priority_rank": 93,
+    "report_path_json": "data/reports/INC-0084.json",
+    "report_path_md": "data/reports/markdown/INC-0084.md"
+  },
+  {
+    "incident_id": "INC-0055",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 26.68,
+    "risk_level": "MEDIUM",
+    "priority_rank": 94,
+    "report_path_json": "data/reports/INC-0055.json",
+    "report_path_md": "data/reports/markdown/INC-0055.md"
+  },
+  {
+    "incident_id": "INC-0019",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 26.67,
+    "risk_level": "MEDIUM",
+    "priority_rank": 95,
+    "report_path_json": "data/reports/INC-0019.json",
+    "report_path_md": "data/reports/markdown/INC-0019.md"
+  },
+  {
+    "incident_id": "INC-0043",
+    "incident_type": "Successful Login Event",
+    "risk_score": 26.6,
+    "risk_level": "MEDIUM",
+    "priority_rank": 96,
+    "report_path_json": "data/reports/INC-0043.json",
+    "report_path_md": "data/reports/markdown/INC-0043.md"
+  },
+  {
+    "incident_id": "INC-0006",
+    "incident_type": "Malware Infection",
+    "risk_score": 26.25,
+    "risk_level": "MEDIUM",
+    "priority_rank": 97,
+    "report_path_json": "data/reports/INC-0006.json",
+    "report_path_md": "data/reports/markdown/INC-0006.md"
+  },
+  {
+    "incident_id": "INC-0023",
+    "incident_type": "Malware Infection",
+    "risk_score": 26.07,
+    "risk_level": "MEDIUM",
+    "priority_rank": 98,
+    "report_path_json": "data/reports/INC-0023.json",
+    "report_path_md": "data/reports/markdown/INC-0023.md"
+  },
+  {
+    "incident_id": "INC-0029",
+    "incident_type": "Port Scan Event",
+    "risk_score": 26.02,
+    "risk_level": "MEDIUM",
+    "priority_rank": 99,
+    "report_path_json": "data/reports/INC-0029.json",
+    "report_path_md": "data/reports/markdown/INC-0029.md"
+  },
+  {
+    "incident_id": "INC-0060",
+    "incident_type": "Unauthorized Access Event",
+    "risk_score": 25.8,
+    "risk_level": "MEDIUM",
+    "priority_rank": 100,
+    "report_path_json": "data/reports/INC-0060.json",
+    "report_path_md": "data/reports/markdown/INC-0060.md"
+  },
+  {
+    "incident_id": "INC-0102",
+    "incident_type": "Command and Control Event",
+    "risk_score": 25.7,
+    "risk_level": "MEDIUM",
+    "priority_rank": 101,
+    "report_path_json": "data/reports/INC-0102.json",
+    "report_path_md": "data/reports/markdown/INC-0102.md"
+  },
+  {
+    "incident_id": "INC-0003",
+    "incident_type": "Port Scan Event",
+    "risk_score": 25.68,
+    "risk_level": "MEDIUM",
+    "priority_rank": 102,
+    "report_path_json": "data/reports/INC-0003.json",
+    "report_path_md": "data/reports/markdown/INC-0003.md"
+  },
+  {
+    "incident_id": "INC-0057",
+    "incident_type": "Malware Infection",
+    "risk_score": 25.51,
+    "risk_level": "MEDIUM",
+    "priority_rank": 103,
+    "report_path_json": "data/reports/INC-0057.json",
+    "report_path_md": "data/reports/markdown/INC-0057.md"
+  },
+  {
+    "incident_id": "INC-0052",
+    "incident_type": "Port Scan Event",
+    "risk_score": 25.36,
+    "risk_level": "MEDIUM",
+    "priority_rank": 104,
+    "report_path_json": "data/reports/INC-0052.json",
+    "report_path_md": "data/reports/markdown/INC-0052.md"
+  },
+  {
+    "incident_id": "INC-0089",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 25.25,
+    "risk_level": "MEDIUM",
+    "priority_rank": 105,
+    "report_path_json": "data/reports/INC-0089.json",
+    "report_path_md": "data/reports/markdown/INC-0089.md"
+  },
+  {
+    "incident_id": "INC-0010",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 24.37,
+    "risk_level": "LOW",
+    "priority_rank": 106,
+    "report_path_json": "data/reports/INC-0010.json",
+    "report_path_md": "data/reports/markdown/INC-0010.md"
+  },
+  {
+    "incident_id": "INC-0034",
+    "incident_type": "Malware Infection",
+    "risk_score": 23.9,
+    "risk_level": "LOW",
+    "priority_rank": 107,
+    "report_path_json": "data/reports/INC-0034.json",
+    "report_path_md": "data/reports/markdown/INC-0034.md"
+  },
+  {
+    "incident_id": "INC-0049",
+    "incident_type": "Port Scan Event",
+    "risk_score": 22.48,
+    "risk_level": "LOW",
+    "priority_rank": 108,
+    "report_path_json": "data/reports/INC-0049.json",
+    "report_path_md": "data/reports/markdown/INC-0049.md"
+  },
+  {
+    "incident_id": "INC-0082",
+    "incident_type": "Suspicious Email Event",
+    "risk_score": 22.4,
+    "risk_level": "LOW",
+    "priority_rank": 109,
+    "report_path_json": "data/reports/INC-0082.json",
+    "report_path_md": "data/reports/markdown/INC-0082.md"
+  },
+  {
+    "incident_id": "INC-0004",
+    "incident_type": "Port Scan Event",
+    "risk_score": 22.06,
+    "risk_level": "LOW",
+    "priority_rank": 110,
+    "report_path_json": "data/reports/INC-0004.json",
+    "report_path_md": "data/reports/markdown/INC-0004.md"
+  },
+  {
+    "incident_id": "INC-0014",
+    "incident_type": "Port Scan Event",
+    "risk_score": 21.55,
+    "risk_level": "LOW",
+    "priority_rank": 111,
+    "report_path_json": "data/reports/INC-0014.json",
+    "report_path_md": "data/reports/markdown/INC-0014.md"
+  }
+]

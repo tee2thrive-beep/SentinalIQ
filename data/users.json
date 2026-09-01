@@ -1,0 +1,497 @@
+[
+  {
+    "user_id": "usr_fin_mgr",
+    "username": "alice.smith",
+    "department": "Finance",
+    "role": "Finance Manager",
+    "privilege_level": "elevated",
+    "asset_id": "ast_wkst_01",
+    "risk_level": "medium"
+  },
+  {
+    "user_id": "usr_hr_spec",
+    "username": "bob.johnson",
+    "department": "HR",
+    "role": "HR Specialist",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_02",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_sysadmin",
+    "username": "charlie.admin",
+    "department": "IT",
+    "role": "Systems Administrator",
+    "privilege_level": "administrator",
+    "asset_id": "ast_wkst_03",
+    "risk_level": "high"
+  },
+  {
+    "user_id": "usr_devops",
+    "username": "david.devops",
+    "department": "Engineering",
+    "role": "DevOps Engineer",
+    "privilege_level": "elevated",
+    "asset_id": "ast_wkst_04",
+    "risk_level": "medium"
+  },
+  {
+    "user_id": "usr_sales_vp",
+    "username": "emma.vp",
+    "department": "Sales",
+    "role": "VP Sales",
+    "privilege_level": "elevated",
+    "asset_id": "ast_wkst_05",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_insider",
+    "username": "frank.insider",
+    "department": "Engineering",
+    "role": "Software Engineer",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_06",
+    "risk_level": "high"
+  },
+  {
+    "user_id": "usr_sec_analyst",
+    "username": "grace.soc",
+    "department": "Security",
+    "role": "SOC Analyst",
+    "privilege_level": "administrator",
+    "asset_id": "ast_wkst_07",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_008",
+    "username": "liam.martin8",
+    "department": "Sales",
+    "role": "Sales Exec",
+    "privilege_level": "elevated",
+    "asset_id": "ast_wkst_09",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_009",
+    "username": "mia.williams9",
+    "department": "Sales",
+    "role": "Sales Operations",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_12",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_010",
+    "username": "bob.davis10",
+    "department": "Sales",
+    "role": "Sales Exec",
+    "privilege_level": "elevated",
+    "asset_id": "ast_wkst_14",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_011",
+    "username": "mia.rodriguez11",
+    "department": "Executive",
+    "role": "CTO",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_06",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_012",
+    "username": "victor.rodriguez12",
+    "department": "HR",
+    "role": "Recruiter",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_04",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_013",
+    "username": "olivia.gonzalez13",
+    "department": "Sales",
+    "role": "Account Manager",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_14",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_014",
+    "username": "henry.johnson14",
+    "department": "Operations",
+    "role": "Logistics Specialist",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_04",
+    "risk_level": "high"
+  },
+  {
+    "user_id": "usr_015",
+    "username": "wendy.hernandez15",
+    "department": "Engineering",
+    "role": "Lead Developer",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_11",
+    "risk_level": "medium"
+  },
+  {
+    "user_id": "usr_016",
+    "username": "emma.rodriguez16",
+    "department": "IT",
+    "role": "Helpdesk Technician",
+    "privilege_level": "elevated",
+    "asset_id": "ast_wkst_09",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_017",
+    "username": "xavier.jackson17",
+    "department": "Security",
+    "role": "CISO",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_04",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_018",
+    "username": "quinn.thomas18",
+    "department": "HR",
+    "role": "HR Generalist",
+    "privilege_level": "elevated",
+    "asset_id": "ast_wkst_03",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_019",
+    "username": "zack.wilson19",
+    "department": "HR",
+    "role": "Benefits Specialist",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_08",
+    "risk_level": "high"
+  },
+  {
+    "user_id": "usr_020",
+    "username": "ivy.moore20",
+    "department": "Finance",
+    "role": "Financial Analyst",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_09",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_021",
+    "username": "yara.hernandez21",
+    "department": "HR",
+    "role": "HR Director",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_08",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_022",
+    "username": "xavier.rodriguez22",
+    "department": "IT",
+    "role": "Systems Administrator",
+    "privilege_level": "elevated",
+    "asset_id": "ast_wkst_05",
+    "risk_level": "high"
+  },
+  {
+    "user_id": "usr_023",
+    "username": "tina.miller23",
+    "department": "IT",
+    "role": "Network Engineer",
+    "privilege_level": "elevated",
+    "asset_id": "ast_wkst_09",
+    "risk_level": "high"
+  },
+  {
+    "user_id": "usr_024",
+    "username": "alice.martin24",
+    "department": "Operations",
+    "role": "Logistics Specialist",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_06",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_025",
+    "username": "henry.johnson25",
+    "department": "Engineering",
+    "role": "Software Engineer",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_08",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_026",
+    "username": "yara.moore26",
+    "department": "IT",
+    "role": "Helpdesk Technician",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_09",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_027",
+    "username": "ivy.taylor27",
+    "department": "Security",
+    "role": "SOC Analyst",
+    "privilege_level": "administrator",
+    "asset_id": "ast_wkst_13",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_028",
+    "username": "wendy.martinez28",
+    "department": "Security",
+    "role": "CISO",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_08",
+    "risk_level": "high"
+  },
+  {
+    "user_id": "usr_029",
+    "username": "olivia.brown29",
+    "department": "Engineering",
+    "role": "DevOps Engineer",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_01",
+    "risk_level": "high"
+  },
+  {
+    "user_id": "usr_030",
+    "username": "rachel.davis30",
+    "department": "Engineering",
+    "role": "Software Engineer",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_11",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_031",
+    "username": "henry.williams31",
+    "department": "Finance",
+    "role": "Payroll Specialist",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_04",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_032",
+    "username": "victor.thomas32",
+    "department": "Engineering",
+    "role": "DevOps Engineer",
+    "privilege_level": "elevated",
+    "asset_id": "ast_wkst_10",
+    "risk_level": "high"
+  },
+  {
+    "user_id": "usr_033",
+    "username": "peter.davis33",
+    "department": "Executive",
+    "role": "VP Operations",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_02",
+    "risk_level": "medium"
+  },
+  {
+    "user_id": "usr_034",
+    "username": "liam.wilson34",
+    "department": "Security",
+    "role": "Security Engineer",
+    "privilege_level": "elevated",
+    "asset_id": "ast_wkst_01",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_035",
+    "username": "bob.gonzalez35",
+    "department": "Operations",
+    "role": "Operations Analyst",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_04",
+    "risk_level": "high"
+  },
+  {
+    "user_id": "usr_036",
+    "username": "olivia.jones36",
+    "department": "Security",
+    "role": "SOC Analyst",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_04",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_037",
+    "username": "olivia.moore37",
+    "department": "HR",
+    "role": "HR Generalist",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_09",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_038",
+    "username": "charlie.davis38",
+    "department": "IT",
+    "role": "IT Director",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_04",
+    "risk_level": "medium"
+  },
+  {
+    "user_id": "usr_039",
+    "username": "bob.garcia39",
+    "department": "Security",
+    "role": "SOC Analyst",
+    "privilege_level": "administrator",
+    "asset_id": "ast_wkst_05",
+    "risk_level": "medium"
+  },
+  {
+    "user_id": "usr_040",
+    "username": "jack.wilson40",
+    "department": "Executive",
+    "role": "CFO",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_04",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_041",
+    "username": "sam.moore41",
+    "department": "Finance",
+    "role": "Payroll Specialist",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_10",
+    "risk_level": "medium"
+  },
+  {
+    "user_id": "usr_042",
+    "username": "quinn.taylor42",
+    "department": "IT",
+    "role": "Systems Administrator",
+    "privilege_level": "administrator",
+    "asset_id": "ast_wkst_02",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_043",
+    "username": "charlie.martin43",
+    "department": "HR",
+    "role": "Recruiter",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_10",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_044",
+    "username": "sam.martin44",
+    "department": "Finance",
+    "role": "Financial Analyst",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_10",
+    "risk_level": "high"
+  },
+  {
+    "user_id": "usr_045",
+    "username": "quinn.hernandez45",
+    "department": "Sales",
+    "role": "Account Manager",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_06",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_046",
+    "username": "ivy.gonzalez46",
+    "department": "IT",
+    "role": "Network Engineer",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_13",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_047",
+    "username": "alice.anderson47",
+    "department": "HR",
+    "role": "HR Generalist",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_09",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_048",
+    "username": "emma.lopez48",
+    "department": "HR",
+    "role": "Recruiter",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_03",
+    "risk_level": "medium"
+  },
+  {
+    "user_id": "usr_049",
+    "username": "rachel.martinez49",
+    "department": "Finance",
+    "role": "Payroll Specialist",
+    "privilege_level": "administrator",
+    "asset_id": "ast_wkst_02",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_050",
+    "username": "ivy.brown50",
+    "department": "HR",
+    "role": "Recruiter",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_10",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_051",
+    "username": "wendy.hernandez51",
+    "department": "Engineering",
+    "role": "QA Engineer",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_05",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_052",
+    "username": "charlie.wilson52",
+    "department": "Sales",
+    "role": "Sales Exec",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_13",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_053",
+    "username": "umar.rodriguez53",
+    "department": "IT",
+    "role": "IT Director",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_07",
+    "risk_level": "high"
+  },
+  {
+    "user_id": "usr_054",
+    "username": "alice.brown54",
+    "department": "HR",
+    "role": "Recruiter",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_14",
+    "risk_level": "low"
+  },
+  {
+    "user_id": "usr_055",
+    "username": "sam.moore55",
+    "department": "IT",
+    "role": "IT Director",
+    "privilege_level": "standard",
+    "asset_id": "ast_wkst_05",
+    "risk_level": "low"
+  }
+]

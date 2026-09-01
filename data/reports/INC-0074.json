@@ -1,0 +1,180 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-09-01T06:03:36.030747+00:00",
+  "incident": {
+    "incident_id": "INC-0074",
+    "incident_type": "Unauthorized Access Event",
+    "risk_score": 61.05,
+    "risk_level": "HIGH",
+    "priority_rank": 33,
+    "priority_band": "HIGH",
+    "first_seen": "2026-09-01T16:21:58+00:00",
+    "last_seen": "2026-09-01T16:21:58+00:00",
+    "alert_count": 1,
+    "affected_user_count": 1,
+    "tie_group_id": null
+  },
+  "executive_summary": "INC-0074 is a HIGH Unauthorized Access Event ranked #33 in the SentinelIQ investigation queue with a defensible risk score of 61.05 / 100. The incident contains 1 correlated alerts affecting 1 unique user(s) and target asset(s) (mail.corp.internal). The primary risk drivers elevating this incident's priority rank are Asset Importance, Business Impact, Data Sensitivity.",
+  "risk_analysis": {
+    "formula": "R = 0.20*S + 0.20*A + 0.10*U + 0.15*D + 0.15*C + 0.20*B",
+    "risk_score": 61.05,
+    "risk_level": "HIGH",
+    "factors": [
+      {
+        "name": "severity",
+        "value": 27.0,
+        "weight": 0.2,
+        "contribution": 5.4,
+        "status": "MEDIUM",
+        "source": "maximum_severity",
+        "evidence": "Maximum alert severity is 27.0 (average alert severity: 27.0)."
+      },
+      {
+        "name": "asset_importance",
+        "value": 85.0,
+        "weight": 0.2,
+        "contribution": 17.0,
+        "status": "CRITICAL",
+        "source": "incident_asset_importance",
+        "evidence": "Target asset normalized importance rating is 85.0."
+      },
+      {
+        "name": "affected_users",
+        "value": 10.03,
+        "weight": 0.1,
+        "contribution": 1.003,
+        "status": "LOW",
+        "source": "normalized_affected_users",
+        "evidence": "1 unique user(s) affected, logarithmically normalized to 10.03."
+      },
+      {
+        "name": "data_sensitivity",
+        "value": 80.0,
+        "weight": 0.15,
+        "contribution": 12.0,
+        "status": "CRITICAL",
+        "source": "incident_data_sensitivity",
+        "evidence": "Target asset data sensitivity rating is 80.0."
+      },
+      {
+        "name": "attack_confidence",
+        "value": 59.0,
+        "weight": 0.15,
+        "contribution": 8.85,
+        "status": "HIGH",
+        "source": "incident_confidence",
+        "evidence": "Corroborated incident attack confidence is 59.0 (max alert confidence: 59)."
+      },
+      {
+        "name": "business_impact",
+        "value": 84.0,
+        "weight": 0.2,
+        "contribution": 16.8,
+        "status": "CRITICAL",
+        "source": "incident_business_impact",
+        "evidence": "Potential business impact rating is 84.0."
+      }
+    ],
+    "dominant_factors": [
+      "asset_importance",
+      "business_impact",
+      "data_sensitivity"
+    ],
+    "contribution_sum": 61.05
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-09-01T16:21:58+00:00",
+      "alert_id": "alt_0114",
+      "alert_type": "Unauthorized Access",
+      "category": "Security Alert",
+      "severity": 27,
+      "confidence": 80.0,
+      "source_ip": "192.168.4.232",
+      "destination_ip": "10.0.2.175",
+      "user_id": "usr_035",
+      "username": "bob.gonzalez35",
+      "asset_id": "ast_email_01",
+      "asset_name": "ast_email_01"
+    }
+  ],
+  "correlation_evidence": [],
+  "classification": {
+    "incident_type": "Unauthorized Access Event",
+    "classification_evidence": [
+      "Incident contains 1 alert(s) matching Unauthorized Access Event threat patterns.",
+      "Highest alert severity: 27.0"
+    ]
+  },
+  "affected_users": [
+    {
+      "user_id": "usr_035",
+      "username": "bob.gonzalez35",
+      "role": "Operations Analyst",
+      "department": "Operations",
+      "privilege_level": "standard"
+    }
+  ],
+  "affected_assets": [
+    {
+      "asset_id": "ast_email_01",
+      "name": "mail.corp.internal",
+      "asset_type": "email_server",
+      "criticality": 85,
+      "business_impact": 80.0,
+      "data_sensitivity": 80
+    }
+  ],
+  "priority_explanation": {
+    "priority_rank": 33,
+    "risk_score": 61.05,
+    "risk_level": "HIGH",
+    "tie_group_id": null,
+    "primary_reason": "Higher risk score",
+    "compared_with_next": {
+      "incident_id": "INC-0032",
+      "risk_score": 60.75,
+      "score_difference": 0.3,
+      "deciding_factor": "risk_score"
+    }
+  },
+  "recommendations": [
+    {
+      "type": "automated recommendation",
+      "action": "Revoke Compromised Sessions",
+      "priority": "IMMEDIATE",
+      "details": "Terminate active Kerberos/OAuth sessions and revoke OAuth application refresh tokens.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Audit Privilege Escalation Activity",
+      "priority": "HIGH",
+      "details": "Review sudo/admin privilege escalation logs and local group membership modifications.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Enforce MFA Verification",
+      "priority": "HIGH",
+      "details": "Require mandatory multi-factor authentication re-verification for all administrative logins.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Inspect Access Log Anomalies",
+      "priority": "MEDIUM",
+      "details": "Compare user login location and device fingerprint against historical baseline profiles.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    }
+  ],
+  "limitations": [
+    "AUTOMATED REPORT DISCLAIMER: Recommendations listed in this report are automated policy-based guidance generated for SOC analysts. They represent suggested investigation/containment actions and do not imply that automated mitigation has been executed.",
+    "Prioritization is based on batch snapshot data. Live streaming telemetry will update queue dynamically.",
+    "Asset importance and data sensitivity values reflect configured CMDB asset tags."
+  ]
+}

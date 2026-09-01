@@ -1,0 +1,160 @@
+alert_id,timestamp,alert_type,source_ip,destination_ip,user_id,asset_id,severity,description,confidence,status
+alt_0001,2026-09-01T08:05:00+00:00,Suspicious Email,185.220.101.5,192.168.1.105,usr_fin_mgr,ast_wkst_01,45,Phishing email detected with suspicious attachment delivered to Finance Manager,60,open
+alt_0143,2026-09-01T08:06:40+00:00,Suspicious DNS,192.168.5.170,10.0.2.19,usr_010,ast_dc_02,22,DNS query to newly registered domain for marketing software (ast_dc_02),73,open
+alt_0002,2026-09-01T08:08:00+00:00,Credential Theft,192.168.1.105,192.168.1.105,usr_fin_mgr,ast_wkst_01,85,LSASS memory dump detected on workstation ast_wkst_01,90,open
+alt_0003,2026-09-01T08:12:00+00:00,Successful Login,192.168.1.105,10.0.2.10,usr_fin_mgr,ast_app_01,60,Successful authentication to app server using stolen credentials,95,open
+alt_0004,2026-09-01T08:17:00+00:00,Privilege Escalation,192.168.1.105,10.0.2.10,usr_fin_mgr,ast_app_01,88,Token impersonation attempt to elevate privileges to SYSTEM,85,open
+alt_0080,2026-09-01T08:18:50+00:00,Port Scan,192.168.4.179,10.0.1.80,usr_043,ast_wkst_03,25,Routine internal network audit scan by IT security scanner (ast_wkst_03),57,open
+alt_0005,2026-09-01T08:22:00+00:00,Lateral Movement,10.0.2.10,10.0.1.50,usr_fin_mgr,ast_db_fin,90,PsExec lateral movement from app server to Financial Database,92,open
+alt_0006,2026-09-01T08:27:00+00:00,Unauthorized Access,10.0.2.10,10.0.1.50,usr_fin_mgr,ast_db_fin,92,Bulk query execution on restricted financial_records table,88,open
+alt_0007,2026-09-01T08:32:00+00:00,Data Exfiltration,10.0.1.50,185.220.101.5,usr_fin_mgr,ast_db_fin,98,Encrypted HTTPS outbound transfer of 4.2 GB to untrusted IP 185.220.101.5,95,open
+alt_0050,2026-09-01T08:41:47+00:00,Port Scan,192.168.3.188,10.0.2.113,usr_039,ast_wkst_12,13,Routine internal network audit scan by IT security scanner (ast_wkst_12),52,open
+alt_0045,2026-09-01T08:43:34+00:00,Successful Login,192.168.2.172,10.0.1.92,usr_050,ast_wkst_06,14,Normal user login during standard business hours (ast_wkst_06),92,open
+alt_0150,2026-09-01T08:46:12+00:00,Suspicious PowerShell,172.16.2.222,10.0.2.149,usr_028,ast_wkst_05,40,Automated software update script running via PowerShell (ast_wkst_05),63,open
+alt_0125,2026-09-01T08:49:31+00:00,Failed Login,192.168.4.31,10.0.1.62,usr_035,ast_app_02,27,Routine password mistype during login attempt (ast_app_02),74,open
+alt_0086,2026-09-01T08:56:07+00:00,Unauthorized Access,192.168.4.31,10.0.1.104,usr_032,ast_pay_01,43,User attempted to access restricted intranet page without permissions (ast_pay_01),65,open
+alt_0140,2026-09-01T08:56:11+00:00,Unauthorized Access,192.168.3.28,10.0.3.131,usr_014,ast_file_01,40,User attempted to access restricted intranet page without permissions (ast_file_01),52,open
+alt_0100,2026-09-01T08:56:22+00:00,Suspicious Email,192.168.2.239,10.0.2.114,usr_045,ast_wkst_11,18,Marketing email flagged by spam filter due to tracking links (ast_wkst_11),50,open
+alt_0087,2026-09-01T08:58:33+00:00,Suspicious DNS,172.16.10.244,10.0.2.23,usr_016,ast_app_01,37,DNS query to newly registered domain for marketing software (ast_app_01),74,open
+alt_0008,2026-09-01T09:00:00+00:00,Suspicious Email,198.51.100.44,192.168.1.106,usr_hr_spec,ast_wkst_02,50,Email with suspicious macro-enabled document received,70,open
+alt_0112,2026-09-01T09:01:17+00:00,Unauthorized Access,192.168.4.39,10.0.1.137,usr_027,ast_fw_01,30,User attempted to access restricted intranet page without permissions (ast_fw_01),50,open
+alt_0009,2026-09-01T09:04:00+00:00,Suspicious PowerShell,192.168.1.106,192.168.1.106,usr_hr_spec,ast_wkst_02,78,Encoded PowerShell command executed from Word document process,85,open
+alt_0010,2026-09-01T09:08:00+00:00,Malware Detection,192.168.1.106,192.168.1.106,usr_hr_spec,ast_wkst_02,85,Trojan.GenericDropper detected in AppData directory,95,open
+alt_0011,2026-09-01T09:13:20+00:00,Command and Control,192.168.1.106,198.51.100.44,usr_hr_spec,ast_wkst_02,92,Beaconing traffic to external C2 node 198.51.100.44 every 30 seconds,90,open
+alt_0052,2026-09-01T09:16:25+00:00,Successful Login,192.168.1.186,10.0.2.131,usr_020,ast_wkst_06,10,Normal user login during standard business hours (ast_wkst_06),96,open
+alt_0012,2026-09-01T09:20:00+00:00,Lateral Movement,192.168.1.106,10.0.3.15,usr_hr_spec,ast_file_01,82,SMB connection attempt to production file server using HR service account,80,open
+alt_0135,2026-09-01T09:20:16+00:00,Port Scan,192.168.2.18,10.0.1.72,usr_040,ast_test_02,22,Routine internal network audit scan by IT security scanner (ast_test_02),59,open
+alt_0157,2026-09-01T09:21:02+00:00,Unauthorized Access,192.168.1.16,10.0.2.75,usr_sales_vp,ast_web_01,44,User attempted to access restricted intranet page without permissions (ast_web_01),64,open
+alt_0113,2026-09-01T09:26:15+00:00,Suspicious PowerShell,192.168.2.129,10.0.3.38,usr_015,ast_wkst_09,40,Automated software update script running via PowerShell (ast_wkst_09),58,open
+alt_0062,2026-09-01T09:28:00+00:00,Suspicious DNS,192.168.4.179,10.0.1.182,usr_014,ast_pay_01,33,DNS query to newly registered domain for marketing software (ast_pay_01),63,open
+alt_0145,2026-09-01T09:32:47+00:00,Failed Login,192.168.5.14,10.0.3.22,usr_018,ast_wkst_08,28,Routine password mistype during login attempt (ast_wkst_08),75,open
+alt_0108,2026-09-01T09:48:54+00:00,Command and Control,192.168.1.186,10.0.1.106,usr_042,ast_file_01,27,False positive alert triggered by legitimate web analytics heartbeat (ast_file_01),55,open
+alt_0152,2026-09-01T09:55:37+00:00,Suspicious Email,192.168.4.136,10.0.1.103,usr_020,ast_wkst_01,22,Marketing email flagged by spam filter due to tracking links (ast_wkst_01),60,open
+alt_0141,2026-09-01T09:58:12+00:00,Successful Login,192.168.3.31,10.0.2.148,usr_015,ast_wkst_07,13,Normal user login during standard business hours (ast_wkst_07),99,open
+alt_0013,2026-09-01T10:00:00+00:00,Failed Login,203.0.113.15,10.0.1.99,usr_sysadmin,ast_pay_01,40,Failed SSH login attempt #1 for admin account,80,open
+alt_0014,2026-09-01T10:00:30+00:00,Failed Login,203.0.113.15,10.0.1.99,usr_sysadmin,ast_pay_01,45,Failed SSH login attempt #2 for admin account,80,open
+alt_0015,2026-09-01T10:01:00+00:00,Failed Login,203.0.113.15,10.0.1.99,usr_sysadmin,ast_pay_01,50,Failed SSH login attempt #3 for admin account,80,open
+alt_0016,2026-09-01T10:01:30+00:00,Failed Login,203.0.113.15,10.0.1.99,usr_sysadmin,ast_pay_01,55,Failed SSH login attempt #4 for admin account,80,open
+alt_0017,2026-09-01T10:02:00+00:00,Failed Login,203.0.113.15,10.0.1.99,usr_sysadmin,ast_pay_01,60,Failed SSH login attempt #5 for admin account,80,open
+alt_0018,2026-09-01T10:03:20+00:00,Brute Force,203.0.113.15,10.0.1.99,usr_sysadmin,ast_pay_01,85,Brute force attack threshold reached: 120 failed SSH attempts in 3 minutes,95,open
+alt_0019,2026-09-01T10:05:50+00:00,Successful Login After Failures,203.0.113.15,10.0.1.99,usr_sysadmin,ast_pay_01,90,Successful authentication following automated brute force attack,98,open
+alt_0020,2026-09-01T10:10:00+00:00,Privilege Escalation,203.0.113.15,10.0.1.99,usr_sysadmin,ast_pay_01,94,Sudo exploitation attempt (CVE-2021-3156) on payment gateway host,90,open
+alt_0021,2026-09-01T10:15:00+00:00,Unauthorized Access,10.0.1.99,10.0.1.99,usr_sysadmin,ast_pay_01,96,Direct memory inspection on active credit card transaction buffer,92,open
+alt_0066,2026-09-01T10:19:24+00:00,Command and Control,172.16.7.153,10.0.3.171,usr_hr_spec,ast_web_01,45,False positive alert triggered by legitimate web analytics heartbeat (ast_web_01),53,open
+alt_0149,2026-09-01T10:21:06+00:00,Suspicious PowerShell,192.168.2.130,10.0.3.173,usr_052,ast_wkst_02,22,Automated software update script running via PowerShell (ast_wkst_02),62,open
+alt_0139,2026-09-01T10:22:07+00:00,Command and Control,172.16.9.145,10.0.2.173,usr_008,ast_wkst_06,36,False positive alert triggered by legitimate web analytics heartbeat (ast_wkst_06),53,open
+alt_0067,2026-09-01T10:28:13+00:00,Malware Detection,192.168.3.99,10.0.2.56,usr_030,ast_test_02,40,Adware PUP detected and automatically quarantined by endpoint agent (ast_test_02),91,open
+alt_0156,2026-09-01T10:44:53+00:00,Malware Detection,172.16.8.163,10.0.2.72,usr_038,ast_db_cust,41,Adware PUP detected and automatically quarantined by endpoint agent (ast_db_cust),93,open
+alt_0075,2026-09-01T10:47:06+00:00,Suspicious PowerShell,192.168.5.249,10.0.3.71,usr_040,ast_wkst_14,35,Automated software update script running via PowerShell (ast_wkst_14),64,open
+alt_0022,2026-09-01T11:00:00+00:00,Web Attack,198.51.100.77,10.0.2.5,usr_009,ast_web_01,65,Automated web application vulnerability scan detected on /api/v1/products,75,open
+alt_0153,2026-09-01T11:03:38+00:00,Port Scan,192.168.1.137,10.0.3.51,usr_050,ast_wkst_02,21,Routine internal network audit scan by IT security scanner (ast_wkst_02),63,open
+alt_0023,2026-09-01T11:05:00+00:00,SQL Injection,198.51.100.77,10.0.2.5,usr_009,ast_web_01,88,SQL injection payload UNION SELECT detected in HTTP GET query parameter,92,open
+alt_0024,2026-09-01T11:10:00+00:00,Web Server Compromise,10.0.2.5,10.0.2.5,usr_009,ast_web_01,90,Web shell script webshell.php spawned interactive bash process,85,open
+alt_0155,2026-09-01T11:13:29+00:00,Malware Detection,192.168.5.196,10.0.3.116,usr_044,ast_test_02,50,Adware PUP detected and automatically quarantined by endpoint agent (ast_test_02),90,open
+alt_0025,2026-09-01T11:15:00+00:00,Unauthorized Access,10.0.2.5,10.0.1.60,usr_009,ast_db_cust,92,Internal database query dump initiated on customer_pii table from web server,90,open
+alt_0026,2026-09-01T11:20:00+00:00,Data Exfiltration,10.0.2.5,198.51.100.77,usr_009,ast_web_01,97,DNS tunneling data exfiltration detected sending encoded records to attacker NS server,95,open
+alt_0129,2026-09-01T11:51:40+00:00,Failed Login,172.16.6.64,10.0.1.146,usr_014,ast_pay_01,32,Routine password mistype during login attempt (ast_pay_01),66,open
+alt_0058,2026-09-01T11:59:01+00:00,Suspicious DNS,192.168.5.120,10.0.1.144,usr_016,ast_app_01,34,DNS query to newly registered domain for marketing software (ast_app_01),54,open
+alt_0027,2026-09-01T12:00:00+00:00,Suspicious PowerShell,192.168.1.108,10.0.2.20,usr_devops,ast_dev_app,75,PowerShell script disabling Windows Defender and volume shadow copies,80,open
+alt_0028,2026-09-01T12:03:00+00:00,Ransomware Indicator,10.0.2.20,10.0.2.20,usr_devops,ast_dev_app,95,Rapid file renaming pattern (.locked extension appended) on local volumes,95,open
+alt_0029,2026-09-01T12:06:40+00:00,Lateral Movement,10.0.2.20,10.0.3.15,usr_devops,ast_file_01,90,WMI remote execution spreading encrypted binaries to file server 01,88,open
+alt_0137,2026-09-01T12:09:34+00:00,Suspicious PowerShell,192.168.4.104,10.0.2.188,usr_sec_analyst,ast_test_02,33,Automated software update script running via PowerShell (ast_test_02),60,open
+alt_0030,2026-09-01T12:10:00+00:00,Ransomware Indicator,10.0.3.15,10.0.3.15,usr_devops,ast_file_01,98,Ransom note README_RESTORE_FILES.txt dropped across shared network drives,98,open
+alt_0095,2026-09-01T12:10:02+00:00,Failed Login,192.168.3.149,10.0.1.197,usr_049,ast_fw_01,30,Routine password mistype during login attempt (ast_fw_01),76,open
+alt_0118,2026-09-01T12:11:21+00:00,Successful Login,192.168.2.160,10.0.2.175,usr_049,ast_app_02,15,Normal user login during standard business hours (ast_app_02),91,open
+alt_0082,2026-09-01T12:11:48+00:00,Port Scan,192.168.3.32,10.0.3.139,usr_049,ast_fw_01,16,Routine internal network audit scan by IT security scanner (ast_fw_01),46,open
+alt_0031,2026-09-01T12:12:30+00:00,Lateral Movement,10.0.2.20,10.0.3.16,usr_devops,ast_file_dev,88,Automated network propagation targeting secondary file server,85,open
+alt_0091,2026-09-01T12:12:50+00:00,Unauthorized Access,192.168.4.20,10.0.3.61,usr_017,ast_cloud_01,38,User attempted to access restricted intranet page without permissions (ast_cloud_01),48,open
+alt_0046,2026-09-01T12:18:34+00:00,Suspicious DNS,192.168.2.227,10.0.2.8,usr_012,ast_wkst_01,33,DNS query to newly registered domain for marketing software (ast_wkst_01),75,open
+alt_0070,2026-09-01T12:20:33+00:00,Suspicious DNS,192.168.1.146,10.0.1.121,usr_045,ast_internal_tool,31,DNS query to newly registered domain for marketing software (ast_internal_tool),55,open
+alt_0090,2026-09-01T12:21:59+00:00,Suspicious DNS,192.168.2.2,10.0.2.117,usr_045,ast_wkst_10,29,DNS query to newly registered domain for marketing software (ast_wkst_10),51,open
+alt_0079,2026-09-01T12:23:37+00:00,Suspicious PowerShell,192.168.2.178,10.0.2.167,usr_046,ast_wkst_11,34,Automated software update script running via PowerShell (ast_wkst_11),75,open
+alt_0047,2026-09-01T12:31:03+00:00,Unauthorized Access,192.168.1.99,10.0.1.122,usr_015,ast_cloud_01,39,User attempted to access restricted intranet page without permissions (ast_cloud_01),56,open
+alt_0138,2026-09-01T12:38:24+00:00,Successful Login,192.168.4.19,10.0.1.23,usr_insider,ast_wkst_07,6,Normal user login during standard business hours (ast_wkst_07),95,open
+alt_0121,2026-09-01T12:40:40+00:00,Malware Detection,192.168.3.193,10.0.2.31,usr_030,ast_pay_01,34,Adware PUP detected and automatically quarantined by endpoint agent (ast_pay_01),88,open
+alt_0078,2026-09-01T12:42:11+00:00,Successful Login,192.168.5.181,10.0.2.144,usr_fin_mgr,ast_wkst_13,8,Normal user login during standard business hours (ast_wkst_13),91,open
+alt_0109,2026-09-01T12:49:28+00:00,Successful Login,192.168.4.168,10.0.1.86,usr_055,ast_wkst_14,11,Normal user login during standard business hours (ast_wkst_14),95,open
+alt_0032,2026-09-01T13:00:00+00:00,Port Scan,45.33.32.1,10.0.0.1,usr_015,ast_fw_01,40,SYN port scan across external gateway subnet 10.0.0.0/24,70,open
+alt_0104,2026-09-01T13:01:44+00:00,Suspicious PowerShell,192.168.5.70,10.0.1.74,usr_047,ast_test_01,38,Automated software update script running via PowerShell (ast_test_01),68,open
+alt_0033,2026-09-01T13:03:20+00:00,DDoS,45.33.32.2,10.0.0.1,usr_015,ast_fw_01,85,UDP flood attack generating 50 Gbps inbound traffic to edge firewall,90,open
+alt_0068,2026-09-01T13:03:55+00:00,Suspicious PowerShell,192.168.1.122,10.0.1.193,usr_035,ast_db_cust,31,Automated software update script running via PowerShell (ast_db_cust),57,open
+alt_0127,2026-09-01T13:05:33+00:00,Failed Login,192.168.2.115,10.0.2.62,usr_055,ast_wkst_03,18,Routine password mistype during login attempt (ast_wkst_03),81,open
+alt_0034,2026-09-01T13:06:40+00:00,DDoS,45.33.32.3,10.0.2.5,usr_015,ast_web_01,88,HTTP Slowloris flood consuming connection pool on web server 01,92,open
+alt_0035,2026-09-01T13:10:00+00:00,Command and Control,45.33.32.1,10.0.2.6,usr_015,ast_web_02,82,Inbound botnet orchestration packets targeting secondary web server,75,open
+alt_0151,2026-09-01T13:16:13+00:00,Port Scan,192.168.3.45,10.0.3.119,usr_054,ast_wkst_03,12,Routine internal network audit scan by IT security scanner (ast_wkst_03),53,open
+alt_0053,2026-09-01T13:22:56+00:00,Command and Control,172.16.7.172,10.0.2.175,usr_048,ast_fw_01,44,False positive alert triggered by legitimate web analytics heartbeat (ast_fw_01),58,open
+alt_0054,2026-09-01T13:28:43+00:00,Suspicious PowerShell,192.168.1.79,10.0.2.55,usr_028,ast_test_02,34,Automated software update script running via PowerShell (ast_test_02),64,open
+alt_0148,2026-09-01T13:29:13+00:00,Suspicious Email,192.168.3.76,10.0.2.32,usr_fin_mgr,ast_wkst_11,28,Marketing email flagged by spam filter due to tracking links (ast_wkst_11),55,open
+alt_0073,2026-09-01T13:29:24+00:00,Port Scan,192.168.5.202,10.0.1.90,usr_035,ast_wkst_07,21,Routine internal network audit scan by IT security scanner (ast_wkst_07),42,open
+alt_0134,2026-09-01T13:29:27+00:00,Malware Detection,192.168.1.17,10.0.2.104,usr_028,ast_web_02,45,Adware PUP detected and automatically quarantined by endpoint agent (ast_web_02),92,open
+alt_0048,2026-09-01T13:33:20+00:00,Suspicious Email,192.168.2.104,10.0.2.73,usr_sales_vp,ast_file_dev,26,Marketing email flagged by spam filter due to tracking links (ast_file_dev),70,open
+alt_0056,2026-09-01T13:39:03+00:00,Suspicious Email,192.168.2.8,10.0.1.64,usr_031,ast_pay_01,29,Marketing email flagged by spam filter due to tracking links (ast_pay_01),63,open
+alt_0106,2026-09-01T13:51:28+00:00,Suspicious Email,192.168.2.148,10.0.2.61,usr_055,ast_wkst_06,16,Marketing email flagged by spam filter due to tracking links (ast_wkst_06),60,open
+alt_0132,2026-09-01T13:53:38+00:00,Failed Login,192.168.1.34,10.0.3.109,usr_034,ast_app_01,17,Routine password mistype during login attempt (ast_app_01),75,open
+alt_0120,2026-09-01T13:56:51+00:00,Suspicious PowerShell,192.168.2.203,10.0.3.95,usr_034,ast_wkst_12,28,Automated software update script running via PowerShell (ast_wkst_12),55,open
+alt_0124,2026-09-01T13:58:16+00:00,Suspicious Email,192.168.4.234,10.0.3.79,usr_042,ast_wkst_06,18,Marketing email flagged by spam filter due to tracking links (ast_wkst_06),54,open
+alt_0036,2026-09-01T14:00:00+00:00,Successful Login,185.125.190.2,10.0.0.50,usr_sales_vp,ast_cloud_01,30,User login from London UK IP address,95,open
+alt_0063,2026-09-01T14:01:24+00:00,Command and Control,192.168.1.54,10.0.2.101,usr_050,ast_dc_02,43,False positive alert triggered by legitimate web analytics heartbeat (ast_dc_02),52,open
+alt_0037,2026-09-01T14:05:00+00:00,Impossible Travel,103.22.200.5,10.0.0.50,usr_sales_vp,ast_cloud_01,90,Impossible travel detected: Login from Tokyo JP 5 mins after login from London UK,95,open
+alt_0038,2026-09-01T14:10:00+00:00,Successful Login,103.22.200.5,10.0.0.50,usr_sales_vp,ast_cloud_01,75,Authenticated cloud portal access from high-risk geolocated IP,90,open
+alt_0039,2026-09-01T14:15:00+00:00,New Admin Account,103.22.200.5,10.0.0.50,usr_sales_vp,ast_cloud_01,92,Created backdoor cloud administrator account global_admin_temp,92,open
+alt_0115,2026-09-01T14:17:26+00:00,Unauthorized Access,192.168.4.178,10.0.2.118,usr_055,ast_test_01,31,User attempted to access restricted intranet page without permissions (ast_test_01),57,open
+alt_0040,2026-09-01T14:20:00+00:00,Unauthorized Access,103.22.200.5,10.0.1.60,usr_sales_vp,ast_db_cust,94,Accessed executive customer contract database using newly assigned admin privileges,94,open
+alt_0097,2026-09-01T14:20:03+00:00,Suspicious PowerShell,192.168.1.221,10.0.1.86,usr_027,ast_wkst_11,29,Automated software update script running via PowerShell (ast_wkst_11),71,open
+alt_0084,2026-09-01T14:34:10+00:00,Suspicious DNS,192.168.5.34,10.0.2.13,usr_devops,ast_cloud_dev,24,DNS query to newly registered domain for marketing software (ast_cloud_dev),70,open
+alt_0128,2026-09-01T14:41:13+00:00,Command and Control,192.168.3.17,10.0.2.72,usr_013,ast_app_01,39,False positive alert triggered by legitimate web analytics heartbeat (ast_app_01),42,open
+alt_0126,2026-09-01T14:45:14+00:00,Command and Control,192.168.2.228,10.0.2.169,usr_sec_analyst,ast_wkst_11,44,False positive alert triggered by legitimate web analytics heartbeat (ast_wkst_11),53,open
+alt_0072,2026-09-01T14:49:56+00:00,Suspicious PowerShell,192.168.2.21,10.0.3.178,usr_054,ast_stage_web,23,Automated software update script running via PowerShell (ast_stage_web),72,open
+alt_0041,2026-09-01T15:00:00+00:00,Unauthorized Access,192.168.1.110,10.0.2.30,usr_insider,ast_dev_db,65,Accessing production database backups from developer workstation,80,open
+alt_0042,2026-09-01T15:07:30+00:00,Unusual File Access,192.168.1.110,10.0.3.15,usr_insider,ast_file_01,78,Mass downloading of proprietary source code archives and patent drafts,85,open
+alt_0122,2026-09-01T15:14:04+00:00,Command and Control,192.168.4.5,10.0.2.139,usr_008,ast_wkst_09,36,False positive alert triggered by legitimate web analytics heartbeat (ast_wkst_09),48,open
+alt_0043,2026-09-01T15:15:00+00:00,Command and Control,192.168.1.110,52.84.12.19,usr_insider,ast_wkst_06,82,Direct connection to personal cloud storage provider MegaUpload,85,open
+alt_0098,2026-09-01T15:17:24+00:00,Command and Control,172.16.2.82,10.0.2.84,usr_008,ast_wkst_05,41,False positive alert triggered by legitimate web analytics heartbeat (ast_wkst_05),40,open
+alt_0044,2026-09-01T15:23:20+00:00,Data Exfiltration,192.168.1.110,52.84.12.19,usr_insider,ast_wkst_06,95,Outbound file transfer exceeding 15 GB to personal cloud storage container,95,open
+alt_0088,2026-09-01T15:34:34+00:00,Suspicious Email,192.168.4.117,10.0.2.78,usr_038,ast_wkst_07,24,Marketing email flagged by spam filter due to tracking links (ast_wkst_07),68,open
+alt_0111,2026-09-01T15:54:00+00:00,Port Scan,192.168.1.115,10.0.1.179,usr_020,ast_dc_02,11,Routine internal network audit scan by IT security scanner (ast_dc_02),50,open
+alt_0076,2026-09-01T15:55:45+00:00,Unauthorized Access,192.168.2.214,10.0.1.73,usr_029,ast_stage_web,39,User attempted to access restricted intranet page without permissions (ast_stage_web),63,open
+alt_0055,2026-09-01T16:02:57+00:00,Suspicious Email,192.168.2.170,10.0.1.74,usr_033,ast_wkst_01,17,Marketing email flagged by spam filter due to tracking links (ast_wkst_01),57,open
+alt_0060,2026-09-01T16:07:03+00:00,Suspicious DNS,192.168.4.117,10.0.2.194,usr_016,ast_file_dev,36,DNS query to newly registered domain for marketing software (ast_file_dev),65,open
+alt_0133,2026-09-01T16:09:38+00:00,Successful Login,192.168.1.117,10.0.3.58,usr_040,ast_db_fin,15,Normal user login during standard business hours (ast_db_fin),98,open
+alt_0114,2026-09-01T16:21:58+00:00,Unauthorized Access,192.168.4.232,10.0.2.175,usr_035,ast_email_01,27,User attempted to access restricted intranet page without permissions (ast_email_01),59,open
+alt_0102,2026-09-01T16:24:01+00:00,Port Scan,192.168.2.129,10.0.3.76,usr_033,ast_file_dev,23,Routine internal network audit scan by IT security scanner (ast_file_dev),66,open
+alt_0059,2026-09-01T16:27:30+00:00,Command and Control,192.168.5.83,10.0.2.158,usr_053,ast_wkst_12,38,False positive alert triggered by legitimate web analytics heartbeat (ast_wkst_12),57,open
+alt_0107,2026-09-01T16:36:36+00:00,Suspicious PowerShell,192.168.2.128,10.0.1.34,usr_033,ast_wkst_01,23,Automated software update script running via PowerShell (ast_wkst_01),64,open
+alt_0159,2026-09-01T16:39:30+00:00,Command and Control,192.168.1.117,10.0.1.89,usr_046,ast_web_01,41,False positive alert triggered by legitimate web analytics heartbeat (ast_web_01),60,open
+alt_0064,2026-09-01T16:40:59+00:00,Failed Login,192.168.3.194,10.0.2.109,usr_035,ast_wkst_14,34,Routine password mistype during login attempt (ast_wkst_14),67,open
+alt_0103,2026-09-01T16:47:01+00:00,Malware Detection,192.168.5.39,10.0.2.50,usr_039,ast_wkst_12,34,Adware PUP detected and automatically quarantined by endpoint agent (ast_wkst_12),86,open
+alt_0116,2026-09-01T16:47:47+00:00,Port Scan,192.168.5.93,10.0.3.77,usr_045,ast_cloud_dev,10,Routine internal network audit scan by IT security scanner (ast_cloud_dev),66,open
+alt_0083,2026-09-01T16:48:52+00:00,Unauthorized Access,192.168.5.154,10.0.2.27,usr_054,ast_cloud_01,34,User attempted to access restricted intranet page without permissions (ast_cloud_01),52,open
+alt_0065,2026-09-01T16:53:16+00:00,Suspicious Email,192.168.4.9,10.0.2.88,usr_043,ast_wkst_05,20,Marketing email flagged by spam filter due to tracking links (ast_wkst_05),64,open
+alt_0105,2026-09-01T16:54:49+00:00,Suspicious DNS,192.168.4.90,10.0.2.143,usr_049,ast_wkst_14,32,DNS query to newly registered domain for marketing software (ast_wkst_14),64,open
+alt_0085,2026-09-01T16:56:10+00:00,Port Scan,192.168.5.74,10.0.2.124,usr_029,ast_wkst_01,15,Routine internal network audit scan by IT security scanner (ast_wkst_01),70,open
+alt_0094,2026-09-01T16:59:21+00:00,Malware Detection,172.16.1.229,10.0.2.190,usr_021,ast_internal_tool,30,Adware PUP detected and automatically quarantined by endpoint agent (ast_internal_tool),86,open
+alt_0074,2026-09-01T17:12:38+00:00,Successful Login,172.16.7.212,10.0.2.29,usr_028,ast_wkst_03,15,Normal user login during standard business hours (ast_wkst_03),97,open
+alt_0158,2026-09-01T17:13:51+00:00,Suspicious PowerShell,192.168.5.246,10.0.3.12,usr_029,ast_cloud_01,30,Automated software update script running via PowerShell (ast_cloud_01),69,open
+alt_0049,2026-09-01T17:16:24+00:00,Suspicious PowerShell,192.168.5.86,10.0.1.31,usr_017,ast_fw_01,38,Automated software update script running via PowerShell (ast_fw_01),58,open
+alt_0144,2026-09-01T17:39:25+00:00,Suspicious Email,192.168.4.89,10.0.1.96,usr_020,ast_test_02,33,Marketing email flagged by spam filter due to tracking links (ast_test_02),69,open
+alt_0136,2026-09-01T17:39:30+00:00,Unauthorized Access,192.168.5.112,10.0.1.181,usr_008,ast_dev_db,38,User attempted to access restricted intranet page without permissions (ast_dev_db),59,open
+alt_0081,2026-09-01T17:39:54+00:00,Successful Login,192.168.5.86,10.0.2.181,usr_030,ast_file_dev,9,Normal user login during standard business hours (ast_file_dev),94,open
+alt_0131,2026-09-01T17:50:03+00:00,Unauthorized Access,192.168.1.171,10.0.1.35,usr_fin_mgr,ast_wkst_02,32,User attempted to access restricted intranet page without permissions (ast_wkst_02),63,open
+alt_0092,2026-09-01T17:54:48+00:00,Suspicious Email,192.168.3.213,10.0.1.20,usr_devops,ast_email_01,24,Marketing email flagged by spam filter due to tracking links (ast_email_01),69,open
+alt_0093,2026-09-01T18:21:43+00:00,Unauthorized Access,192.168.4.178,10.0.2.181,usr_026,ast_file_dev,41,User attempted to access restricted intranet page without permissions (ast_file_dev),62,open
+alt_0051,2026-09-01T18:29:47+00:00,Suspicious Email,192.168.4.2,10.0.3.139,usr_044,ast_cloud_01,26,Marketing email flagged by spam filter due to tracking links (ast_cloud_01),63,open
+alt_0123,2026-09-01T18:38:29+00:00,Suspicious PowerShell,192.168.3.29,10.0.3.61,usr_031,ast_dc_02,39,Automated software update script running via PowerShell (ast_dc_02),67,open
+alt_0130,2026-09-01T18:40:29+00:00,Suspicious Email,192.168.2.86,10.0.1.154,usr_fin_mgr,ast_file_dev,19,Marketing email flagged by spam filter due to tracking links (ast_file_dev),54,open
+alt_0147,2026-09-01T18:47:51+00:00,Malware Detection,192.168.3.13,10.0.1.103,usr_039,ast_db_cust,30,Adware PUP detected and automatically quarantined by endpoint agent (ast_db_cust),88,open
+alt_0071,2026-09-01T19:01:47+00:00,Port Scan,192.168.2.248,10.0.2.29,usr_038,ast_dc_02,19,Routine internal network audit scan by IT security scanner (ast_dc_02),58,open
+alt_0146,2026-09-01T19:03:05+00:00,Malware Detection,192.168.2.195,10.0.3.31,usr_023,ast_wkst_07,33,Adware PUP detected and automatically quarantined by endpoint agent (ast_wkst_07),89,open
+alt_0077,2026-09-01T19:06:38+00:00,Suspicious PowerShell,192.168.4.219,10.0.2.48,usr_032,ast_dev_db,31,Automated software update script running via PowerShell (ast_dev_db),75,open
+alt_0142,2026-09-01T19:10:11+00:00,Command and Control,172.16.5.9,10.0.1.71,usr_045,ast_test_01,35,False positive alert triggered by legitimate web analytics heartbeat (ast_test_01),51,open
+alt_0089,2026-09-01T19:18:19+00:00,Failed Login,192.168.1.244,10.0.1.162,usr_014,ast_internal_tool,17,Routine password mistype during login attempt (ast_internal_tool),65,open
+alt_0061,2026-09-01T19:24:34+00:00,Suspicious Email,192.168.1.184,10.0.2.62,usr_018,ast_wkst_01,25,Marketing email flagged by spam filter due to tracking links (ast_wkst_01),67,open
+alt_0110,2026-09-01T19:24:37+00:00,Malware Detection,192.168.1.160,10.0.1.62,usr_041,ast_cloud_dev,37,Adware PUP detected and automatically quarantined by endpoint agent (ast_cloud_dev),86,open
+alt_0119,2026-09-01T19:25:21+00:00,Failed Login,192.168.4.10,10.0.3.95,usr_047,ast_app_02,17,Routine password mistype during login attempt (ast_app_02),69,open
+alt_0057,2026-09-01T19:27:52+00:00,Suspicious Email,192.168.4.128,10.0.2.64,usr_010,ast_dc_01,18,Marketing email flagged by spam filter due to tracking links (ast_dc_01),63,open
+alt_0101,2026-09-01T19:28:09+00:00,Suspicious Email,192.168.3.143,10.0.1.143,usr_027,ast_web_01,22,Marketing email flagged by spam filter due to tracking links (ast_web_01),53,open
+alt_0154,2026-09-01T19:44:59+00:00,Suspicious DNS,192.168.2.67,10.0.1.46,usr_039,ast_file_01,40,DNS query to newly registered domain for marketing software (ast_file_01),52,open
+alt_0069,2026-09-01T19:50:07+00:00,Port Scan,192.168.1.195,10.0.1.65,usr_013,ast_dc_02,29,Routine internal network audit scan by IT security scanner (ast_dc_02),44,open
+alt_0096,2026-09-01T19:51:37+00:00,Malware Detection,192.168.2.151,10.0.2.164,usr_053,ast_wkst_11,32,Adware PUP detected and automatically quarantined by endpoint agent (ast_wkst_11),92,open
+alt_0099,2026-09-01T19:58:20+00:00,Command and Control,192.168.1.50,10.0.3.94,usr_040,ast_wkst_11,45,False positive alert triggered by legitimate web analytics heartbeat (ast_wkst_11),54,open
+alt_0117,2026-09-01T19:58:57+00:00,Suspicious PowerShell,192.168.5.223,10.0.3.192,usr_devops,ast_wkst_11,29,Automated software update script running via PowerShell (ast_wkst_11),74,open

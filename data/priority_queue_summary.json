@@ -1,0 +1,173 @@
+{
+  "total_incidents": 111,
+  "critical_count": 9,
+  "high_count": 39,
+  "medium_count": 57,
+  "low_count": 6,
+  "average_risk_score": 47.11,
+  "highest_risk_score": 90.2,
+  "lowest_risk_score": 21.55,
+  "tie_group_count": 4,
+  "top_10_queue": [
+    {
+      "rank": 1,
+      "incident_id": "INC-0021",
+      "incident_type": "Multi-stage Attack",
+      "risk_score": 90.2,
+      "risk_level": "CRITICAL",
+      "dominant_factors": [
+        "business_impact",
+        "asset_importance",
+        "severity"
+      ],
+      "alert_count": 9,
+      "affected_users": 1,
+      "first_seen": "2026-09-01T10:00:00+00:00",
+      "ranking_reason": "Higher risk score"
+    },
+    {
+      "rank": 2,
+      "incident_id": "INC-0001",
+      "incident_type": "Data Exfiltration",
+      "risk_score": 89.5,
+      "risk_level": "CRITICAL",
+      "dominant_factors": [
+        "severity",
+        "business_impact",
+        "asset_importance"
+      ],
+      "alert_count": 7,
+      "affected_users": 1,
+      "first_seen": "2026-09-01T08:05:00+00:00",
+      "ranking_reason": "Higher risk score"
+    },
+    {
+      "rank": 3,
+      "incident_id": "INC-0028",
+      "incident_type": "Data Exfiltration",
+      "risk_score": 86.55,
+      "risk_level": "CRITICAL",
+      "dominant_factors": [
+        "severity",
+        "business_impact",
+        "asset_importance"
+      ],
+      "alert_count": 5,
+      "affected_users": 1,
+      "first_seen": "2026-09-01T11:00:00+00:00",
+      "ranking_reason": "Higher risk score"
+    },
+    {
+      "rank": 4,
+      "incident_id": "INC-0058",
+      "incident_type": "Multi-stage Attack",
+      "risk_score": 85.95,
+      "risk_level": "CRITICAL",
+      "dominant_factors": [
+        "severity",
+        "business_impact",
+        "asset_importance"
+      ],
+      "alert_count": 5,
+      "affected_users": 1,
+      "first_seen": "2026-09-01T14:00:00+00:00",
+      "ranking_reason": "Higher risk score"
+    },
+    {
+      "rank": 5,
+      "incident_id": "INC-0033",
+      "incident_type": "Ransomware Outbreak",
+      "risk_score": 79.45,
+      "risk_level": "CRITICAL",
+      "dominant_factors": [
+        "severity",
+        "business_impact",
+        "asset_importance"
+      ],
+      "alert_count": 5,
+      "affected_users": 1,
+      "first_seen": "2026-09-01T12:00:00+00:00",
+      "ranking_reason": "Higher risk score"
+    },
+    {
+      "rank": 6,
+      "incident_id": "INC-0066",
+      "incident_type": "Data Exfiltration",
+      "risk_score": 78.85,
+      "risk_level": "CRITICAL",
+      "dominant_factors": [
+        "severity",
+        "business_impact",
+        "asset_importance"
+      ],
+      "alert_count": 4,
+      "affected_users": 1,
+      "first_seen": "2026-09-01T15:00:00+00:00",
+      "ranking_reason": "Higher risk score"
+    },
+    {
+      "rank": 7,
+      "incident_id": "INC-0012",
+      "incident_type": "Multi-stage Attack",
+      "risk_score": 78.84,
+      "risk_level": "CRITICAL",
+      "dominant_factors": [
+        "severity",
+        "business_impact",
+        "asset_importance"
+      ],
+      "alert_count": 6,
+      "affected_users": 2,
+      "first_seen": "2026-09-01T09:00:00+00:00",
+      "ranking_reason": "Higher risk score"
+    },
+    {
+      "rank": 8,
+      "incident_id": "INC-0045",
+      "incident_type": "DDoS Attack",
+      "risk_score": 78.34,
+      "risk_level": "CRITICAL",
+      "dominant_factors": [
+        "asset_importance",
+        "severity",
+        "business_impact"
+      ],
+      "alert_count": 5,
+      "affected_users": 2,
+      "first_seen": "2026-09-01T13:00:00+00:00",
+      "ranking_reason": "Higher risk score"
+    },
+    {
+      "rank": 9,
+      "incident_id": "INC-0042",
+      "incident_type": "Malware Infection",
+      "risk_score": 76.0,
+      "risk_level": "CRITICAL",
+      "dominant_factors": [
+        "business_impact",
+        "asset_importance",
+        "data_sensitivity"
+      ],
+      "alert_count": 1,
+      "affected_users": 1,
+      "first_seen": "2026-09-01T12:40:40+00:00",
+      "ranking_reason": "Higher risk score"
+    },
+    {
+      "rank": 10,
+      "incident_id": "INC-0008",
+      "incident_type": "Unauthorized Access Event",
+      "risk_score": 74.35,
+      "risk_level": "HIGH",
+      "dominant_factors": [
+        "business_impact",
+        "asset_importance",
+        "data_sensitivity"
+      ],
+      "alert_count": 1,
+      "affected_users": 1,
+      "first_seen": "2026-09-01T08:56:07+00:00",
+      "ranking_reason": "Higher risk score"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+.env
+.env.*
+.git
+.gitignore
+.venv
+venv
+frontend/node_modules
+frontend/dist
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+coverage
+.vscode
+.idea

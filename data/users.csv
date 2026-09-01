@@ -1,0 +1,56 @@
+user_id,username,department,role,privilege_level,asset_id,risk_level
+usr_fin_mgr,alice.smith,Finance,Finance Manager,elevated,ast_wkst_01,medium
+usr_hr_spec,bob.johnson,HR,HR Specialist,standard,ast_wkst_02,low
+usr_sysadmin,charlie.admin,IT,Systems Administrator,administrator,ast_wkst_03,high
+usr_devops,david.devops,Engineering,DevOps Engineer,elevated,ast_wkst_04,medium
+usr_sales_vp,emma.vp,Sales,VP Sales,elevated,ast_wkst_05,low
+usr_insider,frank.insider,Engineering,Software Engineer,standard,ast_wkst_06,high
+usr_sec_analyst,grace.soc,Security,SOC Analyst,administrator,ast_wkst_07,low
+usr_008,liam.martin8,Sales,Sales Exec,elevated,ast_wkst_09,low
+usr_009,mia.williams9,Sales,Sales Operations,standard,ast_wkst_12,low
+usr_010,bob.davis10,Sales,Sales Exec,elevated,ast_wkst_14,low
+usr_011,mia.rodriguez11,Executive,CTO,standard,ast_wkst_06,low
+usr_012,victor.rodriguez12,HR,Recruiter,standard,ast_wkst_04,low
+usr_013,olivia.gonzalez13,Sales,Account Manager,standard,ast_wkst_14,low
+usr_014,henry.johnson14,Operations,Logistics Specialist,standard,ast_wkst_04,high
+usr_015,wendy.hernandez15,Engineering,Lead Developer,standard,ast_wkst_11,medium
+usr_016,emma.rodriguez16,IT,Helpdesk Technician,elevated,ast_wkst_09,low
+usr_017,xavier.jackson17,Security,CISO,standard,ast_wkst_04,low
+usr_018,quinn.thomas18,HR,HR Generalist,elevated,ast_wkst_03,low
+usr_019,zack.wilson19,HR,Benefits Specialist,standard,ast_wkst_08,high
+usr_020,ivy.moore20,Finance,Financial Analyst,standard,ast_wkst_09,low
+usr_021,yara.hernandez21,HR,HR Director,standard,ast_wkst_08,low
+usr_022,xavier.rodriguez22,IT,Systems Administrator,elevated,ast_wkst_05,high
+usr_023,tina.miller23,IT,Network Engineer,elevated,ast_wkst_09,high
+usr_024,alice.martin24,Operations,Logistics Specialist,standard,ast_wkst_06,low
+usr_025,henry.johnson25,Engineering,Software Engineer,standard,ast_wkst_08,low
+usr_026,yara.moore26,IT,Helpdesk Technician,standard,ast_wkst_09,low
+usr_027,ivy.taylor27,Security,SOC Analyst,administrator,ast_wkst_13,low
+usr_028,wendy.martinez28,Security,CISO,standard,ast_wkst_08,high
+usr_029,olivia.brown29,Engineering,DevOps Engineer,standard,ast_wkst_01,high
+usr_030,rachel.davis30,Engineering,Software Engineer,standard,ast_wkst_11,low
+usr_031,henry.williams31,Finance,Payroll Specialist,standard,ast_wkst_04,low
+usr_032,victor.thomas32,Engineering,DevOps Engineer,elevated,ast_wkst_10,high
+usr_033,peter.davis33,Executive,VP Operations,standard,ast_wkst_02,medium
+usr_034,liam.wilson34,Security,Security Engineer,elevated,ast_wkst_01,low
+usr_035,bob.gonzalez35,Operations,Operations Analyst,standard,ast_wkst_04,high
+usr_036,olivia.jones36,Security,SOC Analyst,standard,ast_wkst_04,low
+usr_037,olivia.moore37,HR,HR Generalist,standard,ast_wkst_09,low
+usr_038,charlie.davis38,IT,IT Director,standard,ast_wkst_04,medium
+usr_039,bob.garcia39,Security,SOC Analyst,administrator,ast_wkst_05,medium
+usr_040,jack.wilson40,Executive,CFO,standard,ast_wkst_04,low
+usr_041,sam.moore41,Finance,Payroll Specialist,standard,ast_wkst_10,medium
+usr_042,quinn.taylor42,IT,Systems Administrator,administrator,ast_wkst_02,low
+usr_043,charlie.martin43,HR,Recruiter,standard,ast_wkst_10,low
+usr_044,sam.martin44,Finance,Financial Analyst,standard,ast_wkst_10,high
+usr_045,quinn.hernandez45,Sales,Account Manager,standard,ast_wkst_06,low
+usr_046,ivy.gonzalez46,IT,Network Engineer,standard,ast_wkst_13,low
+usr_047,alice.anderson47,HR,HR Generalist,standard,ast_wkst_09,low
+usr_048,emma.lopez48,HR,Recruiter,standard,ast_wkst_03,medium
+usr_049,rachel.martinez49,Finance,Payroll Specialist,administrator,ast_wkst_02,low
+usr_050,ivy.brown50,HR,Recruiter,standard,ast_wkst_10,low
+usr_051,wendy.hernandez51,Engineering,QA Engineer,standard,ast_wkst_05,low
+usr_052,charlie.wilson52,Sales,Sales Exec,standard,ast_wkst_13,low
+usr_053,umar.rodriguez53,IT,IT Director,standard,ast_wkst_07,high
+usr_054,alice.brown54,HR,Recruiter,standard,ast_wkst_14,low
+usr_055,sam.moore55,IT,IT Director,standard,ast_wkst_05,low

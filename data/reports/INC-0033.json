@@ -1,0 +1,252 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-09-01T06:03:36.010571+00:00",
+  "incident": {
+    "incident_id": "INC-0033",
+    "incident_type": "Ransomware Outbreak",
+    "risk_score": 79.45,
+    "risk_level": "CRITICAL",
+    "priority_rank": 5,
+    "priority_band": "CRITICAL",
+    "first_seen": "2026-09-01T12:00:00+00:00",
+    "last_seen": "2026-09-01T12:12:30+00:00",
+    "alert_count": 5,
+    "affected_user_count": 1,
+    "tie_group_id": null
+  },
+  "executive_summary": "INC-0033 is a CRITICAL Ransomware Outbreak ranked #5 in the SentinelIQ investigation queue with a defensible risk score of 79.45 / 100. The incident contains 5 correlated alerts affecting 1 unique user(s) and target asset(s) (dev-app-01.corp.internal, file-share-prod.corp.internal). The primary risk drivers elevating this incident's priority rank are Severity, Business Impact, Asset Importance.",
+  "risk_analysis": {
+    "formula": "R = 0.20*S + 0.20*A + 0.10*U + 0.15*D + 0.15*C + 0.20*B",
+    "risk_score": 79.45,
+    "risk_level": "CRITICAL",
+    "factors": [
+      {
+        "name": "severity",
+        "value": 98.0,
+        "weight": 0.2,
+        "contribution": 19.6,
+        "status": "CRITICAL",
+        "source": "maximum_severity",
+        "evidence": "Maximum alert severity is 98.0 (average alert severity: 89.2)."
+      },
+      {
+        "name": "asset_importance",
+        "value": 77.0,
+        "weight": 0.2,
+        "contribution": 15.4,
+        "status": "CRITICAL",
+        "source": "incident_asset_importance",
+        "evidence": "Target asset normalized importance rating is 77.0."
+      },
+      {
+        "name": "affected_users",
+        "value": 10.03,
+        "weight": 0.1,
+        "contribution": 1.003,
+        "status": "LOW",
+        "source": "normalized_affected_users",
+        "evidence": "1 unique user(s) affected, logarithmically normalized to 10.03."
+      },
+      {
+        "name": "data_sensitivity",
+        "value": 85.0,
+        "weight": 0.15,
+        "contribution": 12.75,
+        "status": "CRITICAL",
+        "source": "incident_data_sensitivity",
+        "evidence": "Target asset data sensitivity rating is 85.0."
+      },
+      {
+        "name": "attack_confidence",
+        "value": 100.0,
+        "weight": 0.15,
+        "contribution": 15.0,
+        "status": "CRITICAL",
+        "source": "incident_confidence",
+        "evidence": "Corroborated incident attack confidence is 100.0 (max alert confidence: 98)."
+      },
+      {
+        "name": "business_impact",
+        "value": 78.5,
+        "weight": 0.2,
+        "contribution": 15.7,
+        "status": "CRITICAL",
+        "source": "incident_business_impact",
+        "evidence": "Potential business impact rating is 78.5."
+      }
+    ],
+    "dominant_factors": [
+      "severity",
+      "business_impact",
+      "asset_importance"
+    ],
+    "contribution_sum": 79.45
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-09-01T12:00:00+00:00",
+      "alert_id": "alt_0027",
+      "alert_type": "Suspicious PowerShell",
+      "category": "Security Alert",
+      "severity": 75,
+      "confidence": 80.0,
+      "source_ip": "192.168.1.108",
+      "destination_ip": "10.0.2.20",
+      "user_id": "usr_devops",
+      "username": "david.devops",
+      "asset_id": "ast_dev_app",
+      "asset_name": "ast_dev_app"
+    },
+    {
+      "timestamp": "2026-09-01T12:03:00+00:00",
+      "alert_id": "alt_0028",
+      "alert_type": "Ransomware Indicator",
+      "category": "Security Alert",
+      "severity": 95,
+      "confidence": 80.0,
+      "source_ip": "10.0.2.20",
+      "destination_ip": "10.0.2.20",
+      "user_id": "usr_devops",
+      "username": "david.devops",
+      "asset_id": "ast_dev_app",
+      "asset_name": "ast_dev_app"
+    },
+    {
+      "timestamp": "2026-09-01T12:06:40+00:00",
+      "alert_id": "alt_0029",
+      "alert_type": "Lateral Movement",
+      "category": "Security Alert",
+      "severity": 90,
+      "confidence": 80.0,
+      "source_ip": "10.0.2.20",
+      "destination_ip": "10.0.3.15",
+      "user_id": "usr_devops",
+      "username": "david.devops",
+      "asset_id": "ast_file_01",
+      "asset_name": "ast_file_01"
+    },
+    {
+      "timestamp": "2026-09-01T12:10:00+00:00",
+      "alert_id": "alt_0030",
+      "alert_type": "Ransomware Indicator",
+      "category": "Security Alert",
+      "severity": 98,
+      "confidence": 80.0,
+      "source_ip": "10.0.3.15",
+      "destination_ip": "10.0.3.15",
+      "user_id": "usr_devops",
+      "username": "david.devops",
+      "asset_id": "ast_file_01",
+      "asset_name": "ast_file_01"
+    },
+    {
+      "timestamp": "2026-09-01T12:12:30+00:00",
+      "alert_id": "alt_0031",
+      "alert_type": "Lateral Movement",
+      "category": "Security Alert",
+      "severity": 88,
+      "confidence": 80.0,
+      "source_ip": "10.0.2.20",
+      "destination_ip": "10.0.3.16",
+      "user_id": "usr_devops",
+      "username": "david.devops",
+      "asset_id": "ast_file_dev",
+      "asset_name": "ast_file_dev"
+    }
+  ],
+  "correlation_evidence": [],
+  "classification": {
+    "incident_type": "Ransomware Outbreak",
+    "classification_evidence": [
+      "Incident contains 5 alert(s) matching Ransomware Outbreak threat patterns.",
+      "Highest alert severity: 98.0"
+    ]
+  },
+  "affected_users": [
+    {
+      "user_id": "usr_devops",
+      "username": "david.devops",
+      "role": "DevOps Engineer",
+      "department": "Engineering",
+      "privilege_level": "elevated"
+    }
+  ],
+  "affected_assets": [
+    {
+      "asset_id": "ast_dev_app",
+      "name": "dev-app-01.corp.internal",
+      "asset_type": "application_server",
+      "criticality": 45,
+      "business_impact": 80.0,
+      "data_sensitivity": 40
+    },
+    {
+      "asset_id": "ast_file_01",
+      "name": "file-share-prod.corp.internal",
+      "asset_type": "file_server",
+      "criticality": 75,
+      "business_impact": 80.0,
+      "data_sensitivity": 85
+    },
+    {
+      "asset_id": "ast_file_dev",
+      "name": "file-share-dev.corp.internal",
+      "asset_type": "file_server",
+      "criticality": 45,
+      "business_impact": 80.0,
+      "data_sensitivity": 50
+    }
+  ],
+  "priority_explanation": {
+    "priority_rank": 5,
+    "risk_score": 79.45,
+    "risk_level": "CRITICAL",
+    "tie_group_id": null,
+    "primary_reason": "Higher risk score",
+    "compared_with_next": {
+      "incident_id": "INC-0066",
+      "risk_score": 78.85,
+      "score_difference": 0.6,
+      "deciding_factor": "risk_score"
+    }
+  },
+  "recommendations": [
+    {
+      "type": "automated recommendation",
+      "action": "Isolate Affected Host",
+      "priority": "IMMEDIATE",
+      "details": "Disconnect affected endpoints from local network VLANs to prevent wormable encryption spread.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Disable Suspicious Accounts",
+      "priority": "IMMEDIATE",
+      "details": "Revoke active session tokens and disable compromised user/service credentials.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Preserve Forensic Memory",
+      "priority": "HIGH",
+      "details": "Capture RAM dumps and unencrypted process artifacts prior to host reboot or re-imaging.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Investigate Lateral Movement",
+      "priority": "HIGH",
+      "details": "Audit SMB/RPC/PsExec logs on adjacent network subnet hosts for unauthorized execution.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    }
+  ],
+  "limitations": [
+    "AUTOMATED REPORT DISCLAIMER: Recommendations listed in this report are automated policy-based guidance generated for SOC analysts. They represent suggested investigation/containment actions and do not imply that automated mitigation has been executed.",
+    "Prioritization is based on batch snapshot data. Live streaming telemetry will update queue dynamically.",
+    "Asset importance and data sensitivity values reflect configured CMDB asset tags."
+  ]
+}

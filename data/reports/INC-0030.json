@@ -1,0 +1,180 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-09-01T06:03:36.050946+00:00",
+  "incident": {
+    "incident_id": "INC-0030",
+    "incident_type": "Malware Infection",
+    "risk_score": 31.8,
+    "risk_level": "MEDIUM",
+    "priority_rank": 68,
+    "priority_band": "MEDIUM",
+    "first_seen": "2026-09-01T11:13:29+00:00",
+    "last_seen": "2026-09-01T11:13:29+00:00",
+    "alert_count": 1,
+    "affected_user_count": 1,
+    "tie_group_id": null
+  },
+  "executive_summary": "INC-0030 is a MEDIUM Malware Infection ranked #68 in the SentinelIQ investigation queue with a defensible risk score of 31.80 / 100. The incident contains 1 correlated alerts affecting 1 unique user(s) and target asset(s) (test-box-02.corp.internal). The primary risk drivers elevating this incident's priority rank are Attack Confidence, Severity, Asset Importance.",
+  "risk_analysis": {
+    "formula": "R = 0.20*S + 0.20*A + 0.10*U + 0.15*D + 0.15*C + 0.20*B",
+    "risk_score": 31.8,
+    "risk_level": "MEDIUM",
+    "factors": [
+      {
+        "name": "severity",
+        "value": 50.0,
+        "weight": 0.2,
+        "contribution": 10.0,
+        "status": "HIGH",
+        "source": "maximum_severity",
+        "evidence": "Maximum alert severity is 50.0 (average alert severity: 50.0)."
+      },
+      {
+        "name": "asset_importance",
+        "value": 15.0,
+        "weight": 0.2,
+        "contribution": 3.0,
+        "status": "LOW",
+        "source": "incident_asset_importance",
+        "evidence": "Target asset normalized importance rating is 15.0."
+      },
+      {
+        "name": "affected_users",
+        "value": 10.03,
+        "weight": 0.1,
+        "contribution": 1.003,
+        "status": "LOW",
+        "source": "normalized_affected_users",
+        "evidence": "1 unique user(s) affected, logarithmically normalized to 10.03."
+      },
+      {
+        "name": "data_sensitivity",
+        "value": 10.0,
+        "weight": 0.15,
+        "contribution": 1.5,
+        "status": "LOW",
+        "source": "incident_data_sensitivity",
+        "evidence": "Target asset data sensitivity rating is 10.0."
+      },
+      {
+        "name": "attack_confidence",
+        "value": 90.0,
+        "weight": 0.15,
+        "contribution": 13.5,
+        "status": "CRITICAL",
+        "source": "incident_confidence",
+        "evidence": "Corroborated incident attack confidence is 90.0 (max alert confidence: 90)."
+      },
+      {
+        "name": "business_impact",
+        "value": 14.0,
+        "weight": 0.2,
+        "contribution": 2.8,
+        "status": "LOW",
+        "source": "incident_business_impact",
+        "evidence": "Potential business impact rating is 14.0."
+      }
+    ],
+    "dominant_factors": [
+      "attack_confidence",
+      "severity",
+      "asset_importance"
+    ],
+    "contribution_sum": 31.8
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-09-01T11:13:29+00:00",
+      "alert_id": "alt_0155",
+      "alert_type": "Malware Detection",
+      "category": "Security Alert",
+      "severity": 50,
+      "confidence": 80.0,
+      "source_ip": "192.168.5.196",
+      "destination_ip": "10.0.3.116",
+      "user_id": "usr_044",
+      "username": "sam.martin44",
+      "asset_id": "ast_test_02",
+      "asset_name": "ast_test_02"
+    }
+  ],
+  "correlation_evidence": [],
+  "classification": {
+    "incident_type": "Malware Infection",
+    "classification_evidence": [
+      "Incident contains 1 alert(s) matching Malware Infection threat patterns.",
+      "Highest alert severity: 50.0"
+    ]
+  },
+  "affected_users": [
+    {
+      "user_id": "usr_044",
+      "username": "sam.martin44",
+      "role": "Financial Analyst",
+      "department": "Finance",
+      "privilege_level": "standard"
+    }
+  ],
+  "affected_assets": [
+    {
+      "asset_id": "ast_test_02",
+      "name": "test-box-02.corp.internal",
+      "asset_type": "test_server",
+      "criticality": 15,
+      "business_impact": 80.0,
+      "data_sensitivity": 10
+    }
+  ],
+  "priority_explanation": {
+    "priority_rank": 68,
+    "risk_score": 31.8,
+    "risk_level": "MEDIUM",
+    "tie_group_id": null,
+    "primary_reason": "Higher risk score",
+    "compared_with_next": {
+      "incident_id": "INC-0079",
+      "risk_score": 31.36,
+      "score_difference": 0.44,
+      "deciding_factor": "risk_score"
+    }
+  },
+  "recommendations": [
+    {
+      "type": "automated recommendation",
+      "action": "Isolate Infected Endpoint",
+      "priority": "IMMEDIATE",
+      "details": "Isolate affected workstation/server via EDR agent network isolation policy.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Preserve Malware Executable Sample",
+      "priority": "HIGH",
+      "details": "Quarantine payload sample and submit SHA256 hash to static/dynamic sandbox analysis.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Investigate Persistence Mechanisms",
+      "priority": "HIGH",
+      "details": "Audit registry run keys, scheduled tasks, and systemd services for backdoor persistence.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Sweep Fleet for IoCs",
+      "priority": "MEDIUM",
+      "details": "Run enterprise EDR sweep for matching file hashes, IP connections, and mutex names.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    }
+  ],
+  "limitations": [
+    "AUTOMATED REPORT DISCLAIMER: Recommendations listed in this report are automated policy-based guidance generated for SOC analysts. They represent suggested investigation/containment actions and do not imply that automated mitigation has been executed.",
+    "Prioritization is based on batch snapshot data. Live streaming telemetry will update queue dynamically.",
+    "Asset importance and data sensitivity values reflect configured CMDB asset tags."
+  ]
+}

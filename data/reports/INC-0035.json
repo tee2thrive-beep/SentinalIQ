@@ -1,0 +1,194 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-09-01T06:03:36.033122+00:00",
+  "incident": {
+    "incident_id": "INC-0035",
+    "incident_type": "Failed Login Event",
+    "risk_score": 60.6,
+    "risk_level": "HIGH",
+    "priority_rank": 37,
+    "priority_band": "HIGH",
+    "first_seen": "2026-09-01T12:10:02+00:00",
+    "last_seen": "2026-09-01T12:11:48+00:00",
+    "alert_count": 2,
+    "affected_user_count": 1,
+    "tie_group_id": null
+  },
+  "executive_summary": "INC-0035 is a HIGH Failed Login Event ranked #37 in the SentinelIQ investigation queue with a defensible risk score of 60.60 / 100. The incident contains 2 correlated alerts affecting 1 unique user(s) and target asset(s) (fw-edge-01.corp.internal). The primary risk drivers elevating this incident's priority rank are Asset Importance, Business Impact, Attack Confidence.",
+  "risk_analysis": {
+    "formula": "R = 0.20*S + 0.20*A + 0.10*U + 0.15*D + 0.15*C + 0.20*B",
+    "risk_score": 60.6,
+    "risk_level": "HIGH",
+    "factors": [
+      {
+        "name": "severity",
+        "value": 30.0,
+        "weight": 0.2,
+        "contribution": 6.0,
+        "status": "MEDIUM",
+        "source": "maximum_severity",
+        "evidence": "Maximum alert severity is 30.0 (average alert severity: 23.0)."
+      },
+      {
+        "name": "asset_importance",
+        "value": 90.0,
+        "weight": 0.2,
+        "contribution": 18.0,
+        "status": "CRITICAL",
+        "source": "incident_asset_importance",
+        "evidence": "Target asset normalized importance rating is 90.0."
+      },
+      {
+        "name": "affected_users",
+        "value": 10.03,
+        "weight": 0.1,
+        "contribution": 1.003,
+        "status": "LOW",
+        "source": "normalized_affected_users",
+        "evidence": "1 unique user(s) affected, logarithmically normalized to 10.03."
+      },
+      {
+        "name": "data_sensitivity",
+        "value": 50.0,
+        "weight": 0.15,
+        "contribution": 7.5,
+        "status": "HIGH",
+        "source": "incident_data_sensitivity",
+        "evidence": "Target asset data sensitivity rating is 50.0."
+      },
+      {
+        "name": "attack_confidence",
+        "value": 78.0,
+        "weight": 0.15,
+        "contribution": 11.7,
+        "status": "CRITICAL",
+        "source": "incident_confidence",
+        "evidence": "Corroborated incident attack confidence is 78.0 (max alert confidence: 76)."
+      },
+      {
+        "name": "business_impact",
+        "value": 82.0,
+        "weight": 0.2,
+        "contribution": 16.4,
+        "status": "CRITICAL",
+        "source": "incident_business_impact",
+        "evidence": "Potential business impact rating is 82.0."
+      }
+    ],
+    "dominant_factors": [
+      "asset_importance",
+      "business_impact",
+      "attack_confidence"
+    ],
+    "contribution_sum": 60.6
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-09-01T12:10:02+00:00",
+      "alert_id": "alt_0095",
+      "alert_type": "Failed Login",
+      "category": "Security Alert",
+      "severity": 30,
+      "confidence": 80.0,
+      "source_ip": "192.168.3.149",
+      "destination_ip": "10.0.1.197",
+      "user_id": "usr_049",
+      "username": "rachel.martinez49",
+      "asset_id": "ast_fw_01",
+      "asset_name": "ast_fw_01"
+    },
+    {
+      "timestamp": "2026-09-01T12:11:48+00:00",
+      "alert_id": "alt_0082",
+      "alert_type": "Port Scan",
+      "category": "Security Alert",
+      "severity": 16,
+      "confidence": 80.0,
+      "source_ip": "192.168.3.32",
+      "destination_ip": "10.0.3.139",
+      "user_id": "usr_049",
+      "username": "rachel.martinez49",
+      "asset_id": "ast_fw_01",
+      "asset_name": "ast_fw_01"
+    }
+  ],
+  "correlation_evidence": [],
+  "classification": {
+    "incident_type": "Failed Login Event",
+    "classification_evidence": [
+      "Incident contains 2 alert(s) matching Failed Login Event threat patterns.",
+      "Highest alert severity: 30.0"
+    ]
+  },
+  "affected_users": [
+    {
+      "user_id": "usr_049",
+      "username": "rachel.martinez49",
+      "role": "Payroll Specialist",
+      "department": "Finance",
+      "privilege_level": "administrator"
+    }
+  ],
+  "affected_assets": [
+    {
+      "asset_id": "ast_fw_01",
+      "name": "fw-edge-01.corp.internal",
+      "asset_type": "firewall",
+      "criticality": 90,
+      "business_impact": 80.0,
+      "data_sensitivity": 50
+    }
+  ],
+  "priority_explanation": {
+    "priority_rank": 37,
+    "risk_score": 60.6,
+    "risk_level": "HIGH",
+    "tie_group_id": null,
+    "primary_reason": "Higher risk score",
+    "compared_with_next": {
+      "incident_id": "INC-0056",
+      "risk_score": 60.5,
+      "score_difference": 0.1,
+      "deciding_factor": "risk_score"
+    }
+  },
+  "recommendations": [
+    {
+      "type": "automated recommendation",
+      "action": "Isolate Affected Entity",
+      "priority": "IMMEDIATE",
+      "details": "Restrict network access for compromised assets or users involved in the incident.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Preserve Security Logs",
+      "priority": "HIGH",
+      "details": "Collect firewall, SIEM, and host endpoint event logs for root cause analysis.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Audit Account Credentials",
+      "priority": "HIGH",
+      "details": "Reset passwords and review privileges for all accounts associated with the incident alerts.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Monitor Target Subnet",
+      "priority": "MEDIUM",
+      "details": "Enable heightened logging and IDS monitoring across adjacent network subnets.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    }
+  ],
+  "limitations": [
+    "AUTOMATED REPORT DISCLAIMER: Recommendations listed in this report are automated policy-based guidance generated for SOC analysts. They represent suggested investigation/containment actions and do not imply that automated mitigation has been executed.",
+    "Prioritization is based on batch snapshot data. Live streaming telemetry will update queue dynamically.",
+    "Asset importance and data sensitivity values reflect configured CMDB asset tags."
+  ]
+}

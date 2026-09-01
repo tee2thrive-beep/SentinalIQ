@@ -1,0 +1,180 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-09-01T06:03:36.056389+00:00",
+  "incident": {
+    "incident_id": "INC-0078",
+    "incident_type": "Failed Login Event",
+    "risk_score": 29.9,
+    "risk_level": "MEDIUM",
+    "priority_rank": 78,
+    "priority_band": "MEDIUM",
+    "first_seen": "2026-09-01T16:40:59+00:00",
+    "last_seen": "2026-09-01T16:40:59+00:00",
+    "alert_count": 1,
+    "affected_user_count": 1,
+    "tie_group_id": null
+  },
+  "executive_summary": "INC-0078 is a MEDIUM Failed Login Event ranked #78 in the SentinelIQ investigation queue with a defensible risk score of 29.90 / 100. The incident contains 1 correlated alerts affecting 1 unique user(s) and target asset(s) (wkst-security-14.corp.internal). The primary risk drivers elevating this incident's priority rank are Attack Confidence, Severity, Asset Importance.",
+  "risk_analysis": {
+    "formula": "R = 0.20*S + 0.20*A + 0.10*U + 0.15*D + 0.15*C + 0.20*B",
+    "risk_score": 29.9,
+    "risk_level": "MEDIUM",
+    "factors": [
+      {
+        "name": "severity",
+        "value": 34.0,
+        "weight": 0.2,
+        "contribution": 6.8,
+        "status": "MEDIUM",
+        "source": "maximum_severity",
+        "evidence": "Maximum alert severity is 34.0 (average alert severity: 34.0)."
+      },
+      {
+        "name": "asset_importance",
+        "value": 26.6,
+        "weight": 0.2,
+        "contribution": 5.32,
+        "status": "MEDIUM",
+        "source": "incident_asset_importance",
+        "evidence": "Target asset normalized importance rating is 26.6."
+      },
+      {
+        "name": "affected_users",
+        "value": 10.03,
+        "weight": 0.1,
+        "contribution": 1.003,
+        "status": "LOW",
+        "source": "normalized_affected_users",
+        "evidence": "1 unique user(s) affected, logarithmically normalized to 10.03."
+      },
+      {
+        "name": "data_sensitivity",
+        "value": 13.0,
+        "weight": 0.15,
+        "contribution": 1.95,
+        "status": "LOW",
+        "source": "incident_data_sensitivity",
+        "evidence": "Target asset data sensitivity rating is 13.0."
+      },
+      {
+        "name": "attack_confidence",
+        "value": 67.0,
+        "weight": 0.15,
+        "contribution": 10.05,
+        "status": "HIGH",
+        "source": "incident_confidence",
+        "evidence": "Corroborated incident attack confidence is 67.0 (max alert confidence: 67)."
+      },
+      {
+        "name": "business_impact",
+        "value": 23.9,
+        "weight": 0.2,
+        "contribution": 4.78,
+        "status": "LOW",
+        "source": "incident_business_impact",
+        "evidence": "Potential business impact rating is 23.9."
+      }
+    ],
+    "dominant_factors": [
+      "attack_confidence",
+      "severity",
+      "asset_importance"
+    ],
+    "contribution_sum": 29.9
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-09-01T16:40:59+00:00",
+      "alert_id": "alt_0064",
+      "alert_type": "Failed Login",
+      "category": "Security Alert",
+      "severity": 34,
+      "confidence": 80.0,
+      "source_ip": "192.168.3.194",
+      "destination_ip": "10.0.2.109",
+      "user_id": "usr_035",
+      "username": "bob.gonzalez35",
+      "asset_id": "ast_wkst_14",
+      "asset_name": "ast_wkst_14"
+    }
+  ],
+  "correlation_evidence": [],
+  "classification": {
+    "incident_type": "Failed Login Event",
+    "classification_evidence": [
+      "Incident contains 1 alert(s) matching Failed Login Event threat patterns.",
+      "Highest alert severity: 34.0"
+    ]
+  },
+  "affected_users": [
+    {
+      "user_id": "usr_035",
+      "username": "bob.gonzalez35",
+      "role": "Operations Analyst",
+      "department": "Operations",
+      "privilege_level": "standard"
+    }
+  ],
+  "affected_assets": [
+    {
+      "asset_id": "ast_wkst_14",
+      "name": "wkst-security-14.corp.internal",
+      "asset_type": "workstation",
+      "criticality": 27,
+      "business_impact": 80.0,
+      "data_sensitivity": 13
+    }
+  ],
+  "priority_explanation": {
+    "priority_rank": 78,
+    "risk_score": 29.9,
+    "risk_level": "MEDIUM",
+    "tie_group_id": null,
+    "primary_reason": "Higher risk score",
+    "compared_with_next": {
+      "incident_id": "INC-0068",
+      "risk_score": 29.86,
+      "score_difference": 0.04,
+      "deciding_factor": "risk_score"
+    }
+  },
+  "recommendations": [
+    {
+      "type": "automated recommendation",
+      "action": "Isolate Affected Entity",
+      "priority": "IMMEDIATE",
+      "details": "Restrict network access for compromised assets or users involved in the incident.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Preserve Security Logs",
+      "priority": "HIGH",
+      "details": "Collect firewall, SIEM, and host endpoint event logs for root cause analysis.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Audit Account Credentials",
+      "priority": "HIGH",
+      "details": "Reset passwords and review privileges for all accounts associated with the incident alerts.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Monitor Target Subnet",
+      "priority": "MEDIUM",
+      "details": "Enable heightened logging and IDS monitoring across adjacent network subnets.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    }
+  ],
+  "limitations": [
+    "AUTOMATED REPORT DISCLAIMER: Recommendations listed in this report are automated policy-based guidance generated for SOC analysts. They represent suggested investigation/containment actions and do not imply that automated mitigation has been executed.",
+    "Prioritization is based on batch snapshot data. Live streaming telemetry will update queue dynamically.",
+    "Asset importance and data sensitivity values reflect configured CMDB asset tags."
+  ]
+}

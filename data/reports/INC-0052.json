@@ -1,0 +1,180 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-09-01T06:03:36.070752+00:00",
+  "incident": {
+    "incident_id": "INC-0052",
+    "incident_type": "Port Scan Event",
+    "risk_score": 25.36,
+    "risk_level": "MEDIUM",
+    "priority_rank": 104,
+    "priority_band": "MEDIUM",
+    "first_seen": "2026-09-01T13:29:24+00:00",
+    "last_seen": "2026-09-01T13:29:24+00:00",
+    "alert_count": 1,
+    "affected_user_count": 1,
+    "tie_group_id": null
+  },
+  "executive_summary": "INC-0052 is a MEDIUM Port Scan Event ranked #104 in the SentinelIQ investigation queue with a defensible risk score of 25.36 / 100. The incident contains 1 correlated alerts affecting 1 unique user(s) and target asset(s) (wkst-executive-07.corp.internal). The primary risk drivers elevating this incident's priority rank are Asset Importance, Attack Confidence, Business Impact.",
+  "risk_analysis": {
+    "formula": "R = 0.20*S + 0.20*A + 0.10*U + 0.15*D + 0.15*C + 0.20*B",
+    "risk_score": 25.36,
+    "risk_level": "MEDIUM",
+    "factors": [
+      {
+        "name": "severity",
+        "value": 21.0,
+        "weight": 0.2,
+        "contribution": 4.2,
+        "status": "LOW",
+        "source": "maximum_severity",
+        "evidence": "Maximum alert severity is 21.0 (average alert severity: 21.0)."
+      },
+      {
+        "name": "asset_importance",
+        "value": 33.2,
+        "weight": 0.2,
+        "contribution": 6.64,
+        "status": "MEDIUM",
+        "source": "incident_asset_importance",
+        "evidence": "Target asset normalized importance rating is 33.2."
+      },
+      {
+        "name": "affected_users",
+        "value": 10.03,
+        "weight": 0.1,
+        "contribution": 1.003,
+        "status": "LOW",
+        "source": "normalized_affected_users",
+        "evidence": "1 unique user(s) affected, logarithmically normalized to 10.03."
+      },
+      {
+        "name": "data_sensitivity",
+        "value": 10.0,
+        "weight": 0.15,
+        "contribution": 1.5,
+        "status": "LOW",
+        "source": "incident_data_sensitivity",
+        "evidence": "Target asset data sensitivity rating is 10.0."
+      },
+      {
+        "name": "attack_confidence",
+        "value": 42.0,
+        "weight": 0.15,
+        "contribution": 6.3,
+        "status": "MEDIUM",
+        "source": "incident_confidence",
+        "evidence": "Corroborated incident attack confidence is 42.0 (max alert confidence: 42)."
+      },
+      {
+        "name": "business_impact",
+        "value": 28.6,
+        "weight": 0.2,
+        "contribution": 5.72,
+        "status": "MEDIUM",
+        "source": "incident_business_impact",
+        "evidence": "Potential business impact rating is 28.6."
+      }
+    ],
+    "dominant_factors": [
+      "asset_importance",
+      "attack_confidence",
+      "business_impact"
+    ],
+    "contribution_sum": 25.36
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-09-01T13:29:24+00:00",
+      "alert_id": "alt_0073",
+      "alert_type": "Port Scan",
+      "category": "Security Alert",
+      "severity": 21,
+      "confidence": 80.0,
+      "source_ip": "192.168.5.202",
+      "destination_ip": "10.0.1.90",
+      "user_id": "usr_035",
+      "username": "bob.gonzalez35",
+      "asset_id": "ast_wkst_07",
+      "asset_name": "ast_wkst_07"
+    }
+  ],
+  "correlation_evidence": [],
+  "classification": {
+    "incident_type": "Port Scan Event",
+    "classification_evidence": [
+      "Incident contains 1 alert(s) matching Port Scan Event threat patterns.",
+      "Highest alert severity: 21.0"
+    ]
+  },
+  "affected_users": [
+    {
+      "user_id": "usr_035",
+      "username": "bob.gonzalez35",
+      "role": "Operations Analyst",
+      "department": "Operations",
+      "privilege_level": "standard"
+    }
+  ],
+  "affected_assets": [
+    {
+      "asset_id": "ast_wkst_07",
+      "name": "wkst-executive-07.corp.internal",
+      "asset_type": "laptop",
+      "criticality": 34,
+      "business_impact": 80.0,
+      "data_sensitivity": 10
+    }
+  ],
+  "priority_explanation": {
+    "priority_rank": 104,
+    "risk_score": 25.36,
+    "risk_level": "MEDIUM",
+    "tie_group_id": null,
+    "primary_reason": "Higher risk score",
+    "compared_with_next": {
+      "incident_id": "INC-0089",
+      "risk_score": 25.25,
+      "score_difference": 0.11,
+      "deciding_factor": "risk_score"
+    }
+  },
+  "recommendations": [
+    {
+      "type": "automated recommendation",
+      "action": "Isolate Affected Entity",
+      "priority": "IMMEDIATE",
+      "details": "Restrict network access for compromised assets or users involved in the incident.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Preserve Security Logs",
+      "priority": "HIGH",
+      "details": "Collect firewall, SIEM, and host endpoint event logs for root cause analysis.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Audit Account Credentials",
+      "priority": "HIGH",
+      "details": "Reset passwords and review privileges for all accounts associated with the incident alerts.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Monitor Target Subnet",
+      "priority": "MEDIUM",
+      "details": "Enable heightened logging and IDS monitoring across adjacent network subnets.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    }
+  ],
+  "limitations": [
+    "AUTOMATED REPORT DISCLAIMER: Recommendations listed in this report are automated policy-based guidance generated for SOC analysts. They represent suggested investigation/containment actions and do not imply that automated mitigation has been executed.",
+    "Prioritization is based on batch snapshot data. Live streaming telemetry will update queue dynamically.",
+    "Asset importance and data sensitivity values reflect configured CMDB asset tags."
+  ]
+}

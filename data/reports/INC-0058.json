@@ -1,0 +1,244 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-09-01T06:03:36.009952+00:00",
+  "incident": {
+    "incident_id": "INC-0058",
+    "incident_type": "Multi-stage Attack",
+    "risk_score": 85.95,
+    "risk_level": "CRITICAL",
+    "priority_rank": 4,
+    "priority_band": "CRITICAL",
+    "first_seen": "2026-09-01T14:00:00+00:00",
+    "last_seen": "2026-09-01T14:20:00+00:00",
+    "alert_count": 5,
+    "affected_user_count": 1,
+    "tie_group_id": null
+  },
+  "executive_summary": "INC-0058 is a CRITICAL Multi-stage Attack ranked #4 in the SentinelIQ investigation queue with a defensible risk score of 85.95 / 100. The incident contains 5 correlated alerts affecting 1 unique user(s) and target asset(s) (aws-prod-k8s.cloud.internal, cust-db-cluster.corp.internal). The primary risk drivers elevating this incident's priority rank are Severity, Business Impact, Asset Importance.",
+  "risk_analysis": {
+    "formula": "R = 0.20*S + 0.20*A + 0.10*U + 0.15*D + 0.15*C + 0.20*B",
+    "risk_score": 85.95,
+    "risk_level": "CRITICAL",
+    "factors": [
+      {
+        "name": "severity",
+        "value": 94.0,
+        "weight": 0.2,
+        "contribution": 18.8,
+        "status": "CRITICAL",
+        "source": "maximum_severity",
+        "evidence": "Maximum alert severity is 94.0 (average alert severity: 76.2)."
+      },
+      {
+        "name": "asset_importance",
+        "value": 92.0,
+        "weight": 0.2,
+        "contribution": 18.4,
+        "status": "CRITICAL",
+        "source": "incident_asset_importance",
+        "evidence": "Target asset normalized importance rating is 92.0."
+      },
+      {
+        "name": "affected_users",
+        "value": 10.03,
+        "weight": 0.1,
+        "contribution": 1.003,
+        "status": "LOW",
+        "source": "normalized_affected_users",
+        "evidence": "1 unique user(s) affected, logarithmically normalized to 10.03."
+      },
+      {
+        "name": "data_sensitivity",
+        "value": 95.0,
+        "weight": 0.15,
+        "contribution": 14.25,
+        "status": "CRITICAL",
+        "source": "incident_data_sensitivity",
+        "evidence": "Target asset data sensitivity rating is 95.0."
+      },
+      {
+        "name": "attack_confidence",
+        "value": 100.0,
+        "weight": 0.15,
+        "contribution": 15.0,
+        "status": "CRITICAL",
+        "source": "incident_confidence",
+        "evidence": "Corroborated incident attack confidence is 100.0 (max alert confidence: 95)."
+      },
+      {
+        "name": "business_impact",
+        "value": 92.5,
+        "weight": 0.2,
+        "contribution": 18.5,
+        "status": "CRITICAL",
+        "source": "incident_business_impact",
+        "evidence": "Potential business impact rating is 92.5."
+      }
+    ],
+    "dominant_factors": [
+      "severity",
+      "business_impact",
+      "asset_importance"
+    ],
+    "contribution_sum": 85.95
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-09-01T14:00:00+00:00",
+      "alert_id": "alt_0036",
+      "alert_type": "Successful Login",
+      "category": "Security Alert",
+      "severity": 30,
+      "confidence": 80.0,
+      "source_ip": "185.125.190.2",
+      "destination_ip": "10.0.0.50",
+      "user_id": "usr_sales_vp",
+      "username": "emma.vp",
+      "asset_id": "ast_cloud_01",
+      "asset_name": "ast_cloud_01"
+    },
+    {
+      "timestamp": "2026-09-01T14:05:00+00:00",
+      "alert_id": "alt_0037",
+      "alert_type": "Impossible Travel",
+      "category": "Security Alert",
+      "severity": 90,
+      "confidence": 80.0,
+      "source_ip": "103.22.200.5",
+      "destination_ip": "10.0.0.50",
+      "user_id": "usr_sales_vp",
+      "username": "emma.vp",
+      "asset_id": "ast_cloud_01",
+      "asset_name": "ast_cloud_01"
+    },
+    {
+      "timestamp": "2026-09-01T14:10:00+00:00",
+      "alert_id": "alt_0038",
+      "alert_type": "Successful Login",
+      "category": "Security Alert",
+      "severity": 75,
+      "confidence": 80.0,
+      "source_ip": "103.22.200.5",
+      "destination_ip": "10.0.0.50",
+      "user_id": "usr_sales_vp",
+      "username": "emma.vp",
+      "asset_id": "ast_cloud_01",
+      "asset_name": "ast_cloud_01"
+    },
+    {
+      "timestamp": "2026-09-01T14:15:00+00:00",
+      "alert_id": "alt_0039",
+      "alert_type": "New Admin Account",
+      "category": "Security Alert",
+      "severity": 92,
+      "confidence": 80.0,
+      "source_ip": "103.22.200.5",
+      "destination_ip": "10.0.0.50",
+      "user_id": "usr_sales_vp",
+      "username": "emma.vp",
+      "asset_id": "ast_cloud_01",
+      "asset_name": "ast_cloud_01"
+    },
+    {
+      "timestamp": "2026-09-01T14:20:00+00:00",
+      "alert_id": "alt_0040",
+      "alert_type": "Unauthorized Access",
+      "category": "Security Alert",
+      "severity": 94,
+      "confidence": 80.0,
+      "source_ip": "103.22.200.5",
+      "destination_ip": "10.0.1.60",
+      "user_id": "usr_sales_vp",
+      "username": "emma.vp",
+      "asset_id": "ast_db_cust",
+      "asset_name": "ast_db_cust"
+    }
+  ],
+  "correlation_evidence": [],
+  "classification": {
+    "incident_type": "Multi-stage Attack",
+    "classification_evidence": [
+      "Incident contains 5 alert(s) matching Multi-stage Attack threat patterns.",
+      "Highest alert severity: 94.0"
+    ]
+  },
+  "affected_users": [
+    {
+      "user_id": "usr_sales_vp",
+      "username": "emma.vp",
+      "role": "VP Sales",
+      "department": "Sales",
+      "privilege_level": "elevated"
+    }
+  ],
+  "affected_assets": [
+    {
+      "asset_id": "ast_cloud_01",
+      "name": "aws-prod-k8s.cloud.internal",
+      "asset_type": "cloud_server",
+      "criticality": 85,
+      "business_impact": 80.0,
+      "data_sensitivity": 80
+    },
+    {
+      "asset_id": "ast_db_cust",
+      "name": "cust-db-cluster.corp.internal",
+      "asset_type": "database_server",
+      "criticality": 90,
+      "business_impact": 80.0,
+      "data_sensitivity": 95
+    }
+  ],
+  "priority_explanation": {
+    "priority_rank": 4,
+    "risk_score": 85.95,
+    "risk_level": "CRITICAL",
+    "tie_group_id": null,
+    "primary_reason": "Higher risk score",
+    "compared_with_next": {
+      "incident_id": "INC-0033",
+      "risk_score": 79.45,
+      "score_difference": 6.5,
+      "deciding_factor": "risk_score"
+    }
+  },
+  "recommendations": [
+    {
+      "type": "automated recommendation",
+      "action": "Isolate Affected Entity",
+      "priority": "IMMEDIATE",
+      "details": "Restrict network access for compromised assets or users involved in the incident.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Preserve Security Logs",
+      "priority": "HIGH",
+      "details": "Collect firewall, SIEM, and host endpoint event logs for root cause analysis.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Audit Account Credentials",
+      "priority": "HIGH",
+      "details": "Reset passwords and review privileges for all accounts associated with the incident alerts.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    },
+    {
+      "type": "automated recommendation",
+      "action": "Monitor Target Subnet",
+      "priority": "MEDIUM",
+      "details": "Enable heightened logging and IDS monitoring across adjacent network subnets.",
+      "status": "PROPOSED",
+      "automated_note": "Automated policy guidance for SOC analysts. Action has NOT been executed autonomously."
+    }
+  ],
+  "limitations": [
+    "AUTOMATED REPORT DISCLAIMER: Recommendations listed in this report are automated policy-based guidance generated for SOC analysts. They represent suggested investigation/containment actions and do not imply that automated mitigation has been executed.",
+    "Prioritization is based on batch snapshot data. Live streaming telemetry will update queue dynamically.",
+    "Asset importance and data sensitivity values reflect configured CMDB asset tags."
+  ]
+}
