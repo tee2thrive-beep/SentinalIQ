@@ -5,10 +5,10 @@
     "alert_ids": [
       "alt_0001",
       "alt_0002",
-      "alt_0004",
       "alt_0003",
-      "alt_0005",
+      "alt_0004",
       "alt_0006",
+      "alt_0005",
       "alt_0007"
     ],
     "alert_count": 7,
@@ -76,27 +76,6 @@
       },
       {
         "alert_a": "alt_0002",
-        "alert_b": "alt_0004",
-        "correlation_score": 66.98,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 0.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.7985,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_fin_mgr)",
-          "Same source IP address (192.168.1.105)",
-          "Occurred within 9.0 minutes of each other",
-          "Related alert categories (Credential Theft and Privilege Escalation)",
-          "Plausible attack progression: Credential Theft (Credential Access / PrivEsc) -> Privilege Escalation (Credential Access / PrivEsc)"
-        ]
-      },
-      {
-        "alert_a": "alt_0002",
         "alert_b": "alt_0003",
         "correlation_score": 68.57,
         "signals": {
@@ -114,6 +93,27 @@
           "Occurred within 4.0 minutes of each other",
           "Related alert categories (Credential Theft and Successful Login)",
           "Plausible attack progression: Credential Theft (Credential Access / PrivEsc) -> Successful Login (Authentication)"
+        ]
+      },
+      {
+        "alert_a": "alt_0002",
+        "alert_b": "alt_0004",
+        "correlation_score": 66.98,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 0.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.7985,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_fin_mgr)",
+          "Same source IP address (192.168.1.105)",
+          "Occurred within 9.0 minutes of each other",
+          "Related alert categories (Credential Theft and Privilege Escalation)",
+          "Plausible attack progression: Credential Theft (Credential Access / PrivEsc) -> Privilege Escalation (Credential Access / PrivEsc)"
         ]
       },
       {
@@ -139,26 +139,6 @@
       },
       {
         "alert_a": "alt_0004",
-        "alert_b": "alt_0005",
-        "correlation_score": 53.24,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 0.0,
-          "same_source_ip": 0.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.8825,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_fin_mgr)",
-          "Occurred within 5.0 minutes of each other",
-          "Related alert categories (Privilege Escalation and Lateral Movement)",
-          "Plausible attack progression: Privilege Escalation (Credential Access / PrivEsc) -> Lateral Movement (Lateral Movement)"
-        ]
-      },
-      {
-        "alert_a": "alt_0004",
         "alert_b": "alt_0006",
         "correlation_score": 51.68,
         "signals": {
@@ -175,6 +155,26 @@
           "Occurred within 10.0 minutes of each other",
           "Related alert categories (Privilege Escalation and Unauthorized Access)",
           "Plausible attack progression: Privilege Escalation (Credential Access / PrivEsc) -> Unauthorized Access (Collection / Internal Access)"
+        ]
+      },
+      {
+        "alert_a": "alt_0004",
+        "alert_b": "alt_0005",
+        "correlation_score": 53.24,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 0.0,
+          "same_source_ip": 0.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.8825,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_fin_mgr)",
+          "Occurred within 5.0 minutes of each other",
+          "Related alert categories (Privilege Escalation and Lateral Movement)",
+          "Plausible attack progression: Privilege Escalation (Credential Access / PrivEsc) -> Lateral Movement (Lateral Movement)"
         ]
       },
       {
@@ -201,25 +201,6 @@
         ]
       },
       {
-        "alert_a": "alt_0005",
-        "alert_b": "alt_0007",
-        "correlation_score": 51.68,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 0.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.7788,
-          "related_alert_types": 0.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_fin_mgr)",
-          "Same target asset affected (ast_db_fin)",
-          "Occurred within 10.0 minutes of each other"
-        ]
-      },
-      {
         "alert_a": "alt_0006",
         "alert_b": "alt_0007",
         "correlation_score": 73.24,
@@ -238,6 +219,25 @@
           "Occurred within 5.0 minutes of each other",
           "Related alert categories (Unauthorized Access and Data Exfiltration)",
           "Plausible attack progression: Unauthorized Access (Collection / Internal Access) -> Data Exfiltration (Exfiltration / Impact)"
+        ]
+      },
+      {
+        "alert_a": "alt_0005",
+        "alert_b": "alt_0007",
+        "correlation_score": 51.68,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 0.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.7788,
+          "related_alert_types": 0.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_fin_mgr)",
+          "Same target asset affected (ast_db_fin)",
+          "Occurred within 10.0 minutes of each other"
         ]
       }
     ],
@@ -920,8 +920,8 @@
     "alert_ids": [
       "alt_0008",
       "alt_0010",
-      "alt_0011",
       "alt_0009",
+      "alt_0011",
       "alt_0012",
       "alt_0108"
     ],
@@ -986,25 +986,6 @@
       },
       {
         "alert_a": "alt_0008",
-        "alert_b": "alt_0011",
-        "correlation_score": 50.75,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 0.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.7165,
-          "related_alert_types": 0.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_hr_spec)",
-          "Same target asset affected (ast_wkst_02)",
-          "Occurred within 13.3 minutes of each other"
-        ]
-      },
-      {
-        "alert_a": "alt_0008",
         "alert_b": "alt_0009",
         "correlation_score": 83.57,
         "signals": {
@@ -1026,25 +1007,22 @@
         ]
       },
       {
-        "alert_a": "alt_0010",
+        "alert_a": "alt_0008",
         "alert_b": "alt_0011",
-        "correlation_score": 88.13,
+        "correlation_score": 50.75,
         "signals": {
           "same_user": 1.0,
           "same_asset": 1.0,
-          "same_source_ip": 1.0,
+          "same_source_ip": 0.0,
           "same_destination_ip": 0.0,
-          "temporal_proximity": 0.8752,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
+          "temporal_proximity": 0.7165,
+          "related_alert_types": 0.0,
+          "attack_progression": 0.0
         },
         "evidence": [
           "Same user involved (usr_hr_spec)",
           "Same target asset affected (ast_wkst_02)",
-          "Same source IP address (192.168.1.106)",
-          "Occurred within 5.3 minutes of each other",
-          "Related alert categories (Malware Detection and Command and Control)",
-          "Plausible attack progression: Malware Detection (Execution) -> Command and Control (Command & Control)"
+          "Occurred within 13.3 minutes of each other"
         ]
       },
       {
@@ -1068,6 +1046,28 @@
           "Occurred within 4.0 minutes of each other",
           "Related alert categories (Suspicious PowerShell and Malware Detection)",
           "Plausible attack progression: Suspicious PowerShell (Execution) -> Malware Detection (Execution)"
+        ]
+      },
+      {
+        "alert_a": "alt_0010",
+        "alert_b": "alt_0011",
+        "correlation_score": 88.13,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.8752,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_hr_spec)",
+          "Same target asset affected (ast_wkst_02)",
+          "Same source IP address (192.168.1.106)",
+          "Occurred within 5.3 minutes of each other",
+          "Related alert categories (Malware Detection and Command and Control)",
+          "Plausible attack progression: Malware Detection (Execution) -> Command and Control (Command & Control)"
         ]
       },
       {
@@ -1110,6 +1110,25 @@
         ]
       },
       {
+        "alert_a": "alt_0009",
+        "alert_b": "alt_0012",
+        "correlation_score": 45.05,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 0.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.6703,
+          "related_alert_types": 0.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_hr_spec)",
+          "Same source IP address (192.168.1.106)",
+          "Occurred within 16.0 minutes of each other"
+        ]
+      },
+      {
         "alert_a": "alt_0011",
         "alert_b": "alt_0012",
         "correlation_score": 57.7,
@@ -1127,25 +1146,6 @@
           "Same source IP address (192.168.1.106)",
           "Occurred within 6.7 minutes of each other",
           "Related alert categories (Command and Control and Lateral Movement)"
-        ]
-      },
-      {
-        "alert_a": "alt_0009",
-        "alert_b": "alt_0012",
-        "correlation_score": 45.05,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 0.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.6703,
-          "related_alert_types": 0.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_hr_spec)",
-          "Same source IP address (192.168.1.106)",
-          "Occurred within 16.0 minutes of each other"
         ]
       },
       {
@@ -1691,13 +1691,13 @@
     "incident_type": "Multi-stage Attack",
     "alert_ids": [
       "alt_0013",
+      "alt_0018",
       "alt_0015",
-      "alt_0014",
-      "alt_0019",
       "alt_0017",
       "alt_0021",
+      "alt_0019",
       "alt_0016",
-      "alt_0018",
+      "alt_0014",
       "alt_0020"
     ],
     "alert_count": 9,
@@ -1740,6 +1740,29 @@
     "correlation_edges": [
       {
         "alert_a": "alt_0013",
+        "alert_b": "alt_0018",
+        "correlation_score": 98.8,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.92,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_sysadmin)",
+          "Same target asset affected (ast_pay_01)",
+          "Same source IP address (203.0.113.15)",
+          "Same destination IP address (10.0.1.99)",
+          "Occurred within 3.3 minutes of each other",
+          "Related alert categories (Failed Login and Brute Force)",
+          "Plausible attack progression: Failed Login (Authentication) -> Brute Force (Authentication)"
+        ]
+      },
+      {
+        "alert_a": "alt_0013",
         "alert_b": "alt_0015",
         "correlation_score": 99.63,
         "signals": {
@@ -1759,50 +1782,6 @@
           "Occurred within 1.0 minutes of each other",
           "Related alert categories (Failed Login and Failed Login)",
           "Plausible attack progression: Failed Login (Authentication) -> Failed Login (Authentication)"
-        ]
-      },
-      {
-        "alert_a": "alt_0013",
-        "alert_b": "alt_0014",
-        "correlation_score": 99.81,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.9876,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_sysadmin)",
-          "Same target asset affected (ast_pay_01)",
-          "Same source IP address (203.0.113.15)",
-          "Same destination IP address (10.0.1.99)",
-          "Occurred within 0.5 minutes of each other",
-          "Related alert categories (Failed Login and Failed Login)",
-          "Plausible attack progression: Failed Login (Authentication) -> Failed Login (Authentication)"
-        ]
-      },
-      {
-        "alert_a": "alt_0013",
-        "alert_b": "alt_0019",
-        "correlation_score": 77.96,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.8643,
-          "related_alert_types": 0.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_sysadmin)",
-          "Same target asset affected (ast_pay_01)",
-          "Same source IP address (203.0.113.15)",
-          "Same destination IP address (10.0.1.99)",
-          "Occurred within 5.8 minutes of each other"
         ]
       },
       {
@@ -1850,6 +1829,27 @@
       },
       {
         "alert_a": "alt_0013",
+        "alert_b": "alt_0019",
+        "correlation_score": 77.96,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.8643,
+          "related_alert_types": 0.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_sysadmin)",
+          "Same target asset affected (ast_pay_01)",
+          "Same source IP address (203.0.113.15)",
+          "Same destination IP address (10.0.1.99)",
+          "Occurred within 5.8 minutes of each other"
+        ]
+      },
+      {
+        "alert_a": "alt_0013",
         "alert_b": "alt_0016",
         "correlation_score": 99.45,
         "signals": {
@@ -1873,14 +1873,14 @@
       },
       {
         "alert_a": "alt_0013",
-        "alert_b": "alt_0018",
-        "correlation_score": 98.8,
+        "alert_b": "alt_0014",
+        "correlation_score": 99.81,
         "signals": {
           "same_user": 1.0,
           "same_asset": 1.0,
           "same_source_ip": 1.0,
           "same_destination_ip": 1.0,
-          "temporal_proximity": 0.92,
+          "temporal_proximity": 0.9876,
           "related_alert_types": 1.0,
           "attack_progression": 1.0
         },
@@ -1889,9 +1889,9 @@
           "Same target asset affected (ast_pay_01)",
           "Same source IP address (203.0.113.15)",
           "Same destination IP address (10.0.1.99)",
-          "Occurred within 3.3 minutes of each other",
-          "Related alert categories (Failed Login and Brute Force)",
-          "Plausible attack progression: Failed Login (Authentication) -> Brute Force (Authentication)"
+          "Occurred within 0.5 minutes of each other",
+          "Related alert categories (Failed Login and Failed Login)",
+          "Plausible attack progression: Failed Login (Authentication) -> Failed Login (Authentication)"
         ]
       },
       {
@@ -1916,15 +1916,15 @@
         ]
       },
       {
-        "alert_a": "alt_0014",
-        "alert_b": "alt_0015",
-        "correlation_score": 99.81,
+        "alert_a": "alt_0015",
+        "alert_b": "alt_0018",
+        "correlation_score": 99.15,
         "signals": {
           "same_user": 1.0,
           "same_asset": 1.0,
           "same_source_ip": 1.0,
           "same_destination_ip": 1.0,
-          "temporal_proximity": 0.9876,
+          "temporal_proximity": 0.9433,
           "related_alert_types": 1.0,
           "attack_progression": 1.0
         },
@@ -1933,21 +1933,133 @@
           "Same target asset affected (ast_pay_01)",
           "Same source IP address (203.0.113.15)",
           "Same destination IP address (10.0.1.99)",
-          "Occurred within 0.5 minutes of each other",
-          "Related alert categories (Failed Login and Failed Login)",
-          "Plausible attack progression: Failed Login (Authentication) -> Failed Login (Authentication)"
+          "Occurred within 2.3 minutes of each other",
+          "Related alert categories (Failed Login and Brute Force)",
+          "Plausible attack progression: Failed Login (Authentication) -> Brute Force (Authentication)"
         ]
       },
       {
-        "alert_a": "alt_0015",
-        "alert_b": "alt_0019",
-        "correlation_score": 78.29,
+        "alert_a": "alt_0017",
+        "alert_b": "alt_0018",
+        "correlation_score": 99.51,
         "signals": {
           "same_user": 1.0,
           "same_asset": 1.0,
           "same_source_ip": 1.0,
           "same_destination_ip": 1.0,
-          "temporal_proximity": 0.8862,
+          "temporal_proximity": 0.9672,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_sysadmin)",
+          "Same target asset affected (ast_pay_01)",
+          "Same source IP address (203.0.113.15)",
+          "Same destination IP address (10.0.1.99)",
+          "Occurred within 1.3 minutes of each other",
+          "Related alert categories (Failed Login and Brute Force)",
+          "Plausible attack progression: Failed Login (Authentication) -> Brute Force (Authentication)"
+        ]
+      },
+      {
+        "alert_a": "alt_0018",
+        "alert_b": "alt_0021",
+        "correlation_score": 61.2,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 0.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.747,
+          "related_alert_types": 0.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_sysadmin)",
+          "Same target asset affected (ast_pay_01)",
+          "Same destination IP address (10.0.1.99)",
+          "Occurred within 11.7 minutes of each other"
+        ]
+      },
+      {
+        "alert_a": "alt_0018",
+        "alert_b": "alt_0019",
+        "correlation_score": 99.09,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.9394,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_sysadmin)",
+          "Same target asset affected (ast_pay_01)",
+          "Same source IP address (203.0.113.15)",
+          "Same destination IP address (10.0.1.99)",
+          "Occurred within 2.5 minutes of each other",
+          "Related alert categories (Brute Force and Successful Login After Failures)",
+          "Plausible attack progression: Brute Force (Authentication) -> Successful Login After Failures (Authentication)"
+        ]
+      },
+      {
+        "alert_a": "alt_0016",
+        "alert_b": "alt_0018",
+        "correlation_score": 99.33,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.9552,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_sysadmin)",
+          "Same target asset affected (ast_pay_01)",
+          "Same source IP address (203.0.113.15)",
+          "Same destination IP address (10.0.1.99)",
+          "Occurred within 1.8 minutes of each other",
+          "Related alert categories (Failed Login and Brute Force)",
+          "Plausible attack progression: Failed Login (Authentication) -> Brute Force (Authentication)"
+        ]
+      },
+      {
+        "alert_a": "alt_0014",
+        "alert_b": "alt_0018",
+        "correlation_score": 98.97,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.9316,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_sysadmin)",
+          "Same target asset affected (ast_pay_01)",
+          "Same source IP address (203.0.113.15)",
+          "Same destination IP address (10.0.1.99)",
+          "Occurred within 2.8 minutes of each other",
+          "Related alert categories (Failed Login and Brute Force)",
+          "Plausible attack progression: Failed Login (Authentication) -> Brute Force (Authentication)"
+        ]
+      },
+      {
+        "alert_a": "alt_0018",
+        "alert_b": "alt_0020",
+        "correlation_score": 77.7,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.8465,
           "related_alert_types": 0.0,
           "attack_progression": 0.0
         },
@@ -1956,7 +2068,7 @@
           "Same target asset affected (ast_pay_01)",
           "Same source IP address (203.0.113.15)",
           "Same destination IP address (10.0.1.99)",
-          "Occurred within 4.8 minutes of each other"
+          "Occurred within 6.7 minutes of each other"
         ]
       },
       {
@@ -2004,6 +2116,27 @@
       },
       {
         "alert_a": "alt_0015",
+        "alert_b": "alt_0019",
+        "correlation_score": 78.29,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.8862,
+          "related_alert_types": 0.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_sysadmin)",
+          "Same target asset affected (ast_pay_01)",
+          "Same source IP address (203.0.113.15)",
+          "Same destination IP address (10.0.1.99)",
+          "Occurred within 4.8 minutes of each other"
+        ]
+      },
+      {
+        "alert_a": "alt_0015",
         "alert_b": "alt_0016",
         "correlation_score": 99.81,
         "signals": {
@@ -2026,15 +2159,15 @@
         ]
       },
       {
-        "alert_a": "alt_0015",
-        "alert_b": "alt_0018",
-        "correlation_score": 99.15,
+        "alert_a": "alt_0014",
+        "alert_b": "alt_0015",
+        "correlation_score": 99.81,
         "signals": {
           "same_user": 1.0,
           "same_asset": 1.0,
           "same_source_ip": 1.0,
           "same_destination_ip": 1.0,
-          "temporal_proximity": 0.9433,
+          "temporal_proximity": 0.9876,
           "related_alert_types": 1.0,
           "attack_progression": 1.0
         },
@@ -2043,9 +2176,9 @@
           "Same target asset affected (ast_pay_01)",
           "Same source IP address (203.0.113.15)",
           "Same destination IP address (10.0.1.99)",
-          "Occurred within 2.3 minutes of each other",
-          "Related alert categories (Failed Login and Brute Force)",
-          "Plausible attack progression: Failed Login (Authentication) -> Brute Force (Authentication)"
+          "Occurred within 0.5 minutes of each other",
+          "Related alert categories (Failed Login and Failed Login)",
+          "Plausible attack progression: Failed Login (Authentication) -> Failed Login (Authentication)"
         ]
       },
       {
@@ -2070,15 +2203,35 @@
         ]
       },
       {
-        "alert_a": "alt_0014",
+        "alert_a": "alt_0017",
+        "alert_b": "alt_0021",
+        "correlation_score": 60.84,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 0.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.7225,
+          "related_alert_types": 0.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_sysadmin)",
+          "Same target asset affected (ast_pay_01)",
+          "Same destination IP address (10.0.1.99)",
+          "Occurred within 13.0 minutes of each other"
+        ]
+      },
+      {
+        "alert_a": "alt_0017",
         "alert_b": "alt_0019",
-        "correlation_score": 78.13,
+        "correlation_score": 78.63,
         "signals": {
           "same_user": 1.0,
           "same_asset": 1.0,
           "same_source_ip": 1.0,
           "same_destination_ip": 1.0,
-          "temporal_proximity": 0.8752,
+          "temporal_proximity": 0.9086,
           "related_alert_types": 0.0,
           "attack_progression": 0.0
         },
@@ -2087,7 +2240,30 @@
           "Same target asset affected (ast_pay_01)",
           "Same source IP address (203.0.113.15)",
           "Same destination IP address (10.0.1.99)",
-          "Occurred within 5.3 minutes of each other"
+          "Occurred within 3.8 minutes of each other"
+        ]
+      },
+      {
+        "alert_a": "alt_0016",
+        "alert_b": "alt_0017",
+        "correlation_score": 99.81,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.9876,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_sysadmin)",
+          "Same target asset affected (ast_pay_01)",
+          "Same source IP address (203.0.113.15)",
+          "Same destination IP address (10.0.1.99)",
+          "Occurred within 0.5 minutes of each other",
+          "Related alert categories (Failed Login and Failed Login)",
+          "Plausible attack progression: Failed Login (Authentication) -> Failed Login (Authentication)"
         ]
       },
       {
@@ -2114,102 +2290,15 @@
         ]
       },
       {
-        "alert_a": "alt_0014",
-        "alert_b": "alt_0021",
-        "correlation_score": 60.44,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 0.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.6959,
-          "related_alert_types": 0.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_sysadmin)",
-          "Same target asset affected (ast_pay_01)",
-          "Same destination IP address (10.0.1.99)",
-          "Occurred within 14.5 minutes of each other"
-        ]
-      },
-      {
-        "alert_a": "alt_0014",
-        "alert_b": "alt_0016",
-        "correlation_score": 99.63,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.9753,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_sysadmin)",
-          "Same target asset affected (ast_pay_01)",
-          "Same source IP address (203.0.113.15)",
-          "Same destination IP address (10.0.1.99)",
-          "Occurred within 1.0 minutes of each other",
-          "Related alert categories (Failed Login and Failed Login)",
-          "Plausible attack progression: Failed Login (Authentication) -> Failed Login (Authentication)"
-        ]
-      },
-      {
-        "alert_a": "alt_0014",
-        "alert_b": "alt_0018",
-        "correlation_score": 98.97,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.9316,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_sysadmin)",
-          "Same target asset affected (ast_pay_01)",
-          "Same source IP address (203.0.113.15)",
-          "Same destination IP address (10.0.1.99)",
-          "Occurred within 2.8 minutes of each other",
-          "Related alert categories (Failed Login and Brute Force)",
-          "Plausible attack progression: Failed Login (Authentication) -> Brute Force (Authentication)"
-        ]
-      },
-      {
-        "alert_a": "alt_0014",
-        "alert_b": "alt_0020",
-        "correlation_score": 76.83,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.7886,
-          "related_alert_types": 0.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_sysadmin)",
-          "Same target asset affected (ast_pay_01)",
-          "Same source IP address (203.0.113.15)",
-          "Same destination IP address (10.0.1.99)",
-          "Occurred within 9.5 minutes of each other"
-        ]
-      },
-      {
         "alert_a": "alt_0017",
-        "alert_b": "alt_0019",
-        "correlation_score": 78.63,
+        "alert_b": "alt_0020",
+        "correlation_score": 77.28,
         "signals": {
           "same_user": 1.0,
           "same_asset": 1.0,
           "same_source_ip": 1.0,
           "same_destination_ip": 1.0,
-          "temporal_proximity": 0.9086,
+          "temporal_proximity": 0.8187,
           "related_alert_types": 0.0,
           "attack_progression": 0.0
         },
@@ -2218,7 +2307,7 @@
           "Same target asset affected (ast_pay_01)",
           "Same source IP address (203.0.113.15)",
           "Same destination IP address (10.0.1.99)",
-          "Occurred within 3.8 minutes of each other"
+          "Occurred within 8.0 minutes of each other"
         ]
       },
       {
@@ -2243,159 +2332,6 @@
       },
       {
         "alert_a": "alt_0016",
-        "alert_b": "alt_0019",
-        "correlation_score": 78.46,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.8973,
-          "related_alert_types": 0.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_sysadmin)",
-          "Same target asset affected (ast_pay_01)",
-          "Same source IP address (203.0.113.15)",
-          "Same destination IP address (10.0.1.99)",
-          "Occurred within 4.3 minutes of each other"
-        ]
-      },
-      {
-        "alert_a": "alt_0018",
-        "alert_b": "alt_0019",
-        "correlation_score": 99.09,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.9394,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_sysadmin)",
-          "Same target asset affected (ast_pay_01)",
-          "Same source IP address (203.0.113.15)",
-          "Same destination IP address (10.0.1.99)",
-          "Occurred within 2.5 minutes of each other",
-          "Related alert categories (Brute Force and Successful Login After Failures)",
-          "Plausible attack progression: Brute Force (Authentication) -> Successful Login After Failures (Authentication)"
-        ]
-      },
-      {
-        "alert_a": "alt_0019",
-        "alert_b": "alt_0020",
-        "correlation_score": 88.52,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.9011,
-          "related_alert_types": 1.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_sysadmin)",
-          "Same target asset affected (ast_pay_01)",
-          "Same source IP address (203.0.113.15)",
-          "Same destination IP address (10.0.1.99)",
-          "Occurred within 4.2 minutes of each other",
-          "Related alert categories (Successful Login After Failures and Privilege Escalation)"
-        ]
-      },
-      {
-        "alert_a": "alt_0017",
-        "alert_b": "alt_0021",
-        "correlation_score": 60.84,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 0.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.7225,
-          "related_alert_types": 0.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_sysadmin)",
-          "Same target asset affected (ast_pay_01)",
-          "Same destination IP address (10.0.1.99)",
-          "Occurred within 13.0 minutes of each other"
-        ]
-      },
-      {
-        "alert_a": "alt_0016",
-        "alert_b": "alt_0017",
-        "correlation_score": 99.81,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.9876,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_sysadmin)",
-          "Same target asset affected (ast_pay_01)",
-          "Same source IP address (203.0.113.15)",
-          "Same destination IP address (10.0.1.99)",
-          "Occurred within 0.5 minutes of each other",
-          "Related alert categories (Failed Login and Failed Login)",
-          "Plausible attack progression: Failed Login (Authentication) -> Failed Login (Authentication)"
-        ]
-      },
-      {
-        "alert_a": "alt_0017",
-        "alert_b": "alt_0018",
-        "correlation_score": 99.51,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.9672,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_sysadmin)",
-          "Same target asset affected (ast_pay_01)",
-          "Same source IP address (203.0.113.15)",
-          "Same destination IP address (10.0.1.99)",
-          "Occurred within 1.3 minutes of each other",
-          "Related alert categories (Failed Login and Brute Force)",
-          "Plausible attack progression: Failed Login (Authentication) -> Brute Force (Authentication)"
-        ]
-      },
-      {
-        "alert_a": "alt_0017",
-        "alert_b": "alt_0020",
-        "correlation_score": 77.28,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.8187,
-          "related_alert_types": 0.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_sysadmin)",
-          "Same target asset affected (ast_pay_01)",
-          "Same source IP address (203.0.113.15)",
-          "Same destination IP address (10.0.1.99)",
-          "Occurred within 8.0 minutes of each other"
-        ]
-      },
-      {
-        "alert_a": "alt_0016",
         "alert_b": "alt_0021",
         "correlation_score": 60.7,
         "signals": {
@@ -2415,15 +2351,15 @@
         ]
       },
       {
-        "alert_a": "alt_0018",
+        "alert_a": "alt_0014",
         "alert_b": "alt_0021",
-        "correlation_score": 61.2,
+        "correlation_score": 60.44,
         "signals": {
           "same_user": 1.0,
           "same_asset": 1.0,
           "same_source_ip": 0.0,
           "same_destination_ip": 1.0,
-          "temporal_proximity": 0.747,
+          "temporal_proximity": 0.6959,
           "related_alert_types": 0.0,
           "attack_progression": 0.0
         },
@@ -2431,7 +2367,7 @@
           "Same user involved (usr_sysadmin)",
           "Same target asset affected (ast_pay_01)",
           "Same destination IP address (10.0.1.99)",
-          "Occurred within 11.7 minutes of each other"
+          "Occurred within 14.5 minutes of each other"
         ]
       },
       {
@@ -2458,14 +2394,78 @@
       },
       {
         "alert_a": "alt_0016",
-        "alert_b": "alt_0018",
-        "correlation_score": 99.33,
+        "alert_b": "alt_0019",
+        "correlation_score": 78.46,
         "signals": {
           "same_user": 1.0,
           "same_asset": 1.0,
           "same_source_ip": 1.0,
           "same_destination_ip": 1.0,
-          "temporal_proximity": 0.9552,
+          "temporal_proximity": 0.8973,
+          "related_alert_types": 0.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_sysadmin)",
+          "Same target asset affected (ast_pay_01)",
+          "Same source IP address (203.0.113.15)",
+          "Same destination IP address (10.0.1.99)",
+          "Occurred within 4.3 minutes of each other"
+        ]
+      },
+      {
+        "alert_a": "alt_0014",
+        "alert_b": "alt_0019",
+        "correlation_score": 78.13,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.8752,
+          "related_alert_types": 0.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_sysadmin)",
+          "Same target asset affected (ast_pay_01)",
+          "Same source IP address (203.0.113.15)",
+          "Same destination IP address (10.0.1.99)",
+          "Occurred within 5.3 minutes of each other"
+        ]
+      },
+      {
+        "alert_a": "alt_0019",
+        "alert_b": "alt_0020",
+        "correlation_score": 88.52,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.9011,
+          "related_alert_types": 1.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_sysadmin)",
+          "Same target asset affected (ast_pay_01)",
+          "Same source IP address (203.0.113.15)",
+          "Same destination IP address (10.0.1.99)",
+          "Occurred within 4.2 minutes of each other",
+          "Related alert categories (Successful Login After Failures and Privilege Escalation)"
+        ]
+      },
+      {
+        "alert_a": "alt_0014",
+        "alert_b": "alt_0016",
+        "correlation_score": 99.63,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.9753,
           "related_alert_types": 1.0,
           "attack_progression": 1.0
         },
@@ -2474,9 +2474,9 @@
           "Same target asset affected (ast_pay_01)",
           "Same source IP address (203.0.113.15)",
           "Same destination IP address (10.0.1.99)",
-          "Occurred within 1.8 minutes of each other",
-          "Related alert categories (Failed Login and Brute Force)",
-          "Plausible attack progression: Failed Login (Authentication) -> Brute Force (Authentication)"
+          "Occurred within 1.0 minutes of each other",
+          "Related alert categories (Failed Login and Failed Login)",
+          "Plausible attack progression: Failed Login (Authentication) -> Failed Login (Authentication)"
         ]
       },
       {
@@ -2501,15 +2501,15 @@
         ]
       },
       {
-        "alert_a": "alt_0018",
+        "alert_a": "alt_0014",
         "alert_b": "alt_0020",
-        "correlation_score": 77.7,
+        "correlation_score": 76.83,
         "signals": {
           "same_user": 1.0,
           "same_asset": 1.0,
           "same_source_ip": 1.0,
           "same_destination_ip": 1.0,
-          "temporal_proximity": 0.8465,
+          "temporal_proximity": 0.7886,
           "related_alert_types": 0.0,
           "attack_progression": 0.0
         },
@@ -2518,7 +2518,7 @@
           "Same target asset affected (ast_pay_01)",
           "Same source IP address (203.0.113.15)",
           "Same destination IP address (10.0.1.99)",
-          "Occurred within 6.7 minutes of each other"
+          "Occurred within 9.5 minutes of each other"
         ]
       }
     ],
@@ -2966,8 +2966,8 @@
     "alert_ids": [
       "alt_0022",
       "alt_0023",
-      "alt_0026",
       "alt_0024",
+      "alt_0026",
       "alt_0025"
     ],
     "alert_count": 5,
@@ -3033,25 +3033,6 @@
       },
       {
         "alert_a": "alt_0022",
-        "alert_b": "alt_0026",
-        "correlation_score": 49.1,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 0.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.6065,
-          "related_alert_types": 0.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_009)",
-          "Same target asset affected (ast_web_01)",
-          "Occurred within 20.0 minutes of each other"
-        ]
-      },
-      {
-        "alert_a": "alt_0022",
         "alert_b": "alt_0024",
         "correlation_score": 61.68,
         "signals": {
@@ -3071,22 +3052,22 @@
         ]
       },
       {
-        "alert_a": "alt_0023",
+        "alert_a": "alt_0022",
         "alert_b": "alt_0026",
-        "correlation_score": 50.31,
+        "correlation_score": 49.1,
         "signals": {
           "same_user": 1.0,
           "same_asset": 1.0,
           "same_source_ip": 0.0,
           "same_destination_ip": 0.0,
-          "temporal_proximity": 0.6873,
+          "temporal_proximity": 0.6065,
           "related_alert_types": 0.0,
           "attack_progression": 0.0
         },
         "evidence": [
           "Same user involved (usr_009)",
           "Same target asset affected (ast_web_01)",
-          "Occurred within 15.0 minutes of each other"
+          "Occurred within 20.0 minutes of each other"
         ]
       },
       {
@@ -3112,6 +3093,25 @@
         ]
       },
       {
+        "alert_a": "alt_0023",
+        "alert_b": "alt_0026",
+        "correlation_score": 50.31,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 0.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.6873,
+          "related_alert_types": 0.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_009)",
+          "Same target asset affected (ast_web_01)",
+          "Occurred within 15.0 minutes of each other"
+        ]
+      },
+      {
         "alert_a": "alt_0024",
         "alert_b": "alt_0026",
         "correlation_score": 66.68,
@@ -3129,27 +3129,6 @@
           "Same target asset affected (ast_web_01)",
           "Same source IP address (10.0.2.5)",
           "Occurred within 10.0 minutes of each other"
-        ]
-      },
-      {
-        "alert_a": "alt_0025",
-        "alert_b": "alt_0026",
-        "correlation_score": 68.24,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 0.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.8825,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_009)",
-          "Same source IP address (10.0.2.5)",
-          "Occurred within 5.0 minutes of each other",
-          "Related alert categories (Unauthorized Access and Data Exfiltration)",
-          "Plausible attack progression: Unauthorized Access (Collection / Internal Access) -> Data Exfiltration (Exfiltration / Impact)"
         ]
       },
       {
@@ -3171,6 +3150,27 @@
           "Occurred within 5.0 minutes of each other",
           "Related alert categories (Web Server Compromise and Unauthorized Access)",
           "Plausible attack progression: Web Server Compromise (Collection / Internal Access) -> Unauthorized Access (Collection / Internal Access)"
+        ]
+      },
+      {
+        "alert_a": "alt_0025",
+        "alert_b": "alt_0026",
+        "correlation_score": 68.24,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 0.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.8825,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_009)",
+          "Same source IP address (10.0.2.5)",
+          "Occurred within 5.0 minutes of each other",
+          "Related alert categories (Unauthorized Access and Data Exfiltration)",
+          "Plausible attack progression: Unauthorized Access (Collection / Internal Access) -> Data Exfiltration (Exfiltration / Impact)"
         ]
       }
     ],
@@ -3461,8 +3461,8 @@
     "incident_type": "Ransomware Outbreak",
     "alert_ids": [
       "alt_0027",
-      "alt_0028",
       "alt_0030",
+      "alt_0028",
       "alt_0029",
       "alt_0031"
     ],
@@ -3505,6 +3505,26 @@
     "correlation_edges": [
       {
         "alert_a": "alt_0027",
+        "alert_b": "alt_0030",
+        "correlation_score": 51.68,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 0.0,
+          "same_source_ip": 0.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.7788,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_devops)",
+          "Occurred within 10.0 minutes of each other",
+          "Related alert categories (Suspicious PowerShell and Ransomware Indicator)",
+          "Plausible attack progression: Suspicious PowerShell (Execution) -> Ransomware Indicator (Execution)"
+        ]
+      },
+      {
+        "alert_a": "alt_0027",
         "alert_b": "alt_0028",
         "correlation_score": 83.92,
         "signals": {
@@ -3521,26 +3541,6 @@
           "Same target asset affected (ast_dev_app)",
           "Same destination IP address (10.0.2.20)",
           "Occurred within 3.0 minutes of each other",
-          "Related alert categories (Suspicious PowerShell and Ransomware Indicator)",
-          "Plausible attack progression: Suspicious PowerShell (Execution) -> Ransomware Indicator (Execution)"
-        ]
-      },
-      {
-        "alert_a": "alt_0027",
-        "alert_b": "alt_0030",
-        "correlation_score": 51.68,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 0.0,
-          "same_source_ip": 0.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.7788,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_devops)",
-          "Occurred within 10.0 minutes of each other",
           "Related alert categories (Suspicious PowerShell and Ransomware Indicator)",
           "Plausible attack progression: Suspicious PowerShell (Execution) -> Ransomware Indicator (Execution)"
         ]
@@ -3563,6 +3563,47 @@
           "Occurred within 7.0 minutes of each other",
           "Related alert categories (Ransomware Indicator and Ransomware Indicator)",
           "Plausible attack progression: Ransomware Indicator (Execution) -> Ransomware Indicator (Execution)"
+        ]
+      },
+      {
+        "alert_a": "alt_0029",
+        "alert_b": "alt_0030",
+        "correlation_score": 73.8,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 0.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.92,
+          "related_alert_types": 1.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_devops)",
+          "Same target asset affected (ast_file_01)",
+          "Same destination IP address (10.0.3.15)",
+          "Occurred within 3.3 minutes of each other",
+          "Related alert categories (Lateral Movement and Ransomware Indicator)"
+        ]
+      },
+      {
+        "alert_a": "alt_0030",
+        "alert_b": "alt_0031",
+        "correlation_score": 54.09,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 0.0,
+          "same_source_ip": 0.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.9394,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_devops)",
+          "Occurred within 2.5 minutes of each other",
+          "Related alert categories (Ransomware Indicator and Lateral Movement)",
+          "Plausible attack progression: Ransomware Indicator (Execution) -> Lateral Movement (Lateral Movement)"
         ]
       },
       {
@@ -3603,47 +3644,6 @@
           "Same user involved (usr_devops)",
           "Same source IP address (10.0.2.20)",
           "Occurred within 9.5 minutes of each other",
-          "Related alert categories (Ransomware Indicator and Lateral Movement)",
-          "Plausible attack progression: Ransomware Indicator (Execution) -> Lateral Movement (Lateral Movement)"
-        ]
-      },
-      {
-        "alert_a": "alt_0029",
-        "alert_b": "alt_0030",
-        "correlation_score": 73.8,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 0.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.92,
-          "related_alert_types": 1.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_devops)",
-          "Same target asset affected (ast_file_01)",
-          "Same destination IP address (10.0.3.15)",
-          "Occurred within 3.3 minutes of each other",
-          "Related alert categories (Lateral Movement and Ransomware Indicator)"
-        ]
-      },
-      {
-        "alert_a": "alt_0030",
-        "alert_b": "alt_0031",
-        "correlation_score": 54.09,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 0.0,
-          "same_source_ip": 0.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.9394,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_devops)",
-          "Occurred within 2.5 minutes of each other",
           "Related alert categories (Ransomware Indicator and Lateral Movement)",
           "Plausible attack progression: Ransomware Indicator (Execution) -> Lateral Movement (Lateral Movement)"
         ]
@@ -4449,8 +4449,8 @@
     "alert_ids": [
       "alt_0032",
       "alt_0035",
-      "alt_0034",
       "alt_0033",
+      "alt_0034",
       "alt_0053"
     ],
     "alert_count": 5,
@@ -4511,26 +4511,6 @@
       },
       {
         "alert_a": "alt_0032",
-        "alert_b": "alt_0034",
-        "correlation_score": 52.7,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 0.0,
-          "same_source_ip": 0.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.8465,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_015)",
-          "Occurred within 6.7 minutes of each other",
-          "Related alert categories (Port Scan and DDoS)",
-          "Plausible attack progression: Port Scan (Recon / Initial Access) -> DDoS (Command & Control)"
-        ]
-      },
-      {
-        "alert_a": "alt_0032",
         "alert_b": "alt_0033",
         "correlation_score": 83.8,
         "signals": {
@@ -4552,23 +4532,23 @@
         ]
       },
       {
-        "alert_a": "alt_0034",
-        "alert_b": "alt_0035",
-        "correlation_score": 53.8,
+        "alert_a": "alt_0032",
+        "alert_b": "alt_0034",
+        "correlation_score": 52.7,
         "signals": {
           "same_user": 1.0,
           "same_asset": 0.0,
           "same_source_ip": 0.0,
           "same_destination_ip": 0.0,
-          "temporal_proximity": 0.92,
+          "temporal_proximity": 0.8465,
           "related_alert_types": 1.0,
           "attack_progression": 1.0
         },
         "evidence": [
           "Same user involved (usr_015)",
-          "Occurred within 3.3 minutes of each other",
-          "Related alert categories (DDoS and Command and Control)",
-          "Plausible attack progression: DDoS (Command & Control) -> Command and Control (Command & Control)"
+          "Occurred within 6.7 minutes of each other",
+          "Related alert categories (Port Scan and DDoS)",
+          "Plausible attack progression: Port Scan (Recon / Initial Access) -> DDoS (Command & Control)"
         ]
       },
       {
@@ -4587,6 +4567,26 @@
         "evidence": [
           "Same user involved (usr_015)",
           "Occurred within 6.7 minutes of each other",
+          "Related alert categories (DDoS and Command and Control)",
+          "Plausible attack progression: DDoS (Command & Control) -> Command and Control (Command & Control)"
+        ]
+      },
+      {
+        "alert_a": "alt_0034",
+        "alert_b": "alt_0035",
+        "correlation_score": 53.8,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 0.0,
+          "same_source_ip": 0.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.92,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_015)",
+          "Occurred within 3.3 minutes of each other",
           "Related alert categories (DDoS and Command and Control)",
           "Plausible attack progression: DDoS (Command & Control) -> Command and Control (Command & Control)"
         ]
@@ -5433,9 +5433,9 @@
     "incident_type": "Multi-stage Attack",
     "alert_ids": [
       "alt_0036",
-      "alt_0037",
-      "alt_0038",
       "alt_0039",
+      "alt_0038",
+      "alt_0037",
       "alt_0040"
     ],
     "alert_count": 5,
@@ -5479,14 +5479,14 @@
     "correlation_edges": [
       {
         "alert_a": "alt_0036",
-        "alert_b": "alt_0037",
-        "correlation_score": 73.24,
+        "alert_b": "alt_0039",
+        "correlation_score": 70.31,
         "signals": {
           "same_user": 1.0,
           "same_asset": 1.0,
           "same_source_ip": 0.0,
           "same_destination_ip": 1.0,
-          "temporal_proximity": 0.8825,
+          "temporal_proximity": 0.6873,
           "related_alert_types": 1.0,
           "attack_progression": 0.0
         },
@@ -5494,8 +5494,8 @@
           "Same user involved (usr_sales_vp)",
           "Same target asset affected (ast_cloud_01)",
           "Same destination IP address (10.0.0.50)",
-          "Occurred within 5.0 minutes of each other",
-          "Related alert categories (Successful Login and Impossible Travel)"
+          "Occurred within 15.0 minutes of each other",
+          "Related alert categories (Successful Login and New Admin Account)"
         ]
       },
       {
@@ -5522,14 +5522,14 @@
       },
       {
         "alert_a": "alt_0036",
-        "alert_b": "alt_0039",
-        "correlation_score": 70.31,
+        "alert_b": "alt_0037",
+        "correlation_score": 73.24,
         "signals": {
           "same_user": 1.0,
           "same_asset": 1.0,
           "same_source_ip": 0.0,
           "same_destination_ip": 1.0,
-          "temporal_proximity": 0.6873,
+          "temporal_proximity": 0.8825,
           "related_alert_types": 1.0,
           "attack_progression": 0.0
         },
@@ -5537,8 +5537,72 @@
           "Same user involved (usr_sales_vp)",
           "Same target asset affected (ast_cloud_01)",
           "Same destination IP address (10.0.0.50)",
-          "Occurred within 15.0 minutes of each other",
+          "Occurred within 5.0 minutes of each other",
+          "Related alert categories (Successful Login and Impossible Travel)"
+        ]
+      },
+      {
+        "alert_a": "alt_0038",
+        "alert_b": "alt_0039",
+        "correlation_score": 88.24,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.8825,
+          "related_alert_types": 1.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_sales_vp)",
+          "Same target asset affected (ast_cloud_01)",
+          "Same source IP address (103.22.200.5)",
+          "Same destination IP address (10.0.0.50)",
+          "Occurred within 5.0 minutes of each other",
           "Related alert categories (Successful Login and New Admin Account)"
+        ]
+      },
+      {
+        "alert_a": "alt_0037",
+        "alert_b": "alt_0039",
+        "correlation_score": 76.68,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 1.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 1.0,
+          "temporal_proximity": 0.7788,
+          "related_alert_types": 0.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_sales_vp)",
+          "Same target asset affected (ast_cloud_01)",
+          "Same source IP address (103.22.200.5)",
+          "Same destination IP address (10.0.0.50)",
+          "Occurred within 10.0 minutes of each other"
+        ]
+      },
+      {
+        "alert_a": "alt_0039",
+        "alert_b": "alt_0040",
+        "correlation_score": 68.24,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 0.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.8825,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_sales_vp)",
+          "Same source IP address (103.22.200.5)",
+          "Occurred within 5.0 minutes of each other",
+          "Related alert categories (New Admin Account and Unauthorized Access)",
+          "Plausible attack progression: New Admin Account (Credential Access / PrivEsc) -> Unauthorized Access (Collection / Internal Access)"
         ]
       },
       {
@@ -5565,23 +5629,21 @@
         ]
       },
       {
-        "alert_a": "alt_0037",
-        "alert_b": "alt_0039",
-        "correlation_score": 76.68,
+        "alert_a": "alt_0038",
+        "alert_b": "alt_0040",
+        "correlation_score": 46.68,
         "signals": {
           "same_user": 1.0,
-          "same_asset": 1.0,
+          "same_asset": 0.0,
           "same_source_ip": 1.0,
-          "same_destination_ip": 1.0,
+          "same_destination_ip": 0.0,
           "temporal_proximity": 0.7788,
           "related_alert_types": 0.0,
           "attack_progression": 0.0
         },
         "evidence": [
           "Same user involved (usr_sales_vp)",
-          "Same target asset affected (ast_cloud_01)",
           "Same source IP address (103.22.200.5)",
-          "Same destination IP address (10.0.0.50)",
           "Occurred within 10.0 minutes of each other"
         ]
       },
@@ -5602,68 +5664,6 @@
           "Same user involved (usr_sales_vp)",
           "Same source IP address (103.22.200.5)",
           "Occurred within 15.0 minutes of each other"
-        ]
-      },
-      {
-        "alert_a": "alt_0038",
-        "alert_b": "alt_0039",
-        "correlation_score": 88.24,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 1.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 1.0,
-          "temporal_proximity": 0.8825,
-          "related_alert_types": 1.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_sales_vp)",
-          "Same target asset affected (ast_cloud_01)",
-          "Same source IP address (103.22.200.5)",
-          "Same destination IP address (10.0.0.50)",
-          "Occurred within 5.0 minutes of each other",
-          "Related alert categories (Successful Login and New Admin Account)"
-        ]
-      },
-      {
-        "alert_a": "alt_0038",
-        "alert_b": "alt_0040",
-        "correlation_score": 46.68,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 0.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.7788,
-          "related_alert_types": 0.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_sales_vp)",
-          "Same source IP address (103.22.200.5)",
-          "Occurred within 10.0 minutes of each other"
-        ]
-      },
-      {
-        "alert_a": "alt_0039",
-        "alert_b": "alt_0040",
-        "correlation_score": 68.24,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 0.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.8825,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_sales_vp)",
-          "Same source IP address (103.22.200.5)",
-          "Occurred within 5.0 minutes of each other",
-          "Related alert categories (New Admin Account and Unauthorized Access)",
-          "Plausible attack progression: New Admin Account (Credential Access / PrivEsc) -> Unauthorized Access (Collection / Internal Access)"
         ]
       }
     ],
@@ -6122,9 +6122,9 @@
     "incident_type": "Data Exfiltration",
     "alert_ids": [
       "alt_0041",
+      "alt_0044",
       "alt_0043",
-      "alt_0042",
-      "alt_0044"
+      "alt_0042"
     ],
     "alert_count": 4,
     "unique_users": 1,
@@ -6166,6 +6166,27 @@
     "correlation_edges": [
       {
         "alert_a": "alt_0041",
+        "alert_b": "alt_0044",
+        "correlation_score": 63.37,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 0.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.558,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same user involved (usr_insider)",
+          "Same source IP address (192.168.1.110)",
+          "Occurred within 23.3 minutes of each other",
+          "Related alert categories (Unauthorized Access and Data Exfiltration)",
+          "Plausible attack progression: Unauthorized Access (Collection / Internal Access) -> Data Exfiltration (Exfiltration / Impact)"
+        ]
+      },
+      {
+        "alert_a": "alt_0041",
         "alert_b": "alt_0043",
         "correlation_score": 45.31,
         "signals": {
@@ -6202,46 +6223,6 @@
           "Occurred within 7.5 minutes of each other",
           "Related alert categories (Unauthorized Access and Unusual File Access)",
           "Plausible attack progression: Unauthorized Access (Collection / Internal Access) -> Unusual File Access (Collection / Internal Access)"
-        ]
-      },
-      {
-        "alert_a": "alt_0041",
-        "alert_b": "alt_0044",
-        "correlation_score": 63.37,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 0.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.558,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same user involved (usr_insider)",
-          "Same source IP address (192.168.1.110)",
-          "Occurred within 23.3 minutes of each other",
-          "Related alert categories (Unauthorized Access and Data Exfiltration)",
-          "Plausible attack progression: Unauthorized Access (Collection / Internal Access) -> Data Exfiltration (Exfiltration / Impact)"
-        ]
-      },
-      {
-        "alert_a": "alt_0042",
-        "alert_b": "alt_0043",
-        "correlation_score": 47.44,
-        "signals": {
-          "same_user": 1.0,
-          "same_asset": 0.0,
-          "same_source_ip": 1.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.829,
-          "related_alert_types": 0.0,
-          "attack_progression": 0.0
-        },
-        "evidence": [
-          "Same user involved (usr_insider)",
-          "Same source IP address (192.168.1.110)",
-          "Occurred within 7.5 minutes of each other"
         ]
       },
       {
@@ -6282,6 +6263,25 @@
           "Same user involved (usr_insider)",
           "Same source IP address (192.168.1.110)",
           "Occurred within 15.8 minutes of each other"
+        ]
+      },
+      {
+        "alert_a": "alt_0042",
+        "alert_b": "alt_0043",
+        "correlation_score": 47.44,
+        "signals": {
+          "same_user": 1.0,
+          "same_asset": 0.0,
+          "same_source_ip": 1.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.829,
+          "related_alert_types": 0.0,
+          "attack_progression": 0.0
+        },
+        "evidence": [
+          "Same user involved (usr_insider)",
+          "Same source IP address (192.168.1.110)",
+          "Occurred within 7.5 minutes of each other"
         ]
       }
     ],
@@ -8869,8 +8869,8 @@
     "incident_type": "Malware Infection",
     "alert_ids": [
       "alt_0096",
-      "alt_0099",
-      "alt_0117"
+      "alt_0117",
+      "alt_0099"
     ],
     "alert_count": 3,
     "unique_users": 3,
@@ -8911,26 +8911,6 @@
     "correlation_edges": [
       {
         "alert_a": "alt_0096",
-        "alert_b": "alt_0099",
-        "correlation_score": 52.68,
-        "signals": {
-          "same_user": 0.0,
-          "same_asset": 1.0,
-          "same_source_ip": 0.0,
-          "same_destination_ip": 0.0,
-          "temporal_proximity": 0.8454,
-          "related_alert_types": 1.0,
-          "attack_progression": 1.0
-        },
-        "evidence": [
-          "Same target asset affected (ast_wkst_11)",
-          "Occurred within 6.7 minutes of each other",
-          "Related alert categories (Malware Detection and Command and Control)",
-          "Plausible attack progression: Malware Detection (Execution) -> Command and Control (Command & Control)"
-        ]
-      },
-      {
-        "alert_a": "alt_0096",
         "alert_b": "alt_0117",
         "correlation_score": 52.49,
         "signals": {
@@ -8947,6 +8927,26 @@
           "Occurred within 7.3 minutes of each other",
           "Related alert categories (Malware Detection and Suspicious PowerShell)",
           "Plausible attack progression: Malware Detection (Execution) -> Suspicious PowerShell (Execution)"
+        ]
+      },
+      {
+        "alert_a": "alt_0096",
+        "alert_b": "alt_0099",
+        "correlation_score": 52.68,
+        "signals": {
+          "same_user": 0.0,
+          "same_asset": 1.0,
+          "same_source_ip": 0.0,
+          "same_destination_ip": 0.0,
+          "temporal_proximity": 0.8454,
+          "related_alert_types": 1.0,
+          "attack_progression": 1.0
+        },
+        "evidence": [
+          "Same target asset affected (ast_wkst_11)",
+          "Occurred within 6.7 minutes of each other",
+          "Related alert categories (Malware Detection and Command and Control)",
+          "Plausible attack progression: Malware Detection (Execution) -> Command and Control (Command & Control)"
         ]
       }
     ],
