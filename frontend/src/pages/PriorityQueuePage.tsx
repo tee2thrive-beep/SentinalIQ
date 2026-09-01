@@ -4,7 +4,8 @@ import { IncidentSummaryItem } from '../types';
 import { PriorityQueueTable } from '../components/incidents/PriorityQueueTable';
 import { Loader } from '../components/common/Loader';
 import { ErrorState } from '../components/common/ErrorState';
-import { ListOrdered, Filter, Search, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ListOrdered, Filter, Search, ChevronLeft, ChevronRight, ShieldAlert, Sparkles, SlidersHorizontal } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const PriorityQueuePage: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -39,8 +40,7 @@ export const PriorityQueuePage: React.FC = () => {
     loadQueue();
   }, [page, riskFilter, typeFilter]);
 
-  // Client-side search filtering if query typed
-  const filteredIncidents = incidents.filter(item => {
+  const filteredIncidents = incidents.filter((item) => {
     if (!searchQuery) return true;
     const q = searchQuery.toLowerCase();
     return (
@@ -50,112 +50,116 @@ export const PriorityQueuePage: React.FC = () => {
   });
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-[#111827] border border-[#1f293d] p-5 rounded-xl">
-        <div>
-          <div className="flex items-center space-x-2">
-            <ListOrdered className="w-5 h-5 text-blue-400" />
-            <h1 className="text-lg font-bold text-slate-100 font-mono tracking-wide">Investigation Priority Queue</h1>
+    <div className="space-y-6 font-mono">
+      {/* Header Banner */}
+      <div className="cyber-card p-5 rounded-2xl border border-blue-500/30 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="flex items-center space-x-3">
+          <div className="p-2.5 bg-blue-950/60 border border-blue-500/40 rounded-xl text-cyan-400">
+            <ListOrdered className="w-6 h-6" />
           </div>
-          <p className="text-xs text-slate-400 font-mono mt-1">
-            Ordered deterministically by Risk Score DESC & 8-Level Tie-Breaker Hierarchy.
-          </p>
+          <div>
+            <h1 className="text-xl font-bold text-slate-100 flex items-center gap-2">
+              <span>Investigation Priority Queue</span>
+            </h1>
+            <p className="text-xs text-slate-400 mt-0.5">
+              Ranked deterministically by 6-Factor Risk Score DESC & 8-Level Tie-Breaker Hierarchy
+            </p>
+          </div>
         </div>
-        <div className="text-right font-mono">
-          <span className="text-xs text-slate-400">Total Queue Count:</span>
-          <div className="text-2xl font-bold text-blue-400">{total} Incidents</div>
+
+        <div className="flex items-center space-x-3">
+          <Link
+            to="/compare"
+            className="px-3.5 py-2 bg-purple-950/40 hover:bg-purple-900/50 text-purple-300 border border-purple-500/40 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5"
+          >
+            <span>Compare Queue</span>
+          </Link>
+          <Link
+            to="/priority-config"
+            className="px-3.5 py-2 bg-blue-950/40 hover:bg-blue-900/50 text-blue-300 border border-blue-500/40 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5"
+          >
+            <SlidersHorizontal className="w-4 h-4" />
+            <span>Edit Weights</span>
+          </Link>
         </div>
       </div>
 
-      {/* Filter & Search Bar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#111827] border border-[#1f293d] p-4 rounded-xl">
-        <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
-          {/* Risk Level Filter */}
-          <div className="flex items-center space-x-2 text-xs font-mono text-slate-400">
-            <Filter className="w-4 h-4 text-slate-500" />
-            <span>Risk Level:</span>
-            <select
-              value={riskFilter}
-              onChange={(e) => { setRiskFilter(e.target.value); setPage(1); }}
-              className="bg-[#0f172a] border border-[#1f293d] text-slate-200 rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-blue-500/60 font-semibold"
-            >
-              <option value="ALL">ALL LEVELS</option>
-              <option value="CRITICAL">CRITICAL</option>
-              <option value="HIGH">HIGH</option>
-              <option value="MEDIUM">MEDIUM</option>
-              <option value="LOW">LOW</option>
-            </select>
-          </div>
-
-          {/* Incident Type Filter */}
-          <div className="flex items-center space-x-2 text-xs font-mono text-slate-400">
-            <span>Type:</span>
-            <select
-              value={typeFilter}
-              onChange={(e) => { setTypeFilter(e.target.value); setPage(1); }}
-              className="bg-[#0f172a] border border-[#1f293d] text-slate-200 rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-blue-500/60 font-semibold"
-            >
-              <option value="ALL">ALL TYPES</option>
-              <option value="Multi-stage">Multi-stage Attack</option>
-              <option value="Data Exfiltration">Data Exfiltration</option>
-              <option value="Ransomware">Ransomware Outbreak</option>
-              <option value="DDoS">DDoS Attack</option>
-              <option value="Malware">Malware Infection</option>
-              <option value="Brute Force">Brute Force Attack</option>
-              <option value="Phishing">Phishing Campaign</option>
-              <option value="Unauthorized">Unauthorized Access</option>
-            </select>
-          </div>
+      {/* Filter Tabs & Live Search Bar */}
+      <div className="cyber-card p-4 rounded-2xl border border-[#151d30] flex flex-col lg:flex-row items-center justify-between gap-4">
+        {/* Risk Level Pills */}
+        <div className="flex flex-wrap items-center gap-2 w-full lg:w-auto">
+          {['ALL', 'CRITICAL', 'HIGH', 'MEDIUM', 'LOW'].map((level) => {
+            const isActive = riskFilter === level;
+            return (
+              <button
+                key={level}
+                onClick={() => { setRiskFilter(level); setPage(1); }}
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                  isActive
+                    ? level === 'CRITICAL' ? 'bg-rose-600 text-white shadow-[0_0_15px_rgba(239,68,68,0.4)]'
+                    : level === 'HIGH' ? 'bg-amber-600 text-white shadow-[0_0_15px_rgba(245,158,11,0.4)]'
+                    : level === 'MEDIUM' ? 'bg-blue-600 text-white shadow-[0_0_15px_rgba(59,130,246,0.4)]'
+                    : 'bg-purple-600 text-white shadow-[0_0_15px_rgba(168,85,247,0.4)]'
+                    : 'bg-[#090e1c] text-slate-400 hover:text-slate-200 border border-[#182238]'
+                }`}
+              >
+                {level === 'ALL' ? 'ALL LEVELS' : level}
+              </button>
+            );
+          })}
         </div>
 
-        {/* Search */}
-        <div className="relative w-full sm:w-64">
-          <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
+        {/* Live Filter Search Input */}
+        <div className="relative w-full lg:w-72">
+          <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search ID or type..."
-            className="w-full bg-[#0f172a] border border-[#1f293d] rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-blue-500/60 font-mono"
+            placeholder="Filter by ID or Attack Type..."
+            className="w-full bg-[#090e1c] border border-[#182238] rounded-xl pl-9 pr-4 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500/60 font-mono transition-all"
           />
         </div>
       </div>
 
-      {/* Main Priority Queue Table */}
+      {/* Main Table View */}
       {loading ? (
-        <Loader label="Loading priority queue items..." />
+        <Loader label="Loading priority investigation queue..." />
       ) : error ? (
         <ErrorState message={error} onRetry={loadQueue} />
       ) : (
-        <>
+        <div className="space-y-4">
           <PriorityQueueTable items={filteredIncidents} />
 
-          {/* Pagination */}
-          <div className="flex items-center justify-between bg-[#111827] border border-[#1f293d] p-4 rounded-xl font-mono text-xs text-slate-400">
-            <div>
-              Showing page <strong className="text-slate-200">{page}</strong> of <strong className="text-slate-200">{totalPages}</strong> ({total} total items)
-            </div>
+          {/* Pagination Footer */}
+          <div className="cyber-card p-4 rounded-2xl border border-[#151d30] flex items-center justify-between text-xs">
+            <span className="text-slate-400">
+              Showing Page <strong className="text-slate-100 font-bold">{page}</strong> of <strong className="text-slate-100 font-bold">{totalPages}</strong> ({total} Total Incidents)
+            </span>
+
             <div className="flex items-center space-x-2">
               <button
                 disabled={page <= 1}
-                onClick={() => setPage(p => p - 1)}
-                className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#0f172a] border border-[#1f293d] hover:bg-[#1e293b] disabled:opacity-40 disabled:cursor-not-allowed rounded-lg font-semibold text-slate-300 transition-colors"
+                onClick={() => setPage((p) => Math.max(1, p - 1))}
+                className="p-2 bg-[#090e1c] border border-[#182238] rounded-xl hover:bg-[#111827] disabled:opacity-40 transition-colors"
               >
-                <ChevronLeft className="w-4 h-4" />
-                Previous
+                <ChevronLeft className="w-4 h-4 text-slate-300" />
               </button>
+
+              <span className="px-3 py-1 bg-blue-950/60 border border-blue-500/40 text-blue-300 rounded-xl font-bold">
+                {page} / {totalPages}
+              </span>
+
               <button
                 disabled={page >= totalPages}
-                onClick={() => setPage(p => p + 1)}
-                className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#0f172a] border border-[#1f293d] hover:bg-[#1e293b] disabled:opacity-40 disabled:cursor-not-allowed rounded-lg font-semibold text-slate-300 transition-colors"
+                onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                className="p-2 bg-[#090e1c] border border-[#182238] rounded-xl hover:bg-[#111827] disabled:opacity-40 transition-colors"
               >
-                Next
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-4 h-4 text-slate-300" />
               </button>
             </div>
           </div>
-        </>
+        </div>
       )}
     </div>
   );
