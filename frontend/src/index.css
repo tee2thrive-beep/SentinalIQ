@@ -4,22 +4,72 @@
 
 @layer base {
   body {
-    @apply bg-[#090d16] text-slate-100 font-sans;
+    @apply bg-[#050713] text-slate-100 font-mono antialiased selection:bg-purple-600 selection:text-white;
   }
 }
 
-/* Custom scrollbars */
+/* Custom Cyber Scrollbars */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #090d16;
+  background: #050713;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1f293d;
+  background: #1e2438;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #374151;
+  background: #3b82f6;
+}
+
+/* Neon Glow Classes */
+.cyber-card {
+  background: rgba(12, 15, 29, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(30, 36, 56, 0.9);
+  box-shadow: 0 0 25px rgba(5, 7, 19, 0.8);
+}
+
+.cyber-card-active {
+  background: linear-gradient(135deg, rgba(88, 28, 135, 0.25) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.35);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.35);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.35);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.35);
+}
+
+/* Radar Sweep Animation */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radar-sweep 8s linear infinite;
+}
+
+/* Pulse Glow Keyframes */
+@keyframes cyber-pulse {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.8)); }
+  50% { opacity: 0.6; filter: drop-shadow(0 0 2px rgba(168, 85, 247, 0.3)); }
+}
+
+.cyber-glow-text {
+  animation: cyber-pulse 3s infinite ease-in-out;
 }
