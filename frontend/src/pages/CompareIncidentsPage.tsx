@@ -97,7 +97,7 @@ export const CompareIncidentsPage: React.FC = () => {
       {/* Selector Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Incident A Selector */}
-        <div className="p-4 bg-[#090d16] border border-blue-500/40 rounded-2xl space-y-2">
+        <div className="cyber-card-glow-blue p-4 rounded-2xl space-y-2">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold text-blue-400 tracking-wider">INCIDENT A (HIGHER RANK TARGET)</span>
             <span className="px-2 py-0.5 bg-blue-950/60 border border-blue-500/40 text-blue-300 rounded text-[11px] font-bold">
@@ -107,7 +107,7 @@ export const CompareIncidentsPage: React.FC = () => {
           <select
             value={selectedIdA}
             onChange={(e) => handleSelectA(e.target.value)}
-            className="w-full bg-[#111827] border border-[#1f293d] text-slate-200 rounded-xl p-2.5 text-xs font-bold focus:outline-none focus:border-blue-500"
+            className="w-full bg-[#111827] border border-[#1f293d] text-slate-200 rounded-xl p-2.5 text-xs font-bold focus:outline-none focus:border-blue-500 cursor-pointer"
           >
             {incidents.map((inc) => (
               <option key={inc.incident_id} value={inc.incident_id}>
@@ -118,7 +118,7 @@ export const CompareIncidentsPage: React.FC = () => {
         </div>
 
         {/* Incident B Selector */}
-        <div className="p-4 bg-[#090d16] border border-purple-500/40 rounded-2xl space-y-2">
+        <div className="cyber-card-glow-purple p-4 rounded-2xl space-y-2">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold text-purple-400 tracking-wider">INCIDENT B (COMPARISON TARGET)</span>
             <span className="px-2 py-0.5 bg-purple-950/60 border border-purple-500/40 text-purple-300 rounded text-[11px] font-bold">

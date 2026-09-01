@@ -162,7 +162,7 @@ export const PriorityConfigPage: React.FC = () => {
       {/* Sliders Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {Object.entries(factorLabels).map(([key, info]) => (
-          <div key={key} className="p-4 bg-[#090d16] border border-[#1f293d] rounded-2xl space-y-3">
+          <div key={key} className="cyber-card p-4 rounded-2xl space-y-3">
             <div className="flex items-center justify-between">
               <div>
                 <h3 className={`text-xs font-bold ${info.color}`}>{info.label}</h3>
