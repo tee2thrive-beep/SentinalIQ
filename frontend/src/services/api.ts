@@ -74,5 +74,20 @@ export const api = {
   async fetchSimulationSensitivity(): Promise<SensitivityPayload> {
     const res = await client.get<SensitivityPayload>('/simulations/sensitivity');
     return res.data;
+  },
+
+  async createCustomAlert(payload: {
+    alert_type: string;
+    category: string;
+    severity: number;
+    confidence: number;
+    source_ip?: string;
+    destination_ip?: string;
+    asset_id?: string;
+    user_id?: string;
+  }) {
+    const res = await client.post('/alerts', payload);
+    return res.data;
   }
 };
+

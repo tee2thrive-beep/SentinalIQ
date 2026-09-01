@@ -156,3 +156,73 @@ def get_simulation_sensitivity():
             return json.load(f)
     raise HTTPException(status_code=404, detail="Simulation sensitivity analysis file not found.")
 
+from backend.api.schemas import CreateAlertRequest, CreateAlertResponse
+import os, json, datetime
+
+@router.post("/alerts", response_model=CreateAlertResponse)
+def ingest_custom_alert(payload: CreateAlertRequest):
+    """Ingests a new custom raw security alert, appends it to data/alerts.json, re-runs normalization, correlation, clustering, risk scoring, and priority queue ranking live in memory."""
+    data_dir = "data"
+    alerts_file = os.path.join(data_dir, "alerts.json")
+
+    existing_alerts = []
+    if os.path.exists(alerts_file):
+        with open(alerts_file, "r", encoding="utf-8") as f:
+            existing_alerts = json.load(f)
+
+    alert_num = len(existing_alerts) + 1
+    new_alert_id = f"ALT-CUSTOM-{alert_num:04d}"
+    now_str = datetime.datetime.now(datetime.timezone.utc).isoformat()
+
+    new_alert = {
+        "alert_id": new_alert_id,
+        "timestamp": now_str,
+        "alert_type": payload.alert_type,
+        "category": payload.category,
+        "severity": float(payload.severity),
+        "confidence": float(payload.confidence),
+        "source_ip": payload.source_ip or "192.168.1.150",
+        "destination_ip": payload.destination_ip or "10.0.4.22",
+        "asset_id": payload.asset_id or "AST-0001",
+        "user_id": payload.user_id or "USR-0005"
+    }
+
+    existing_alerts.append(new_alert)
+    with open(alerts_file, "w", encoding="utf-8") as f:
+        json.dump(existing_alerts, f, indent=2)
+
+    # Re-run full pipeline scripts to re-compute normalization, correlation, clustering, scoring, priority queue & reports
+    from scripts.process_reports import main as run_pipeline
+    run_pipeline()
+
+    # Reload in-memory DataStore cache
+    store = IncidentDataStore.get_instance()
+    store.reload()
+
+    # Locate incident containing the new alert
+    matched_item = None
+    for item in store.priority_queue:
+        iid = item["incident_id"]
+        report = store.reports_cache.get(iid, {})
+        for evt in report.get("timeline", []):
+            if evt.get("alert_id") == new_alert_id:
+                matched_item = item
+                break
+        if matched_item:
+            break
+
+    if not matched_item:
+        # Fallback to top priority item if single standalone
+        matched_item = store.priority_queue[0]
+
+    return CreateAlertResponse(
+        success=True,
+        alert_id=new_alert_id,
+        incident_id=matched_item["incident_id"],
+        priority_rank=matched_item["priority_rank"],
+        risk_score=matched_item["risk_score"],
+        risk_level=matched_item["risk_level"],
+        message=f"Successfully ingested custom alert '{new_alert_id}'. Assigned to Incident '{matched_item['incident_id']}' at Priority Rank #{matched_item['priority_rank']} with Risk Score {matched_item['risk_score']:.2f}."
+    )
+
+
