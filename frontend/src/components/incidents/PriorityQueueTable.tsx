@@ -79,16 +79,29 @@ export const PriorityQueueTable: React.FC<PriorityQueueTableProps> = ({ items })
                     {drivers}
                   </td>
                   <td className="py-3 px-4 text-center">
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        navigate(`/incidents/${item.incident_id}`);
-                      }}
-                      className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 border border-blue-500/40 rounded-md text-[11px] font-semibold transition-colors group-hover:border-blue-400"
-                    >
-                      Investigate
-                      <ArrowRight className="w-3 h-3" />
-                    </button>
+                    <div className="flex items-center justify-center space-x-1.5">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          navigate(`/compare?a=${item.incident_id}&b=INC-0021`);
+                        }}
+                        className="px-2 py-1 bg-purple-950/40 hover:bg-purple-900/50 text-purple-300 border border-purple-500/40 rounded-md text-[11px] font-semibold transition-colors"
+                        title="Compare against Rank #1"
+                      >
+                        Compare
+                      </button>
+
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          navigate(`/incidents/${item.incident_id}`);
+                        }}
+                        className="inline-flex items-center gap-1 px-2.5 py-1 bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 border border-blue-500/40 rounded-md text-[11px] font-semibold transition-colors group-hover:border-blue-400"
+                      >
+                        Investigate
+                        <ArrowRight className="w-3 h-3" />
+                      </button>
+                    </div>
                   </td>
                 </tr>
               );
