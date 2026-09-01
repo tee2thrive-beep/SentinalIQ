@@ -9,6 +9,7 @@ import { SimulationPage } from './pages/SimulationPage';
 import { ReportsPage } from './pages/ReportsPage';
 import { SystemStatusPage } from './pages/SystemStatusPage';
 import { CompareIncidentsPage } from './pages/CompareIncidentsPage';
+import { PriorityConfigPage } from './pages/PriorityConfigPage';
 
 export const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ export const App: React.FC = () => {
             <Route path="/incidents" element={<PriorityQueuePage />} />
             <Route path="/incidents/:incidentId" element={<InvestigationPage />} />
             <Route path="/compare" element={<CompareIncidentsPage />} />
+            <Route path="/priority-config" element={<PriorityConfigPage />} />
             <Route path="/simulations" element={<SimulationPage />} />
             <Route path="/reports" element={<ReportsPage />} />
             <Route path="/status" element={<SystemStatusPage />} />

@@ -1,12 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Shield, LayoutDashboard, ListOrdered, Scale, Sliders, FileText, Activity } from 'lucide-react';
+import { Shield, LayoutDashboard, ListOrdered, Scale, SlidersHorizontal, Sliders, FileText, Activity } from 'lucide-react';
 
 export const Sidebar: React.FC = () => {
   const navItems = [
     { to: '/', label: 'Dashboard', icon: LayoutDashboard },
     { to: '/incidents', label: 'Priority Queue', icon: ListOrdered },
     { to: '/compare', label: 'Compare Queue', icon: Scale },
+    { to: '/priority-config', label: 'Edit Priority Weights', icon: SlidersHorizontal },
     { to: '/simulations', label: 'What-If Simulations', icon: Sliders },
     { to: '/reports', label: 'Reports', icon: FileText },
     { to: '/status', label: 'System Status', icon: Activity },

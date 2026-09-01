@@ -163,6 +163,61 @@ def get_simulation_sensitivity():
             return json.load(f)
     raise HTTPException(status_code=404, detail="Simulation sensitivity analysis file not found.")
 
+from pydantic import BaseModel, Field
+
+class CustomWeightsPayload(BaseModel):
+    weights: Dict[str, float] = Field(..., example={
+        "severity": 0.25,
+        "asset_importance": 0.20,
+        "affected_users": 0.15,
+        "data_sensitivity": 0.15,
+        "confidence": 0.15,
+        "business_impact": 0.10
+    })
+
+@router.post("/simulations/custom-weights")
+def simulate_custom_weights(payload: CustomWeightsPayload):
+    """Simulates real-time priority queue re-ranking under analyst-customized factor weights."""
+    store = IncidentDataStore.get_instance()
+    incidents = store.datasets.get("incidents", [])
+
+    from backend.simulation.engine import simulate_scenario
+    try:
+        sim_scored, sim_queue, summary = simulate_scenario(incidents, "custom", payload.weights)
+        
+        # Calculate rank changes vs baseline priority queue
+        baseline_ranks = {item["incident_id"]: item["priority_rank"] for item in store.priority_queue}
+        top_movers = []
+
+        for sim_item in sim_queue:
+            iid = sim_item["incident_id"]
+            base_rank = baseline_ranks.get(iid, sim_item["priority_rank"])
+            sim_rank = sim_item["priority_rank"]
+            delta = base_rank - sim_rank  # positive means moved UP in rank
+
+            top_movers.append({
+                "incident_id": iid,
+                "incident_type": sim_item["incident_type"],
+                "baseline_rank": base_rank,
+                "simulated_rank": sim_rank,
+                "rank_change": delta,
+                "baseline_score": next((b["risk_score"] for b in store.priority_queue if b["incident_id"] == iid), 0.0),
+                "simulated_score": sim_item["risk_score"]
+            })
+
+        top_movers.sort(key=lambda x: abs(x["rank_change"]), reverse=True)
+
+        return {
+            "scenario_name": "custom",
+            "weights": payload.weights,
+            "summary": summary,
+            "simulated_queue": sim_queue,
+            "top_movers": top_movers[:10]
+        }
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
 from backend.api.schemas import CreateAlertRequest, CreateAlertResponse
 import os, json, datetime
 

@@ -76,6 +76,11 @@ export const api = {
     return res.data;
   },
 
+  async simulateCustomWeights(weights: Record<string, number>) {
+    const res = await client.post('/simulations/custom-weights', { weights });
+    return res.data;
+  },
+
   async createCustomAlert(payload: {
     alert_type: string;
     category: string;
