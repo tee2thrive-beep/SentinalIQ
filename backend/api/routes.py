@@ -3,7 +3,7 @@ from fastapi import APIRouter, HTTPException, Query
 from typing import Optional, List, Dict, Any
 
 from backend.api.schemas import HealthResponse, IncidentListResponse, IncidentSummaryItem
-from backend.api.app import IncidentDataStore
+from backend.api.store import IncidentDataStore
 
 router = APIRouter()
 
@@ -184,7 +184,8 @@ def ingest_custom_alert(payload: CreateAlertRequest):
         "source_ip": payload.source_ip or "192.168.1.150",
         "destination_ip": payload.destination_ip or "10.0.4.22",
         "asset_id": payload.asset_id or "AST-0001",
-        "user_id": payload.user_id or "USR-0005"
+        "user_id": payload.user_id or "USR-0005",
+        "description": f"{payload.alert_type} detected on asset {payload.asset_id or 'AST-0001'} by user {payload.user_id or 'USR-0005'}."
     }
 
     existing_alerts.append(new_alert)

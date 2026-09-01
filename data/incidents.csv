@@ -1,5 +1,5 @@
 incident_id,incident_type,alert_count,unique_users,unique_assets,first_seen,last_seen,duration_seconds,maximum_severity,average_severity,maximum_confidence,incident_confidence,affected_users,normalized_affected_users,incident_asset_importance,incident_data_sensitivity,incident_business_impact,cluster_score,observed_stages,alert_ids
-INC-0001,Data Exfiltration,7,1,3,2026-09-01T08:05:00+00:00,2026-09-01T08:32:00+00:00,1620,98,79.71,95,100.0,1,10.03,97.0,100.0,97.5,69.53,Recon / Initial Access -> Credential Access / PrivEsc -> Authentication -> Lateral Movement -> Collection / Internal Access -> Exfiltration / Impact,"alt_0001, alt_0002, alt_0004, alt_0003, alt_0005, alt_0006, alt_0007"
+INC-0001,Data Exfiltration,7,1,3,2026-09-01T08:05:00+00:00,2026-09-01T08:32:00+00:00,1620,98,79.71,95,100.0,1,10.03,97.0,100.0,97.5,69.53,Recon / Initial Access -> Credential Access / PrivEsc -> Authentication -> Lateral Movement -> Collection / Internal Access -> Exfiltration / Impact,"alt_0001, alt_0002, alt_0004, alt_0003, alt_0006, alt_0005, alt_0007"
 INC-0002,Suspicious DNS Event,1,1,1,2026-09-01T08:06:40+00:00,2026-09-01T08:06:40+00:00,0,22,22.0,73,73.0,1,10.03,95.0,90.0,94.0,100.0,Command & Control,alt_0143
 INC-0003,Port Scan Event,1,1,1,2026-09-01T08:18:50+00:00,2026-09-01T08:18:50+00:00,0,25,25.0,57,57.0,1,10.03,24.2,13.0,21.7,100.0,Recon / Initial Access,alt_0080
 INC-0004,Port Scan Event,1,1,1,2026-09-01T08:41:47+00:00,2026-09-01T08:41:47+00:00,0,13,13.0,52,52.0,1,10.03,22.2,14.0,20.6,100.0,Recon / Initial Access,alt_0050
@@ -10,7 +10,7 @@ INC-0008,Unauthorized Access Event,1,1,1,2026-09-01T08:56:07+00:00,2026-09-01T08
 INC-0009,Unauthorized Access Event,1,1,1,2026-09-01T08:56:11+00:00,2026-09-01T08:56:11+00:00,0,40,40.0,52,52.0,1,10.03,77.0,85.0,78.5,100.0,Collection / Internal Access,alt_0140
 INC-0010,Suspicious Email Event,1,1,1,2026-09-01T08:56:22+00:00,2026-09-01T08:56:22+00:00,0,18,18.0,50,50.0,1,10.03,22.0,23.0,22.1,100.0,Recon / Initial Access,alt_0100
 INC-0011,Suspicious DNS Event,1,1,1,2026-09-01T08:58:33+00:00,2026-09-01T08:58:33+00:00,0,37,37.0,74,74.0,1,10.03,85.0,75.0,83.0,100.0,Command & Control,alt_0087
-INC-0012,Multi-stage Attack,6,2,2,2026-09-01T09:00:00+00:00,2026-09-01T09:48:54+00:00,2934,92,69.0,95,100.0,2,15.9,77.0,85.0,78.5,64.63,Recon / Initial Access -> Execution -> Command & Control -> Lateral Movement,"alt_0008, alt_0010, alt_0009, alt_0011, alt_0012, alt_0108"
+INC-0012,Multi-stage Attack,6,2,2,2026-09-01T09:00:00+00:00,2026-09-01T09:48:54+00:00,2934,92,69.0,95,100.0,2,15.9,77.0,85.0,78.5,64.63,Recon / Initial Access -> Execution -> Command & Control -> Lateral Movement,"alt_0008, alt_0009, alt_0010, alt_0011, alt_0012, alt_0108"
 INC-0013,Unauthorized Access Event,1,1,1,2026-09-01T09:01:17+00:00,2026-09-01T09:01:17+00:00,0,30,30.0,50,50.0,1,10.03,90.0,50.0,82.0,100.0,Collection / Internal Access,alt_0112
 INC-0014,Port Scan Event,1,1,1,2026-09-01T09:20:16+00:00,2026-09-01T09:20:16+00:00,0,22,22.0,59,59.0,1,10.03,15.0,10.0,14.0,100.0,Recon / Initial Access,alt_0135
 INC-0015,Unauthorized Access Event,1,1,1,2026-09-01T09:21:02+00:00,2026-09-01T09:21:02+00:00,0,44,44.0,64,64.0,1,10.03,85.0,60.0,80.0,100.0,Collection / Internal Access,alt_0157
@@ -19,19 +19,19 @@ INC-0017,Suspicious DNS Event,1,1,1,2026-09-01T09:28:00+00:00,2026-09-01T09:28:0
 INC-0018,Failed Login Event,1,1,1,2026-09-01T09:32:47+00:00,2026-09-01T09:32:47+00:00,0,28,28.0,75,75.0,1,10.03,25.4,30.0,26.1,100.0,Authentication,alt_0145
 INC-0019,Suspicious Email Event,1,1,1,2026-09-01T09:55:37+00:00,2026-09-01T09:55:37+00:00,0,22,22.0,60,60.0,1,10.03,27.0,13.0,24.6,100.0,Recon / Initial Access,alt_0152
 INC-0020,Successful Login Event,1,1,1,2026-09-01T09:58:12+00:00,2026-09-01T09:58:12+00:00,0,13,13.0,99,99.0,1,10.03,33.2,10.0,28.6,100.0,Authentication,alt_0141
-INC-0021,Multi-stage Attack,9,1,1,2026-09-01T10:00:00+00:00,2026-09-01T10:15:00+00:00,900,96,68.33,98,100.0,1,10.03,100.0,100.0,100.0,84.53,Authentication -> Credential Access / PrivEsc -> Collection / Internal Access,"alt_0013, alt_0016, alt_0014, alt_0018, alt_0021, alt_0020, alt_0019, alt_0015, alt_0017"
+INC-0021,Multi-stage Attack,9,1,1,2026-09-01T10:00:00+00:00,2026-09-01T10:15:00+00:00,900,96,68.33,98,100.0,1,10.03,100.0,100.0,100.0,84.53,Authentication -> Credential Access / PrivEsc -> Collection / Internal Access,"alt_0013, alt_0017, alt_0014, alt_0016, alt_0021, alt_0015, alt_0019, alt_0020, alt_0018"
 INC-0022,Command and Control Event,1,1,1,2026-09-01T10:19:24+00:00,2026-09-01T10:19:24+00:00,0,45,45.0,53,53.0,1,10.03,85.0,60.0,80.0,100.0,Command & Control,alt_0066
 INC-0023,Malware Infection,1,1,1,2026-09-01T10:21:06+00:00,2026-09-01T10:21:06+00:00,0,22,22.0,62,62.0,1,10.03,22.6,17.0,21.5,100.0,Execution,alt_0149
 INC-0024,Command and Control Event,1,1,1,2026-09-01T10:22:07+00:00,2026-09-01T10:22:07+00:00,0,36,36.0,53,53.0,1,10.03,25.0,17.0,23.2,100.0,Command & Control,alt_0139
 INC-0025,Malware Infection,1,1,1,2026-09-01T10:28:13+00:00,2026-09-01T10:28:13+00:00,0,40,40.0,91,91.0,1,10.03,15.0,10.0,14.0,100.0,Execution,alt_0067
 INC-0026,Malware Infection,1,1,1,2026-09-01T10:44:53+00:00,2026-09-01T10:44:53+00:00,0,41,41.0,93,93.0,1,10.03,92.0,95.0,92.5,100.0,Execution,alt_0156
 INC-0027,Malware Infection,1,1,1,2026-09-01T10:47:06+00:00,2026-09-01T10:47:06+00:00,0,35,35.0,64,64.0,1,10.03,26.6,13.0,23.9,100.0,Execution,alt_0075
-INC-0028,Data Exfiltration,5,1,2,2026-09-01T11:00:00+00:00,2026-09-01T11:20:00+00:00,1200,97,86.4,95,100.0,1,10.03,92.0,95.0,92.5,68.22,Recon / Initial Access -> Collection / Internal Access -> Exfiltration / Impact,"alt_0022, alt_0024, alt_0026, alt_0023, alt_0025"
+INC-0028,Data Exfiltration,5,1,2,2026-09-01T11:00:00+00:00,2026-09-01T11:20:00+00:00,1200,97,86.4,95,100.0,1,10.03,92.0,95.0,92.5,68.22,Recon / Initial Access -> Collection / Internal Access -> Exfiltration / Impact,"alt_0022, alt_0023, alt_0026, alt_0024, alt_0025"
 INC-0029,Port Scan Event,1,1,1,2026-09-01T11:03:38+00:00,2026-09-01T11:03:38+00:00,0,21,21.0,63,63.0,1,10.03,22.6,17.0,21.5,100.0,Recon / Initial Access,alt_0153
 INC-0030,Malware Infection,1,1,1,2026-09-01T11:13:29+00:00,2026-09-01T11:13:29+00:00,0,50,50.0,90,90.0,1,10.03,15.0,10.0,14.0,100.0,Execution,alt_0155
 INC-0031,Failed Login Event,1,1,1,2026-09-01T11:51:40+00:00,2026-09-01T11:51:40+00:00,0,32,32.0,66,66.0,1,10.03,100.0,100.0,100.0,100.0,Authentication,alt_0129
 INC-0032,Suspicious DNS Event,1,1,1,2026-09-01T11:59:01+00:00,2026-09-01T11:59:01+00:00,0,34,34.0,54,54.0,1,10.03,85.0,75.0,83.0,100.0,Command & Control,alt_0058
-INC-0033,Ransomware Outbreak,5,1,3,2026-09-01T12:00:00+00:00,2026-09-01T12:12:30+00:00,750,98,89.2,98,100.0,1,10.03,77.0,85.0,78.5,64.94,Execution -> Lateral Movement,"alt_0027, alt_0030, alt_0028, alt_0031, alt_0029"
+INC-0033,Ransomware Outbreak,5,1,3,2026-09-01T12:00:00+00:00,2026-09-01T12:12:30+00:00,750,98,89.2,98,100.0,1,10.03,77.0,85.0,78.5,64.94,Execution -> Lateral Movement,"alt_0027, alt_0028, alt_0030, alt_0031, alt_0029"
 INC-0034,Malware Infection,1,1,1,2026-09-01T12:09:34+00:00,2026-09-01T12:09:34+00:00,0,33,33.0,60,60.0,1,10.03,15.0,10.0,14.0,100.0,Execution,alt_0137
 INC-0035,Failed Login Event,2,1,1,2026-09-01T12:10:02+00:00,2026-09-01T12:11:48+00:00,106,30,23.0,76,78.0,1,10.03,90.0,50.0,82.0,54.35,Authentication -> Recon / Initial Access,"alt_0095, alt_0082"
 INC-0036,Successful Login Event,1,1,1,2026-09-01T12:11:21+00:00,2026-09-01T12:11:21+00:00,0,15,15.0,91,91.0,1,10.03,80.0,70.0,78.0,100.0,Authentication,alt_0118
@@ -43,7 +43,7 @@ INC-0041,Successful Login Event,1,1,1,2026-09-01T12:38:24+00:00,2026-09-01T12:38
 INC-0042,Malware Infection,1,1,1,2026-09-01T12:40:40+00:00,2026-09-01T12:40:40+00:00,0,34,34.0,88,88.0,1,10.03,100.0,100.0,100.0,100.0,Execution,alt_0121
 INC-0043,Successful Login Event,1,1,1,2026-09-01T12:42:11+00:00,2026-09-01T12:42:11+00:00,0,8,8.0,91,91.0,1,10.03,21.8,13.0,20.2,100.0,Authentication,alt_0078
 INC-0044,Successful Login Event,1,1,1,2026-09-01T12:49:28+00:00,2026-09-01T12:49:28+00:00,0,11,11.0,95,95.0,1,10.03,26.6,13.0,23.9,100.0,Authentication,alt_0109
-INC-0045,DDoS Attack,5,2,3,2026-09-01T13:00:00+00:00,2026-09-01T13:22:56+00:00,1376,88,67.8,92,100.0,2,15.9,90.0,65.0,82.0,56.1,Recon / Initial Access -> Command & Control,"alt_0032, alt_0035, alt_0034, alt_0033, alt_0053"
+INC-0045,DDoS Attack,5,2,3,2026-09-01T13:00:00+00:00,2026-09-01T13:22:56+00:00,1376,88,67.8,92,100.0,2,15.9,90.0,65.0,82.0,56.1,Recon / Initial Access -> Command & Control,"alt_0032, alt_0035, alt_0033, alt_0034, alt_0053"
 INC-0046,Malware Infection,1,1,1,2026-09-01T13:01:44+00:00,2026-09-01T13:01:44+00:00,0,38,38.0,68,68.0,1,10.03,20.0,15.0,19.0,100.0,Execution,alt_0104
 INC-0047,Malware Infection,1,1,1,2026-09-01T13:03:55+00:00,2026-09-01T13:03:55+00:00,0,31,31.0,57,57.0,1,10.03,92.0,95.0,92.5,100.0,Execution,alt_0068
 INC-0048,Failed Login Event,1,1,1,2026-09-01T13:05:33+00:00,2026-09-01T13:05:33+00:00,0,18,18.0,81,81.0,1,10.03,24.2,13.0,21.7,100.0,Authentication,alt_0127
@@ -56,7 +56,7 @@ INC-0054,Suspicious Email Event,1,1,1,2026-09-01T13:39:03+00:00,2026-09-01T13:39
 INC-0055,Suspicious Email Event,2,2,1,2026-09-01T13:51:28+00:00,2026-09-01T13:58:16+00:00,408,18,17.0,60,62.0,2,15.9,25.0,17.0,23.2,52.66,Recon / Initial Access,"alt_0106, alt_0124"
 INC-0056,Failed Login Event,1,1,1,2026-09-01T13:53:38+00:00,2026-09-01T13:53:38+00:00,0,17,17.0,75,75.0,1,10.03,85.0,75.0,83.0,100.0,Authentication,alt_0132
 INC-0057,Malware Infection,1,1,1,2026-09-01T13:56:51+00:00,2026-09-01T13:56:51+00:00,0,28,28.0,55,55.0,1,10.03,22.2,14.0,20.6,100.0,Execution,alt_0120
-INC-0058,Multi-stage Attack,5,1,2,2026-09-01T14:00:00+00:00,2026-09-01T14:20:00+00:00,1200,94,76.2,95,100.0,1,10.03,92.0,95.0,92.5,72.07,Authentication -> Recon / Initial Access -> Credential Access / PrivEsc -> Collection / Internal Access,"alt_0036, alt_0039, alt_0038, alt_0037, alt_0040"
+INC-0058,Multi-stage Attack,5,1,2,2026-09-01T14:00:00+00:00,2026-09-01T14:20:00+00:00,1200,94,76.2,95,100.0,1,10.03,92.0,95.0,92.5,72.07,Authentication -> Recon / Initial Access -> Credential Access / PrivEsc -> Collection / Internal Access,"alt_0036, alt_0038, alt_0037, alt_0039, alt_0040"
 INC-0059,Command and Control Event,1,1,1,2026-09-01T14:01:24+00:00,2026-09-01T14:01:24+00:00,0,43,43.0,52,52.0,1,10.03,95.0,90.0,94.0,100.0,Command & Control,alt_0063
 INC-0060,Unauthorized Access Event,1,1,1,2026-09-01T14:17:26+00:00,2026-09-01T14:17:26+00:00,0,31,31.0,57,57.0,1,10.03,20.0,15.0,19.0,100.0,Collection / Internal Access,alt_0115
 INC-0061,Malware Infection,1,1,1,2026-09-01T14:20:03+00:00,2026-09-01T14:20:03+00:00,0,29,29.0,71,71.0,1,10.03,22.0,23.0,22.1,100.0,Execution,alt_0097
@@ -64,7 +64,7 @@ INC-0062,Suspicious DNS Event,1,1,1,2026-09-01T14:34:10+00:00,2026-09-01T14:34:1
 INC-0063,Command and Control Event,1,1,1,2026-09-01T14:41:13+00:00,2026-09-01T14:41:13+00:00,0,39,39.0,42,42.0,1,10.03,85.0,75.0,83.0,100.0,Command & Control,alt_0128
 INC-0064,Command and Control Event,1,1,1,2026-09-01T14:45:14+00:00,2026-09-01T14:45:14+00:00,0,44,44.0,53,53.0,1,10.03,22.0,23.0,22.1,100.0,Command & Control,alt_0126
 INC-0065,Malware Infection,1,1,1,2026-09-01T14:49:56+00:00,2026-09-01T14:49:56+00:00,0,23,23.0,72,72.0,1,10.03,53.0,45.0,51.5,100.0,Execution,alt_0072
-INC-0066,Data Exfiltration,4,1,3,2026-09-01T15:00:00+00:00,2026-09-01T15:23:20+00:00,1400,95,80.0,95,100.0,1,10.03,77.0,85.0,78.5,57.64,Collection / Internal Access -> Command & Control -> Exfiltration / Impact,"alt_0041, alt_0043, alt_0044, alt_0042"
+INC-0066,Data Exfiltration,4,1,3,2026-09-01T15:00:00+00:00,2026-09-01T15:23:20+00:00,1400,95,80.0,95,100.0,1,10.03,77.0,85.0,78.5,57.64,Collection / Internal Access -> Command & Control -> Exfiltration / Impact,"alt_0041, alt_0044, alt_0042, alt_0043"
 INC-0067,Command and Control Event,2,1,2,2026-09-01T15:14:04+00:00,2026-09-01T15:17:24+00:00,200,41,38.5,48,50.0,1,10.03,28.4,17.0,26.1,53.8,Command & Control,"alt_0122, alt_0098"
 INC-0068,Suspicious Email Event,1,1,1,2026-09-01T15:34:34+00:00,2026-09-01T15:34:34+00:00,0,24,24.0,68,68.0,1,10.03,33.2,10.0,28.6,100.0,Recon / Initial Access,alt_0088
 INC-0069,Port Scan Event,1,1,1,2026-09-01T15:54:00+00:00,2026-09-01T15:54:00+00:00,0,11,11.0,50,50.0,1,10.03,95.0,90.0,94.0,100.0,Recon / Initial Access,alt_0111

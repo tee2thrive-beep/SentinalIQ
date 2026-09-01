@@ -2065,5 +2065,31 @@
     "description": "Automated software update script running via PowerShell (ast_wkst_11)",
     "confidence": 74,
     "status": "open"
+  },
+  {
+    "alert_id": "ALT-CUSTOM-0160",
+    "timestamp": "2026-09-01T08:30:07.069157+00:00",
+    "alert_type": "Data Exfiltration Attempt",
+    "category": "Exfiltration",
+    "severity": 90.0,
+    "confidence": 85.0,
+    "source_ip": "192.168.1.150",
+    "destination_ip": "10.0.4.22",
+    "asset_id": "AST-0001",
+    "user_id": "USR-0005",
+    "description": "Data Exfiltration Attempt detected on AST-0001."
+  },
+  {
+    "alert_id": "ALT-CUSTOM-0161",
+    "timestamp": "2026-09-01T08:30:37.958041+00:00",
+    "alert_type": "Data Exfiltration Attempt",
+    "category": "Exfiltration",
+    "severity": 90.0,
+    "confidence": 85.0,
+    "source_ip": "192.168.1.150",
+    "destination_ip": "10.0.4.22",
+    "asset_id": "AST-0001",
+    "user_id": "USR-0005",
+    "description": "Data Exfiltration Attempt detected on asset AST-0001 by user USR-0005."
   }
 ]
