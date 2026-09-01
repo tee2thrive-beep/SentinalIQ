@@ -19,7 +19,7 @@ export const PriorityConfigPage: React.FC = () => {
     asset_importance: 20,
     affected_users: 15,
     data_sensitivity: 15,
-    confidence: 15,
+    attack_confidence: 15,
     business_impact: 10,
   });
 
@@ -78,7 +78,7 @@ export const PriorityConfigPage: React.FC = () => {
     asset_importance: { label: 'Asset Importance', desc: 'Criticality & business value of target asset', color: 'text-blue-400' },
     affected_users: { label: 'Affected Users', desc: 'Volume of compromised or affected user accounts', color: 'text-purple-400' },
     data_sensitivity: { label: 'Data Sensitivity', desc: 'Sensitivity of data handled by asset (PCI/PII)', color: 'text-amber-400' },
-    confidence: { label: 'Attack Confidence', desc: 'Correlation confidence & detection certainty', color: 'text-cyan-400' },
+    attack_confidence: { label: 'Attack Confidence', desc: 'Correlation confidence & detection certainty', color: 'text-cyan-400' },
     business_impact: { label: 'Business Impact', desc: 'Overall potential revenue & operational risk', color: 'text-emerald-400' },
   };
 
@@ -126,7 +126,7 @@ export const PriorityConfigPage: React.FC = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           <button
-            onClick={() => applyPreset({ severity: 25, asset_importance: 20, affected_users: 15, data_sensitivity: 15, confidence: 15, business_impact: 10 })}
+            onClick={() => applyPreset({ severity: 25, asset_importance: 20, affected_users: 15, data_sensitivity: 15, attack_confidence: 15, business_impact: 10 })}
             className="p-3 bg-[#111827] hover:bg-[#1e293b] border border-[#1f293d] rounded-xl text-left transition-all group"
           >
             <strong className="text-xs text-slate-200 block group-hover:text-blue-400">⚖️ Default Balanced</strong>
@@ -134,7 +134,7 @@ export const PriorityConfigPage: React.FC = () => {
           </button>
 
           <button
-            onClick={() => applyPreset({ severity: 10, asset_importance: 40, affected_users: 5, data_sensitivity: 20, confidence: 5, business_impact: 20 })}
+            onClick={() => applyPreset({ severity: 10, asset_importance: 40, affected_users: 5, data_sensitivity: 20, attack_confidence: 5, business_impact: 20 })}
             className="p-3 bg-[#111827] hover:bg-[#1e293b] border border-[#1f293d] rounded-xl text-left transition-all group"
           >
             <strong className="text-xs text-slate-200 block group-hover:text-blue-400">🚨 High Asset Focus</strong>
@@ -142,7 +142,7 @@ export const PriorityConfigPage: React.FC = () => {
           </button>
 
           <button
-            onClick={() => applyPreset({ severity: 20, asset_importance: 10, affected_users: 40, data_sensitivity: 10, confidence: 10, business_impact: 10 })}
+            onClick={() => applyPreset({ severity: 20, asset_importance: 10, affected_users: 40, data_sensitivity: 10, attack_confidence: 10, business_impact: 10 })}
             className="p-3 bg-[#111827] hover:bg-[#1e293b] border border-[#1f293d] rounded-xl text-left transition-all group"
           >
             <strong className="text-xs text-slate-200 block group-hover:text-blue-400">👥 User-Centric Focus</strong>
@@ -150,7 +150,7 @@ export const PriorityConfigPage: React.FC = () => {
           </button>
 
           <button
-            onClick={() => applyPreset({ severity: 10, asset_importance: 20, affected_users: 5, data_sensitivity: 25, confidence: 5, business_impact: 35 })}
+            onClick={() => applyPreset({ severity: 10, asset_importance: 20, affected_users: 5, data_sensitivity: 25, attack_confidence: 5, business_impact: 35 })}
             className="p-3 bg-[#111827] hover:bg-[#1e293b] border border-[#1f293d] rounded-xl text-left transition-all group"
           >
             <strong className="text-xs text-slate-200 block group-hover:text-blue-400">💥 Impact-First Focus</strong>
