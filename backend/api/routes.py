@@ -3,11 +3,7 @@ project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(_
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
-from scripts.process_normalization import process_normalization
-from scripts.process_correlation import process_correlation
-from scripts.process_clustering import process_clustering
-from scripts.process_scoring import process_scoring
-from scripts.process_priority import process_priority
+from backend.pipeline import run_in_memory_pipeline
 
 import math
 from fastapi import APIRouter, HTTPException, Query
@@ -203,12 +199,8 @@ def ingest_custom_alert(payload: CreateAlertRequest):
     with open(alerts_file, "w", encoding="utf-8") as f:
         json.dump(existing_alerts, f, indent=2)
 
-    # Re-run fast Steps 1-6 pipeline scripts to re-compute normalization, correlation, clustering, scoring & priority queue (0.2s)
-    process_normalization()
-    process_correlation()
-    process_clustering()
-    process_scoring()
-    process_priority()
+    # Re-run fast Steps 1-6 pipeline in memory (0.2s)
+    run_in_memory_pipeline(data_dir)
 
     # Reload in-memory DataStore cache
     store = IncidentDataStore.get_instance()
