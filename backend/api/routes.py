@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.abspath("."))
+
 import math
 from fastapi import APIRouter, HTTPException, Query
 from typing import Optional, List, Dict, Any
