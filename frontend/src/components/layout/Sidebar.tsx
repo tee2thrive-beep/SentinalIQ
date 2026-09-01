@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Shield, LayoutDashboard, AlertCircle, Share2, ListOrdered, Scale, SlidersHorizontal, Sliders, FileText, Database, Radio, Settings, Activity } from 'lucide-react';
+import { Shield, LayoutDashboard, ListOrdered, Scale, SlidersHorizontal, Sliders, FileText, Activity, Radio, Cpu } from 'lucide-react';
 
 export const Sidebar: React.FC = () => {
   const navItems = [
@@ -8,28 +8,28 @@ export const Sidebar: React.FC = () => {
     { to: '/incidents', label: 'Priority Queue', icon: ListOrdered },
     { to: '/compare', label: 'Compare Queue', icon: Scale },
     { to: '/priority-config', label: 'Edit Priority Weights', icon: SlidersHorizontal },
-    { to: '/simulations', label: 'What-If Lab', icon: Sliders },
+    { to: '/simulations', label: 'What-If Simulations', icon: Sliders },
     { to: '/reports', label: 'Reports', icon: FileText },
     { to: '/status', label: 'System Status', icon: Activity },
   ];
 
   return (
-    <aside className="w-64 bg-[#050713] border-r border-[#1e2438] flex flex-col min-h-screen select-none font-mono shadow-[4px_0_25px_rgba(5,7,19,0.8)]">
+    <aside className="w-64 bg-[#070b15] border-r border-[#151d30] flex flex-col min-h-screen select-none font-mono relative z-20">
       {/* Brand Header */}
-      <div className="p-5 border-b border-[#1e2438] flex items-center space-x-3">
-        <div className="p-2.5 bg-purple-950/50 border border-purple-500/40 rounded-xl text-purple-400 glow-purple">
+      <div className="p-5 border-b border-[#151d30] flex items-center space-x-3 bg-[#080d1a]/50">
+        <div className="p-2.5 bg-gradient-to-br from-blue-600/30 to-purple-600/30 border border-blue-500/50 rounded-xl text-cyan-400 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
           <Shield className="w-6 h-6" />
         </div>
         <div>
-          <h1 className="font-bold text-base tracking-wider text-slate-100 flex items-center gap-1">
-            Sentinel<span className="text-purple-400">IQ</span>
+          <h1 className="font-mono font-extrabold text-base tracking-wider text-slate-100 flex items-center gap-1">
+            Sentinel<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">IQ</span>
           </h1>
-          <p className="text-[10px] text-slate-500 font-mono tracking-wide">Cyber Incident Prioritization Engine</p>
+          <p className="text-[9px] text-slate-400 font-mono tracking-tight">Cyber Incident Prioritization Engine</p>
         </div>
       </div>
 
-      {/* Navigation Links */}
-      <nav className="flex-1 p-4 space-y-1.5">
+      {/* Navigation */}
+      <nav className="flex-1 p-3 space-y-1.5 pt-4">
         {navItems.map((item) => {
           const Icon = item.icon;
           return (
@@ -38,55 +38,55 @@ export const Sidebar: React.FC = () => {
               to={item.to}
               end={item.to === '/'}
               className={({ isActive }) =>
-                `flex items-center justify-between px-4 py-2.5 rounded-xl text-xs font-bold tracking-wide transition-all ${
+                `flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold tracking-wide transition-all ${
                   isActive
-                    ? 'bg-gradient-to-r from-purple-900/60 to-slate-900 text-purple-300 border border-purple-500/50 shadow-[0_0_15px_rgba(168,85,247,0.2)]'
-                    : 'text-slate-400 hover:text-slate-200 hover:bg-[#0c0f1d]'
+                    ? 'bg-gradient-to-r from-purple-900/40 via-blue-900/20 to-transparent text-purple-200 border-l-2 border-purple-400 border-y border-r border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.15)] font-bold'
+                    : 'text-slate-400 hover:text-slate-100 hover:bg-[#0d1424] hover:border-l-2 hover:border-slate-500'
                 }`
               }
             >
-              <div className="flex items-center space-x-3">
-                <Icon className="w-4 h-4" />
-                <span>{item.label}</span>
-              </div>
-
-              {item.label === 'Alerts' && (
-                <span className="px-1.5 py-0.5 bg-rose-600 text-white rounded-full text-[10px] font-bold">112</span>
-              )}
+              <Icon className="w-4 h-4" />
+              <span>{item.label}</span>
             </NavLink>
           );
         })}
       </nav>
 
-      {/* Bottom Ingestion Status Card */}
-      <div className="p-4 border-t border-[#1e2438] bg-[#0c0f1d]/60 space-y-3">
-        <div className="space-y-1">
-          <div className="flex items-center justify-between text-[10px] text-slate-400 uppercase font-semibold">
+      {/* Bottom Live System Status Widget (Exact matches screenshot) */}
+      <div className="p-4 m-3 bg-[#090e1c] border border-[#182238] rounded-2xl space-y-3 shadow-inner">
+        <div>
+          <div className="flex items-center justify-between text-[10px] text-slate-400 uppercase font-bold tracking-wider mb-1">
             <span>System Status</span>
-            <span className="inline-flex items-center gap-1 text-emerald-400 font-bold">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              All Operational
-            </span>
+            <Radio className="w-3 h-3 text-emerald-400 animate-pulse" />
           </div>
-
-          {/* Mini Waveform Visualization */}
-          <div className="h-6 w-full bg-[#050713] border border-[#1e2438] rounded-lg overflow-hidden flex items-end justify-between px-1 py-0.5 space-x-0.5">
-            {[40, 65, 30, 85, 45, 90, 60, 75, 50, 95, 40, 70, 85, 30, 60, 90, 50, 80].map((h, idx) => (
-              <div
-                key={idx}
-                className="w-1 bg-gradient-to-t from-blue-600 to-cyan-400 rounded-t"
-                style={{ height: `${h}%` }}
-              ></div>
-            ))}
+          <div className="inline-flex items-center gap-1.5 text-xs text-emerald-400 font-bold">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            All Systems Operational
           </div>
         </div>
 
-        <div className="flex items-center justify-between text-xs font-bold pt-1">
+        {/* Live Ingestion Wave Visualizer */}
+        <div className="pt-2 border-t border-[#151d30] flex items-center justify-between">
           <div>
-            <span className="text-[9px] text-slate-500 block uppercase">LIVE INGESTION</span>
-            <strong className="text-slate-200">2,341 <span className="text-[9px] text-slate-400 font-normal">events / min</span></strong>
+            <span className="text-[9px] text-slate-400 uppercase block font-semibold">Live Ingestion</span>
+            <strong className="text-sm font-bold text-slate-100 font-mono">2,341 <span className="text-[9px] text-slate-400 font-normal">events/min</span></strong>
           </div>
-          <span className="text-[10px] text-purple-400 font-mono">v2.0.0</span>
+          <Cpu className="w-5 h-5 text-cyan-400/80 animate-pulse" />
+        </div>
+
+        {/* Sparkline wave */}
+        <div className="h-6 w-full flex items-end justify-between gap-1 pt-1 opacity-75">
+          {[40, 65, 30, 85, 45, 95, 60, 75, 40, 90, 55, 80, 100].map((h, idx) => (
+            <div
+              key={idx}
+              style={{ height: `${h}%` }}
+              className="w-1 bg-gradient-to-t from-cyan-600 to-blue-400 rounded-t-sm"
+            ></div>
+          ))}
+        </div>
+
+        <div className="text-[9px] text-slate-400 text-center font-mono border-t border-[#151d30] pt-2">
+          SentinelIQ v2.0.0 • PS-03 Edition
         </div>
       </div>
     </aside>
