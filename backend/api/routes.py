@@ -191,9 +191,18 @@ def ingest_custom_alert(payload: CreateAlertRequest):
     with open(alerts_file, "w", encoding="utf-8") as f:
         json.dump(existing_alerts, f, indent=2)
 
-    # Re-run full pipeline scripts to re-compute normalization, correlation, clustering, scoring, priority queue & reports
-    from scripts.process_reports import main as run_pipeline
-    run_pipeline()
+    # Re-run fast Steps 1-6 pipeline scripts to re-compute normalization, correlation, clustering, scoring & priority queue (0.2s)
+    from scripts.process_normalization import process_normalization
+    from scripts.process_correlation import process_correlation
+    from scripts.process_clustering import process_clustering
+    from scripts.process_scoring import process_scoring
+    from scripts.process_priority import process_priority
+
+    process_normalization()
+    process_correlation()
+    process_clustering()
+    process_scoring()
+    process_priority()
 
     # Reload in-memory DataStore cache
     store = IncidentDataStore.get_instance()
@@ -203,17 +212,16 @@ def ingest_custom_alert(payload: CreateAlertRequest):
     matched_item = None
     for item in store.priority_queue:
         iid = item["incident_id"]
-        report = store.reports_cache.get(iid, {})
-        for evt in report.get("timeline", []):
-            if evt.get("alert_id") == new_alert_id:
-                matched_item = item
-                break
-        if matched_item:
+        # Check incident alerts list directly
+        inc_data = store.datasets.get("incident_map", {}).get(iid, {})
+        if new_alert_id in inc_data.get("alerts", []) or new_alert_id.lower() in [a.lower() for a in inc_data.get("alerts", [])]:
+            matched_item = item
             break
 
     if not matched_item:
         # Fallback to top priority item if single standalone
         matched_item = store.priority_queue[0]
+
 
     return CreateAlertResponse(
         success=True,
