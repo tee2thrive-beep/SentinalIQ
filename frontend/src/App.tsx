@@ -10,8 +10,14 @@ import { ReportsPage } from './pages/ReportsPage';
 import { SystemStatusPage } from './pages/SystemStatusPage';
 import { CompareIncidentsPage } from './pages/CompareIncidentsPage';
 import { PriorityConfigPage } from './pages/PriorityConfigPage';
+import { api } from './services/api';
 
 export const App: React.FC = () => {
+  React.useEffect(() => {
+    // Background ping to wake Render server immediately on page load
+    api.fetchHealth().catch(() => {});
+  }, []);
+
   return (
     <ErrorBoundary>
       <BrowserRouter>

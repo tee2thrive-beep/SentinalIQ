@@ -37,8 +37,22 @@ export const api = {
     const params: Record<string, any> = { page, page_size: pageSize };
     if (riskLevel && riskLevel !== 'ALL') params.risk_level = riskLevel;
     if (incidentType && incidentType !== 'ALL') params.incident_type = incidentType;
-    const res = await client.get<IncidentListResponse>('/incidents', { params });
-    return res.data;
+    
+    try {
+      const res = await client.get<IncidentListResponse>('/incidents', { params });
+      if (page === 1 && (!riskLevel || riskLevel === 'ALL')) {
+        try {
+          sessionStorage.setItem('sentineliq_incidents_cache', JSON.stringify(res.data));
+        } catch {}
+      }
+      return res.data;
+    } catch (err) {
+      const cached = sessionStorage.getItem('sentineliq_incidents_cache');
+      if (cached && page === 1) {
+        return JSON.parse(cached);
+      }
+      throw err;
+    }
   },
 
   async fetchIncidentReport(incidentId: string): Promise<IncidentReport> {
