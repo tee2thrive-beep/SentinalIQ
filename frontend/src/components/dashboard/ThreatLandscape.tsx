@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, ShieldAlert, Server, Users, Database } from 'lucide-react';
+import { Globe, ShieldAlert } from 'lucide-react';
 
 export const ThreatLandscape: React.FC = () => {
   return (
@@ -16,46 +16,97 @@ export const ThreatLandscape: React.FC = () => {
         </span>
       </div>
 
-      {/* Holographic Cyber Globe SVG Map Container */}
-      <div className="relative h-64 w-full bg-[#050713]/90 border border-[#1e2438] rounded-xl overflow-hidden flex items-center justify-center">
-        {/* Ambient Grid Lines */}
-        <div className="absolute inset-0 bg-[radial-gradient(#1e2438_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+      {/* Holographic Cyber World Map Container */}
+      <div className="relative h-64 w-full bg-[#050713] border border-[#1e2438] rounded-xl overflow-hidden flex items-center justify-center">
+        {/* Radar Sweeper Line Animation */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+          <div className="w-96 h-96 rounded-full border border-cyan-500/30 animate-radar" style={{ background: 'conic-gradient(from 0deg at 50% 50%, rgba(6, 182, 212, 0.4) 0deg, transparent 60deg, transparent 360deg)' }}></div>
+        </div>
 
-        {/* Global World Map Paths */}
-        <svg className="w-full h-full opacity-60" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-          {/* World Continents Outlines */}
-          <path d="M150 120 C 180 110, 220 130, 250 150 C 230 180, 180 220, 140 190 Z" fill="#1e2438" stroke="#3b82f6" strokeWidth="0.5" />
-          <path d="M400 100 C 450 80, 520 90, 580 120 C 560 170, 480 200, 420 160 Z" fill="#1e2438" stroke="#3b82f6" strokeWidth="0.5" />
-          <path d="M600 180 C 650 160, 720 190, 750 240 C 700 280, 620 260, 580 210 Z" fill="#1e2438" stroke="#3b82f6" strokeWidth="0.5" />
-          <path d="M220 250 C 260 240, 290 280, 270 330 C 240 340, 210 310, 210 280 Z" fill="#1e2438" stroke="#3b82f6" strokeWidth="0.5" />
+        {/* Latitude & Longitude Cyber Grid */}
+        <svg className="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 800 400" fill="none">
+          <line x1="0" y1="100" x2="800" y2="100" stroke="#1e2438" strokeWidth="1" strokeDasharray="4 4" />
+          <line x1="0" y1="200" x2="800" y2="200" stroke="#3b82f6" strokeWidth="1" opacity="0.4" />
+          <line x1="0" y1="300" x2="800" y2="300" stroke="#1e2438" strokeWidth="1" strokeDasharray="4 4" />
 
-          {/* Glowing Attack Trajectory Arcs */}
-          <path d="M 220 140 Q 380 40 520 130" stroke="url(#gradient-arc-1)" strokeWidth="2" fill="none" strokeDasharray="6 4" />
-          <path d="M 680 210 Q 480 80 240 160" stroke="url(#gradient-arc-2)" strokeWidth="2" fill="none" strokeDasharray="8 4" />
-          <path d="M 450 110 Q 320 200 230 270" stroke="url(#gradient-arc-1)" strokeWidth="2" fill="none" />
+          <line x1="200" y1="0" x2="200" y2="400" stroke="#1e2438" strokeWidth="1" strokeDasharray="4 4" />
+          <line x1="400" y1="0" x2="400" y2="400" stroke="#3b82f6" strokeWidth="1" opacity="0.4" />
+          <line x1="600" y1="0" x2="600" y2="400" stroke="#1e2438" strokeWidth="1" strokeDasharray="4 4" />
+        </svg>
 
-          {/* Gradients */}
+        {/* Detailed High-Tech World Map SVG */}
+        <svg className="w-full h-full relative z-10" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="gradient-arc-1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient id="arc-red-purple" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#ef4444" />
+              <stop offset="50%" stopColor="#ec4899" />
               <stop offset="100%" stopColor="#a855f7" />
             </linearGradient>
-            <linearGradient id="gradient-arc-2" x1="0%" y1="0%" x2="100%" y2="100%">
+
+            <linearGradient id="arc-cyan-red" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#06b6d4" />
               <stop offset="100%" stopColor="#ef4444" />
             </linearGradient>
+
+            <radialGradient id="node-glow-red" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="#ef4444" stopOpacity="1" />
+              <stop offset="100%" stopColor="#ef4444" stopOpacity="0" />
+            </radialGradient>
           </defs>
 
-          {/* Attack Node Pingers */}
-          <circle cx="220" cy="140" r="5" fill="#ef4444" className="animate-ping" />
-          <circle cx="520" cy="130" r="4" fill="#a855f7" />
-          <circle cx="680" cy="210" r="4" fill="#06b6d4" />
+          {/* CONTINENT MAP PATHS */}
+          <g fill="#1a2238" stroke="#2a365c" strokeWidth="1" opacity="0.85">
+            {/* North America */}
+            <path d="M 120,80 L 160,70 L 220,90 L 260,110 L 240,160 L 210,180 L 180,170 L 150,190 L 130,150 L 100,120 Z" />
+            <path d="M 230,185 L 250,210 L 220,230 L 200,200 Z" />
+
+            {/* South America */}
+            <path d="M 240,240 L 280,250 L 290,290 L 260,350 L 240,360 L 230,310 L 220,270 Z" />
+
+            {/* Europe */}
+            <path d="M 400,90 L 450,85 L 470,110 L 440,140 L 410,130 L 390,110 Z" />
+
+            {/* Africa */}
+            <path d="M 400,150 L 460,145 L 490,190 L 470,260 L 430,290 L 400,240 L 390,190 Z" />
+
+            {/* Asia */}
+            <path d="M 480,80 L 580,70 L 680,90 L 720,130 L 660,180 L 600,190 L 540,170 L 490,130 Z" />
+            <path d="M 620,195 L 650,210 L 630,240 L 600,220 Z" />
+
+            {/* Australia */}
+            <path d="M 650,260 L 710,250 L 730,290 L 680,320 L 640,290 Z" />
+          </g>
+
+          {/* Glowing Arc Attack Trajectories */}
+          <path d="M 180,130 Q 340,30 450,110" stroke="url(#arc-red-purple)" strokeWidth="2.5" fill="none" strokeDasharray="8 4" className="animate-pulse" />
+          <path d="M 660,120 Q 450,20 180,130" stroke="url(#arc-cyan-red)" strokeWidth="2" fill="none" strokeDasharray="6 3" />
+          <path d="M 450,110 Q 560,180 670,280" stroke="url(#arc-red-purple)" strokeWidth="2" fill="none" />
+          <path d="M 260,280 Q 360,200 450,110" stroke="url(#arc-cyan-red)" strokeWidth="1.5" fill="none" strokeDasharray="4 4" />
+
+          {/* Interactive Attack Nodes & Target Rings */}
+          {/* Node 1: North America (Attacker Origin) */}
+          <circle cx="180" cy="130" r="10" fill="url(#node-glow-red)" />
+          <circle cx="180" cy="130" r="4" fill="#ef4444" className="animate-ping" />
+          <circle cx="180" cy="130" r="2.5" fill="#ffffff" />
+
+          {/* Node 2: Europe (Target Asset Server) */}
+          <circle cx="450" cy="110" r="12" fill="url(#node-glow-red)" />
+          <circle cx="450" cy="110" r="5" fill="#ec4899" className="animate-ping" />
+          <circle cx="450" cy="110" r="3" fill="#ffffff" />
+
+          {/* Node 3: Asia */}
+          <circle cx="660" cy="120" r="4" fill="#06b6d4" />
+          <circle cx="660" cy="120" r="2" fill="#ffffff" />
+
+          {/* Node 4: Australia */}
+          <circle cx="670" cy="280" r="4" fill="#a855f7" />
+          <circle cx="670" cy="280" r="2" fill="#ffffff" />
         </svg>
 
-        {/* Floating Threat Popover Box */}
-        <div className="absolute top-6 right-8 p-3 bg-[#0c0f1d]/95 border border-rose-500/60 rounded-xl space-y-1 text-[11px] shadow-2xl backdrop-blur-md glow-red max-w-[210px]">
+        {/* Floating Cyber Threat Popover Box */}
+        <div className="absolute top-4 right-4 p-3 bg-[#0c0f1d]/95 border border-rose-500/70 rounded-xl space-y-1 text-[11px] shadow-2xl backdrop-blur-md glow-red max-w-[220px] z-20">
           <div className="flex items-center space-x-1.5 text-rose-400 font-bold">
-            <ShieldAlert className="w-3.5 h-3.5" />
+            <ShieldAlert className="w-4 h-4 text-rose-500 animate-pulse" />
             <span>Data Exfiltration Detected</span>
           </div>
           <div className="text-slate-300 font-mono text-[10px]">
@@ -64,7 +115,9 @@ export const ThreatLandscape: React.FC = () => {
           </div>
           <div className="flex items-center justify-between text-[10px]">
             <span className="text-slate-400">Location: Unknown</span>
-            <span className="px-1.5 py-0.2 bg-rose-950 text-rose-300 border border-rose-500/40 rounded font-bold">Critical</span>
+            <span className="px-2 py-0.5 bg-rose-950 text-rose-300 border border-rose-500/50 rounded font-bold uppercase tracking-wider">
+              Critical
+            </span>
           </div>
         </div>
       </div>
